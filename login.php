@@ -8,7 +8,7 @@
 <html>
 <head>
     <title>Login Clientes</title>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
     <script src="JS/jquery-3.3.1.min.js"></script>
     <script>
         //estas lineas de codigo evitan que se envie el formulario al presionar la tecla Enter
@@ -58,8 +58,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
         
         #mensaje {
-            height:20px;
-            line-height:20px;
+            height:35px;
+            line-height:35px;
             color: #F00;
             font-size: 20px;
             font-weight: bold;
@@ -68,22 +68,30 @@
             margin: auto;
         }
 
+        .logo {
+            width: 202px;
+            height: 100px;
+            position: absolute;
+            top: 12%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            display: inline-block;
+        }
+
         body {
-            background: url("imagenes/login.jpg"); 
-            background-size: cover;
+            background: url("imagenes/login.png"); 
+            background-size: 100% 100%;
             background-repeat: no-repeat;
-            margin: 0;
-            height: 100vh;
-            box-sizing: border-box;
+            background-position: center;
         }
 
         .container{
             width: 440px;
-            height: 420px;
+            height: 360px;
             background: #FFF;
             border-radius: 6px;
             position: absolute;
-            top: 62%;
+            top: 55%;
             left: 50%;
             transform: translate(-50%,-50%);
             box-shadow: 0px 1px 10px 1px #000;
@@ -92,7 +100,7 @@
         }
         .wrapper{
             width: 100%;
-            height: 85%;
+            height: 90%;
             background: #fff;
             border-radius: 5px;
             box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
@@ -138,7 +146,7 @@
         .wrapper form .row i{
             position: absolute;
             width: 47px;
-            height: 100%;
+            height: 101%;
             color: #fff;
             font-size: 18px;
             background: red;
@@ -163,33 +171,38 @@
             margin-top: 10px;
             font-family: 'Poppins',sans-serif;
         }
+
         form .button input:hover{
             background: #F36262;
             border: 1px solid #F36262;
         }
+
+        .divALaIzquierda {
+            margin: 36% 0px 0px 7%;
+        }
     </style>
 </head>
 <body>
-    <div align='center' style='font-weight: bold; font-size: 40px; margin-top: 30; color: white;'>Login</div><br>
-    <HR noshade align='center' style='margin-bottom: 30;'>
+    <img src="imagenes/logo.png" class="logo">
     <div class='container'>
         <div class='wrapper'>
             <div class='title'><span>Bienvenid@</span></div>
             <form name="forma01" method="POST">
             <div class='row'>
-                <i class='fas fa-user'></i>
+                <i class='bi bi-person'></i>
                 <input type="email" name="user" id="user" placeholder='Nombre de usuario'>
             </div>
             <div class='row'>
-                <i class='fas fa-lock'></i>
+                <i class='bi bi-lock'></i>
                 <input type='password' name='pass' id="pass" placeholder='Contraseña'>
             </div>
             <div class='row button'>
                 <input onclick='return valida();' type='submit' value='Login'>
             </div>
             </form>
-            <div id='mensaje'></div>
         </div>
+        <div id='mensaje'></div>
     </div>
+    <div class='link divALaIzquierda'><a href="index.php"><img src="imagenes/regresar.png" width="90px" height="90px"></a></div>
 </body>
 </html>

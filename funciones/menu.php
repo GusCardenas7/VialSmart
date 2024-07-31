@@ -4,30 +4,31 @@
         echo "<div id='logo'></div>";
         echo "<table class='tablaMenu letraMenu' style='margin: 0px 10px 0px 0px;'>
             <tr class='encabezadoMenu letraMenu'>
-                <td colspan='5' class='celdasMenu'>MENÚ DE NAVEGACIÓN</td>
+                <td colspan='6' class='celdasMenu'>MENÚ DE NAVEGACIÓN</td>
             </tr>
             <tr class='filasMenu letraMenu'>
-                <td class='celdasMenu letraMenu'><a href=\"index.php\">Home</a></td>
-                <td class='celdasMenu letraMenu'><a href=\"productos.php\">Productos</a></td>
-                <td class='celdasMenu letraMenu'><a href=\"contacto_formulario.php\">Contacto</a></td>
-                <td class='celdasMenu letraMenu'><a href=\"carrito_paso01.php\">Carrito</a></td>";
-                echo "<td class='celdasMenu'><a href=\"funciones/cerrarSesion.php\">Cerrar Sesión</a></td>";
+                <td class='celdasMenu letraMenu'>Bienvenid@ $nombre</a></td>
+                <td class='celdasMenu letraMenu'><a href=\"index.php\">Inicio</a></td>
+                <td class='celdasMenu letraMenu'><a href=\"productos.php\">Lecciones</a></td>
+                <td class='celdasMenu letraMenu'><a href=\"contacto_formulario.php\">Videos</a></td>
+                <td class='celdasMenu letraMenu'><a href=\"carrito_paso01.php\">Juegos</a></td>";
+                echo "<td class='celdasMenu'><a href=\"funciones/cerrarSesion.php\">Logros</a></td>";
             echo "</tr>
         </table>";
     } else {
         echo "<div id='logo'></div>";
         echo "<table class='tablaMenu letraMenu' style='margin: 0px 10px 0px 0px;'>
-                <tr class='encabezadoMenu letraMenu'>
-                    <td colspan='5' class='celdasMenu'>MENÚ DE NAVEGACIÓN</td>
-                </tr>
-                <tr class='filasMenu letraMenu'>
-                    <td class='celdasMenu letraMenu'><a href=\"index.php\">Home</a></td>
-                    <td class='celdasMenu letraMenu'><a href=\"productos.php\">Productos</a></td>
-                    <td class='celdasMenu letraMenu'><a href=\"contacto_formulario.php\">Contacto</a></td>
-                    <td class='celdasMenu letraMenu'><a href=\"carrito_paso01.php\">Carrito</a></td>";
-                    echo "<td class='celdasMenu'><a href=\"login.php\">Iniciar Sesión</a></td>";
-                echo "</tr>
-            </table>";
+            <tr class='encabezadoMenu letraMenu'>
+                <td colspan='5' class='celdasMenu'>MENÚ DE NAVEGACIÓN</td>
+            </tr>
+            <tr class='filasMenu letraMenu'>
+                <td class='celdasMenu letraMenu'><a href=\"index.php\">Inicio</a></td>
+                <td class='celdasMenu letraMenu'><a href=\"productos.php\">Lecciones</a></td>
+                <td class='celdasMenu letraMenu'><a href=\"contacto_formulario.php\">Videos</a></td>
+                <td class='celdasMenu letraMenu'><a href=\"carrito_paso01.php\">Juegos</a></td>
+                <td class='celdasMenu letraMenu'><a href=\"login.php\">Registrarse/Login</a></td>";
+            echo "</tr>
+        </table>";
     }
 ?>
 
