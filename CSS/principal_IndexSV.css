@@ -1,0 +1,228 @@
+body {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1103%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(244%2c 255%2c 160%2c 1)'%3e%3c/rect%3e%3cpath d='M-74.81032675490671 101.71232273148505L-2.941653187962018 166.42316706948324 61.76919115003618 94.55449350253855-10.099482416908515 29.843649164540352z' fill='rgba(187%2c 211%2c 110%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M1088.59 45.24 a141.69 141.69 0 1 0 283.38 0 a141.69 141.69 0 1 0 -283.38 0z' fill='rgba(187%2c 211%2c 110%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M891.3646454623063 424.3919568897521L962.7724023079566 362.3181408866225 900.6985863048268 290.9103840409722 829.2908294591766 352.9842000441019z' fill='rgba(187%2c 211%2c 110%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M684.78%2c271.394C712.777%2c272.018%2c739.078%2c258.842%2c754.418%2c235.413C771.474%2c209.363%2c778.918%2c176.747%2c764.981%2c148.903C749.642%2c118.259%2c719.048%2c96.096%2c684.78%2c96.287C650.792%2c96.476%2c620.656%2c119.069%2c606.11%2c149.788C593.29%2c176.862%2c604.048%2c207.271%2c620.319%2c232.423C634.936%2c255.018%2c657.876%2c270.794%2c684.78%2c271.394' fill='rgba(187%2c 211%2c 110%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M470.219%2c452.011C518.755%2c453.811%2c563.223%2c424.834%2c587.063%2c382.519C610.475%2c340.963%2c609.246%2c289.857%2c584.575%2c249.036C560.724%2c209.572%2c516.317%2c190.344%2c470.219%2c189.191C421.701%2c187.978%2c369.054%2c200.619%2c345.509%2c243.058C322.433%2c284.653%2c343.102%2c333.53%2c367.48%2c374.375C391.058%2c413.88%2c424.245%2c450.306%2c470.219%2c452.011' fill='rgba(187%2c 211%2c 110%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M821.285%2c402.693C858.626%2c402.616%2c891.245%2c377.543%2c907.827%2c344.086C922.764%2c313.948%2c913.042%2c279.983%2c896.666%2c250.601C879.713%2c220.183%2c856.07%2c190.437%2c821.285%2c188.809C784.211%2c187.074%2c750.74%2c210.539%2c732.604%2c242.921C714.879%2c274.571%2c716.519%2c312.728%2c734.123%2c344.445C752.3%2c377.193%2c783.831%2c402.77%2c821.285%2c402.693' fill='rgba(187%2c 211%2c 110%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1362.096%2c179.028C1396.971%2c177.657%2c1429.742%2c160.183%2c1446.268%2c129.441C1462.016%2c100.146%2c1455.295%2c65.441%2c1438.628%2c36.658C1422.005%2c7.952%2c1395.268%2c-16.088%2c1362.096%2c-15.916C1329.162%2c-15.745%2c1304.536%2c9.614%2c1286.926%2c37.444C1267.563%2c68.044%2c1248.645%2c104.557%2c1265.626%2c136.541C1283.286%2c169.804%2c1324.465%2c180.507%2c1362.096%2c179.028' fill='rgba(187%2c 211%2c 110%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1063.439%2c236.757C1080.536%2c236.753%2c1099.541%2c234.939%2c1108.378%2c220.303C1117.419%2c205.329%2c1112.267%2c186.336%2c1102.738%2c171.668C1094.108%2c158.383%2c1079.28%2c151.34%2c1063.439%2c151.129C1047.174%2c150.912%2c1031.147%2c156.958%2c1022.282%2c170.596C1012.571%2c185.536%2c1009.051%2c205.194%2c1018.463%2c220.324C1027.499%2c234.85%2c1046.332%2c236.761%2c1063.439%2c236.757' fill='rgba(187%2c 211%2c 110%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M735.374%2c585.95C770.958%2c586.217%2c807.336%2c571.666%2c823.811%2c540.125C839.401%2c510.277%2c825.37%2c475.979%2c807.829%2c447.234C791.228%2c420.03%2c767.241%2c394.812%2c735.374%2c395.202C703.998%2c395.586%2c682.073%2c422.066%2c665.929%2c448.972C649.131%2c476.968%2c634.443%2c509.696%2c649.206%2c538.816C665.073%2c570.114%2c700.285%2c585.687%2c735.374%2c585.95' fill='rgba(187%2c 211%2c 110%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M681.1617082882533 252.822061890594L747.3843780954824 321.39764393612313 815.9599601410115 255.17497412889406 749.7372903337824 186.59939208336493z' fill='rgba(187%2c 211%2c 110%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1103'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+}
+
+.nombre {
+    position: absolute;
+    left: 80px;
+    font-size: 21px;
+    color: black;
+}
+
+/* Cuadros*/
+
+.cover-small {
+    height: 220px;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: normal;
+}
+.font {
+    font-size: 25px;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+/* Slider*/
+#slider {
+    margin: 30px auto;
+    width: 800px;
+    max-width: 100%;
+    text-align: center;
+}
+
+    #slider input[type=radio] {
+        display: none;
+    }
+
+    #slider label {
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+#slides {
+    padding: 5px;
+    border: 3px solid #ccc;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+#overflow {
+    width: 100%;
+    overflow: hidden;
+}
+
+#slide1:checked ~ #slides .inner {
+    margin-left: 0;
+}
+
+#slide2:checked ~ #slides .inner {
+    margin-left: -100%;
+}
+
+#slide3:checked ~ #slides .inner {
+    margin-left: -200%;
+}
+
+#slide4:checked ~ #slides .inner {
+    margin-left: -300%;
+}
+
+#slides .inner {
+    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    width: 400%;
+    line-height: 0;
+    height: 300px;
+}
+
+#slides .slide {
+    width: 25%;
+    float: left;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    height: 100%;
+    color: #dcd31b;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 5px 3px 5px black;
+}
+
+#slides .slide_1 {
+    background: url("../imagenes/Slider1-.avif") no-repeat;
+}
+
+#slides .slide_2 {
+    background: url("../imagenes/Slider3.png") no-repeat;
+}
+
+#slides .slide_3 {
+    background: url("../imagenes/TomarConducir.avif");
+}
+
+#slides .slide_4 {
+    background: url("../imagenes/distraido.jpg") no-repeat;
+}
+
+#controls {
+    margin: -180px 0 0 0;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+    position: relative;
+}
+
+    #controls label {
+        transition: opacity 0.2s ease-out;
+        display: none;
+        width: 50px;
+        height: 50px;
+        opacity: .4;
+    }
+
+        #controls label:hover {
+            opacity: 1;
+        }
+
+#slide1:checked ~ #controls label:nth-child(2),
+#slide2:checked ~ #controls label:nth-child(3),
+#slide3:checked ~ #controls label:nth-child(4),
+#slide4:checked ~ #controls label:nth-child(1) {
+    background: url(https://cdn-icons-png.flaticon.com/512/4655/4655004.png) no-repeat;
+    float: right;
+    margin: 0 -50px 0 0;
+    display: block;
+}
+
+#slide1:checked ~ #controls label:nth-last-child(2),
+#slide2:checked ~ #controls label:nth-last-child(3),
+#slide3:checked ~ #controls label:nth-last-child(4),
+#slide4:checked ~ #controls label:nth-last-child(1) {
+    background: url("../imagenes/flecha-izquierda.png") no-repeat;
+    float: left;
+    margin: 0 0 0 -50px;
+    display: block;
+}
+
+#bullets {
+    margin: 150px 0 0;
+    text-align: center;
+}
+
+    #bullets label {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background: #ccc;
+        margin: 0 10px;
+    }
+
+#slide1:checked ~ #bullets label:nth-child(1),
+#slide2:checked ~ #bullets label:nth-child(2),
+#slide3:checked ~ #bullets label:nth-child(3),
+#slide4:checked ~ #bullets label:nth-child(4) {
+    background: #444;
+}
+
+@media screen and (max-width: 900px) {
+    #slide1:checked ~ #controls label:nth-child(2),
+    #slide2:checked ~ #controls label:nth-child(3),
+    #slide3:checked ~ #controls label:nth-child(4),
+    #slide4:checked ~ #controls label:nth-child(1),
+    #slide1:checked ~ #controls label:nth-last-child(2),
+    #slide2:checked ~ #controls label:nth-last-child(3),
+    #slide3:checked ~ #controls label:nth-last-child(4),
+    #slide4:checked ~ #controls label:nth-last-child(1) {
+        margin: 0;
+    }
+
+    #slides {
+        max-width: calc(100% - 140px);
+        margin: 0 auto;
+    }
+
+}
+
+/* FOOTER*/
+footer .titulo-seccion {
+    color: #000000;
+    font-size: 17px;
+}
+
+footer .contenedor {
+    background-color: #ffffff;
+    position: absolute;
+    top: 1000px;
+    height: 70px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Decoraciones */
+.decoracion-barrera {
+    width: 10%;
+    top: 230px;
+    right: 80px;
+    position: absolute;
+}
+.decoracion-semaforos {
+    width: 13%;
+    top: 300px;
+    left: 0px;
+    position: absolute;
+    transform: rotate(90deg);
+}
+.decoracion-carro {
+    width: 11%;
+    top: 890px;
+    right: 80px;
+    position: absolute;
+}
+.decoracion-ni�os {
+    width: 13%;
+    top: 270px;
+    left: 9px;
+    position: absolute;
+}
