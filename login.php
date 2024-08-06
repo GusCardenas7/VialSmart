@@ -79,7 +79,7 @@
         }
 
         body {
-            background: url("imagenes/login.png"); 
+            background: url("imagenes/login.jpeg"); 
             background-size: 100% 100%;
             background-repeat: no-repeat;
             background-position: center;
@@ -105,11 +105,13 @@
             border-radius: 5px;
             box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
         }
+
+         /* Encabezado de bienvenida */
         .wrapper .title{
             height: 90px;
-            background: red;
+            background: #e62e1b;
             border-radius: 5px 5px 0 0;
-            color: #fff;
+            color: white;
             font-size: 30px;
             font-weight: 600;
             display: flex;
@@ -125,13 +127,15 @@
             margin-bottom: 20px;
             position: relative;
         }
+
+          /* Contornos de usuario y contraseña */
         .wrapper form .row input{
             height: 105%;
             width: 100%;
             outline: none;
             padding-left: 60px;
             border-radius: 5px;
-            border: 1px solid red;
+            border: 1px solid #ffdf00;
             font-size: 16px;
             transition: all 0.3s ease;
             font-family: 'Poppins',sans-serif;
@@ -143,14 +147,16 @@
         form .row input::placeholder{
             color: #999;
         }
+
+          /* iconos de usuario y contraseña */
         .wrapper form .row i{
             position: absolute;
             width: 47px;
             height: 101%;
-            color: #fff;
+            color: #ffffff;
             font-size: 18px;
-            background: red;
-            border: 1px solid red;
+            background: #ffe65d;
+            border: 1px solid #ffdf00;
             border-radius: 5px 0 0 5px;
             display: flex;
             align-items: center;
@@ -160,13 +166,14 @@
             margin: -8px 0 20px 0;
         }
 
+        /* boton */ 
         .wrapper form .button input{
             color: #fff;
             font-size: 20px;
             font-weight: 500;
             padding-left: 0px;
-            background: red;
-            border: 1px solid red;
+            background: green;
+            border: 1px solid green;
             cursor: pointer;
             margin-top: 10px;
             font-family: 'Poppins',sans-serif;
@@ -178,7 +185,7 @@
         }
 
         .divALaIzquierda {
-            margin: 36% 0px 0px 7%;
+            margin: 28% 0px 0px 10%;
         }
     </style>
 </head>
