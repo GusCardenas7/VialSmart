@@ -7,8 +7,9 @@
 
 <html>
 <head>
-    <title>Login Clientes</title>
+    <title>Login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="CSS/login.css">
     <script src="JS/jquery-3.3.1.min.js"></script>
     <script>
         //estas lineas de codigo evitan que se envie el formulario al presionar la tecla Enter
@@ -54,140 +55,6 @@
             }
         }
     </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-        
-        #mensaje {
-            height:35px;
-            line-height:35px;
-            color: #F00;
-            font-size: 20px;
-            font-weight: bold;
-            width: 250px;
-            text-align: center;
-            margin: auto;
-        }
-
-        .logo {
-            width: 202px;
-            height: 100px;
-            position: absolute;
-            top: 12%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            display: inline-block;
-        }
-
-        body {
-            background: url("imagenes/login.jpeg"); 
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
-        .container{
-            width: 440px;
-            height: 360px;
-            background: #FFF;
-            border-radius: 6px;
-            position: absolute;
-            top: 55%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            box-shadow: 0px 1px 10px 1px #000;
-            overflow: hidden;
-            display: inline-block;
-        }
-        .wrapper{
-            width: 100%;
-            height: 90%;
-            background: #fff;
-            border-radius: 5px;
-            box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
-        }
-
-         /* Encabezado de bienvenida */
-        .wrapper .title{
-            height: 90px;
-            background: #e62e1b;
-            border-radius: 5px 5px 0 0;
-            color: white;
-            font-size: 30px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Poppins',sans-serif;
-        }
-        .wrapper form{
-            padding: 30px 25px 45px 25px;
-        }
-        .wrapper form .row{
-            height: 45px;
-            margin-bottom: 20px;
-            position: relative;
-        }
-
-          /* Contornos de usuario y contraseña */
-        .wrapper form .row input{
-            height: 105%;
-            width: 100%;
-            outline: none;
-            padding-left: 60px;
-            border-radius: 5px;
-            border: 1px solid #ffdf00;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            font-family: 'Poppins',sans-serif;
-        }
-        form .row input:focus{
-            border-color: red;
-            box-shadow: inset 0px 0px 2px 2px red;
-        }
-        form .row input::placeholder{
-            color: #999;
-        }
-
-          /* iconos de usuario y contraseña */
-        .wrapper form .row i{
-            position: absolute;
-            width: 47px;
-            height: 101%;
-            color: #ffffff;
-            font-size: 18px;
-            background: #ffe65d;
-            border: 1px solid #ffdf00;
-            border-radius: 5px 0 0 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .wrapper form .pass{
-            margin: -8px 0 20px 0;
-        }
-
-        /* boton */ 
-        .wrapper form .button input{
-            color: #fff;
-            font-size: 20px;
-            font-weight: 500;
-            padding-left: 0px;
-            background: green;
-            border: 1px solid green;
-            cursor: pointer;
-            margin-top: 10px;
-            font-family: 'Poppins',sans-serif;
-        }
-
-        form .button input:hover{
-            background: #F36262;
-            border: 1px solid #F36262;
-        }
-
-        .divALaIzquierda {
-            margin: 28% 0px 0px 10%;
-        }
-    </style>
 </head>
 <body>
     <img src="imagenes/logo.png" class="logo">
