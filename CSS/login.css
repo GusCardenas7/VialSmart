@@ -85,8 +85,8 @@ body {
     font-family: 'Poppins',sans-serif;
 }
 form .row input:focus{
-    border-color: red;
-    box-shadow: inset 0px 0px 2px 2px red;
+    border-color: yellow;
+    box-shadow: inset 0px 0px 2px 2px #ffdf00;
 }
 form .row input::placeholder{
     color: #999;
