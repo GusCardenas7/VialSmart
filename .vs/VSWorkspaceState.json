@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\imagenes",
+    "\\CSS",
+    "\\funciones",
+    "\\JS",
     "\\Seguridad Vial"
   ],
-  "SelectedNode": "\\imagenes\\transito.webp",
+  "SelectedNode": "\\JS\\JSJuego1.js",
   "PreviewInSolutionExplorer": false
 }

@@ -17,6 +17,7 @@ body {
     background-size: cover;
     background-position: center;
     background-blend-mode: normal;
+    
 }
 .font {
     font-size: 25px;
@@ -42,10 +43,11 @@ body {
 
 #slides {
     padding: 5px;
-    border: 3px solid #ccc;
+    border: 1px solid #7e5e57;
     background: #fff;
     position: relative;
     z-index: 1;
+    box-shadow: 0px 1px 10px 1px #000;
 }
 
 #overflow {
@@ -186,19 +188,55 @@ body {
 }
 
 /* FOOTER*/
-footer .titulo-seccion {
-    color: #000000;
-    font-size: 17px;
-}
-
-footer .contenedor {
-    background-color: #ffffff;
+footer {
+    background-color: #000000;
+    color: #b7b7b7;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    font-weight: normal;
     position: absolute;
     top: 1000px;
     height: 70px;
     width: 100%;
     text-align: center;
 }
+
+    footer .links {
+        display: flex;
+        gap: 30px;
+    }
+
+    footer a {
+        color: white;
+        text-decoration: none;
+        font-weight: normal;
+    }
+
+        footer a:hover {
+            text-decoration: underline;
+            color: white;
+        }
+
+        footer a:active {
+            color: white;
+        }
+
+    footer .copyright {
+        font-size: 13px;
+    }
+
+        footer .copyright::after {
+            content: '';
+            position: absolute;
+            right: 25px;
+            top: 10px;
+            height: 30px;
+            width: 0.1px;
+            background-color: #b7b7b7;
+        }
 
 /* Decoraciones */
 .decoracion-barrera {
@@ -220,9 +258,10 @@ footer .contenedor {
     right: 80px;
     position: absolute;
 }
-.decoracion-ni�os {
+.decoracion-ninos {
     width: 13%;
     top: 270px;
     left: 9px;
     position: absolute;
 }
+
