@@ -1,88 +1,55 @@
-<?php
-    if(isset($_SESSION['nombreC']) && !empty($_SESSION['nombreC'])){
-        $nombre = $_SESSION['nombreC'];
-        echo "<div id='logo'></div>";
-        echo "<table class='tablaMenu letraMenu' style='margin: 0px 10px 0px 0px;'>
-            <tr class='encabezadoMenu letraMenu'>
-                <td colspan='6' class='celdasMenu'>MENÚ DE NAVEGACIÓN</td>
-            </tr>
-            <tr class='filasMenu letraMenu'>
-                <td class='celdasMenu letraMenu'>Bienvenid@ $nombre</a></td>
-                <td class='celdasMenu letraMenu'><a href=\"index.php\">Inicio</a></td>
-                <td class='celdasMenu letraMenu'><a href=\"productos.php\">Lecciones</a></td>
-                <td class='celdasMenu letraMenu'><a href=\"contacto_formulario.php\">Videos</a></td>
-                <td class='celdasMenu letraMenu'><a href=\"carrito_paso01.php\">Juegos</a></td>";
-                echo "<td class='celdasMenu'><a href=\"funciones/cerrarSesion.php\">Logros</a></td>";
-            echo "</tr>
-        </table>";
-    } else {
-        echo "<div id='logo'></div>";
-        echo "<table class='tablaMenu letraMenu' style='margin: 0px 10px 0px 0px;'>
-            <tr class='encabezadoMenu letraMenu'>
-                <td colspan='5' class='celdasMenu'>MENÚ DE NAVEGACIÓN</td>
-            </tr>
-            <tr class='filasMenu letraMenu'>
-                <td class='celdasMenu letraMenu'><a href=\"index.php\">Inicio</a></td>
-                <td class='celdasMenu letraMenu'><a href=\"productos.php\">Lecciones</a></td>
-                <td class='celdasMenu letraMenu'><a href=\"contacto_formulario.php\">Videos</a></td>
-                <td class='celdasMenu letraMenu'><a href=\"carrito_paso01.php\">Juegos</a></td>
-                <td class='celdasMenu letraMenu'><a href=\"login.php\">Registrarse/Login</a></td>";
-            echo "</tr>
-        </table>";
-    }
-?>
-
+<div class="menu">
+    <img class="logo" src="../imagenes/logo.png" alt="" />
+    <ul align="right">
+        <li style="color:#6cda1a;"> <b>Bienvenid@ </b></li>
+        <li> <b><a href="../Seguridad Vial/IndexSV.php">Inicio</a></b></li>
+        <li> <b><a href="/">Lecciones</a></b></li>
+        <li> <b><a href="../Seguridad Vial/videos.php">Videos</a></b></li>
+        <li> <b><a href="/">Juegos</a></b></li>
+        <li> <b><a href="../Seguridad Vial/login.php">Registrarse/Iniciar Sesi&#243;n</a></b></li>
+    </ul>
+</div>
 <style>
-    .tablaMenu {
-        width: 80%;
-        border: 2px solid black;
-        float: right;
-        position: relative;
-    }
+.menu {
+    padding: 0;
+    background: #ffffff;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    left: 0%;
+    width: 100%;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-    .letraMenu { 
-        color: white;
-    }
+.menu li a {
+    text-decoration: none;
+    color: black;
+    padding: 8px;
+    display: block;
+}
 
-    #logo{
-        display: inline-block;
-        width:17.5%;
-        height: 90px;
-        background: url(imagenes/logo.png)no-repeat right;
-        filter: brightness(1.1);
-        mix-blend-mode: multiply;
-    }
+li {
+    font-size: 22px;
+    font-family: 'Share Tech Mono', monospace;
+    list-style: none;
+    display: flex;
+    margin: 0 15px;
+}
 
-    .encabezadoMenu {
-        text-align: center;
-        line-height: 50px;
-        font-weight: bold;
-        height: 50px;
-        background-color: indianred;
-    }
+.menu li {
+    display: inline-block;
+    text-align: center;
+}
 
-    .filasMenu {
-        border: 2px solid black;
-        background-color: lightcoral;
-    }
+.menu li a:hover {
+    background: #F0EB7F;
+}
 
-    .celdasMenu {
-        border: 2px solid black;
-        text-align: center;
-        vertical-align: middle;
-        width: 16.7%;
-    }
-
-    a {
-        color: white;
-        font-weight: bold;
-    }
-
-    a:hover {
-        color: red;
-    }
-
-    a:active {
-        color: blue;
-    }
+.logo {
+    position: absolute;
+    width: 10%;
+    height: 98%;
+    left: 30px;
+}
 </style>
