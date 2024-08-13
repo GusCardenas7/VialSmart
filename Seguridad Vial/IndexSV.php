@@ -115,7 +115,7 @@ function navigateSlider() {
       <!-- Lecciones -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-2">
         <div class="contaner">
-          <div class="card mt-5" style="width: 18rem">
+          <div class="card mt-5" style="width: 20rem; box-shadow: 0px 1px 10px 1px #000;">
             <a href="/">
               <div class="cover-small" style="background-image: url('../imagenes/leccion2.jpg');">
               </div>
@@ -130,7 +130,7 @@ function navigateSlider() {
       <!-- Juegos -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-2">
         <div class="container">
-          <div class="card mt-5" style="width: 18rem">
+          <div class="card mt-5" style="width: 20rem; box-shadow: 0px 1px 10px 1px #000;">
             <a href="/">
               <div class="cover-small" style="background-image: url('../imagenes/juegos2.jpg');">
               </div>
@@ -145,8 +145,8 @@ function navigateSlider() {
       <!-- Videos -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-2">
         <div class="container">
-          <div class="card mt-5" style="width: 18rem">
-            <a href="videos.php">
+          <div class="card mt-5" style="width: 20rem; box-shadow: 0px 1px 10px 1px #000;">
+            <a href="/">
               <div class="cover-small" style="background-image: url('../imagenes/video3.jpg');">
               </div>
             </a>
@@ -163,17 +163,16 @@ function navigateSlider() {
 
 <img class="decoracion-semaforos" src="../imagenes/semaforos.png" alt=""/> 
 <img class="decoracion-carro" src="../imagenes/coche.png" alt=""/> 
-<img class="decoracion-ni�os" src="../imagenes/grupo.png" alt=""/> 
-
-
-
-
+<img class="decoracion-ninos" src="../imagenes/grupo.png" alt=""/> 
 
 <footer>
-    <div class="contenedor" align="center">
-    <br>
-       <h2 class="titulo-seccion">VialSmart.com | Todos los derechos reservados | Pol&#237;tica de privacidad | T&#233;rminos y condiciones</h2>
-    </div>
+        <div class="links">
+            <a href="">Términos y condiciones</a>
+            <a href="">Política de privacidad</a>
+            <a href="../contacto_formulario.php">Contáctanos</a>
+        </div>
+        <span class="copyright">&copy; VialSmart 2024</span>
 </footer>
 
 </body>
+
