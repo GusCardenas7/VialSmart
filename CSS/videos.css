@@ -13,6 +13,7 @@ nav {
     padding: 5px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -20,9 +21,11 @@ nav ul {
     display: flex;
     justify-content: center;
 }
+
 nav ul li {
     margin: 0 15px;
 }
+
 nav ul li a {
     text-decoration: none;
     color: #fff;
@@ -31,14 +34,17 @@ nav ul li a {
     border-radius: 5px;
     transition: background 0.3s, color 0.3s;
 }
+
 nav ul li a:hover {
     background: #ffffffe2;
     color: #000000;
 }
+
 nav ul li a.active {
     background: #ffffff;
     color: #000000;
 }
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -47,6 +53,15 @@ nav ul li a.active {
     nav ul li {
         margin: 10px 0;
     }
+}
+
+.moduleTitle {
+    color: black;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Share Tech Mono', monospace;
 }
 
 .video-container {
@@ -159,25 +174,4 @@ footer .copyright::after {
     height: 30px;
     width: 0.1px;
     background-color: #b7b7b7;
-}
-
-.barraRoja {
-    background-color: red;
-    border: 0;
-    height: 5px;
-    position: relative;
-    left: 0;
-    top: 0;
-    width: 100%;
-    animation: animar_roja 2s ease-in;
-}
-
-@keyframes animar_roja {
-    from {
-        width: 0%;
-    }
-
-    to {
-        width: 100%;
-    }
 }
