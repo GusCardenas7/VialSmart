@@ -13,7 +13,7 @@
 <body>
 <!-- MENU -->
     <?php 
-        include '../funciones/menu.php'; 
+        include '../funciones/menu_sec.php'; 
     ?>
     <br><br><br>
 
@@ -75,6 +75,8 @@
 let Click = new Audio('../audios/click.wav');
 let Lose = new Audio('../audios/Lose.wav');
 let Win = new Audio('../audios/win.wav');
+let WinGame = new Audio('../audios/WinGame.wav');
+let LoseGame = new Audio('../audios/Lose2.wav');
 
 //en un arreglo se colocan las imágenes?
 let imagenes = []
@@ -188,12 +190,12 @@ function terminarJuego(){
 
 function revisarpuntaje(){
     if(aciertos >= 6){
-       Win.play();
+       WinGame.play();
        document.getElementById("PNP").className = "pasa";
        document.getElementById("PNP").innerHTML = "&#161;Has logrado aprobar&#33; 🤩";
        //aqui iria alguna función para desbloquear la siguiente función, ya que logro pasar
     }else{
-       Lose.play();
+       LoseGame.play();
        document.getElementById("PNP").className = "Nopasa";
        document.getElementById("PNP").innerHTML = "&#161;No has obtenido los puntos suficientes&#33; 😱";
     }

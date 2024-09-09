@@ -1,0 +1,218 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1036%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(198%2c 222%2c 226%2c 1)'%3e%3c/rect%3e%3cpath d='M-2.912242637348591 273.84269867546936L105.88823412889474 298.9612679400908 131.00680339351618 190.16079117384749 22.20632662727285 165.04222190922604z' fill='rgba(125%2c 125%2c 111%2c 0.13)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M280.4865690288274 371.7048259365525L349.8817112234937 386.455218758053 337.3097293584113 274.9873090553033z' fill='rgba(125%2c 125%2c 111%2c 0.13)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M-140.91 32.01 a169.32 169.32 0 1 0 338.64 0 a169.32 169.32 0 1 0 -338.64 0z' fill='rgba(125%2c 125%2c 111%2c 0.13)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1125.9680728124185 148.51922262642847L1220.9032044074663 112.0770399457352 1184.461021726773 17.1419083506874 1089.5258901317252 53.584091031380694z' fill='rgba(125%2c 125%2c 111%2c 0.13)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M905.67 63.75 a129.64 129.64 0 1 0 259.28 0 a129.64 129.64 0 1 0 -259.28 0z' fill='rgba(125%2c 125%2c 111%2c 0.13)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M547.65%2c317.258C587.414%2c315.401%2c626.697%2c300.804%2c646.817%2c266.456C667.136%2c231.768%2c660.925%2c190.111%2c643.287%2c153.986C622.633%2c111.684%2c594.724%2c63.596%2c547.65%2c63.348C500.364%2c63.098%2c472.943%2c111.483%2c450.249%2c152.968C428.807%2c192.164%2c408.245%2c238.103%2c431.029%2c276.534C453.535%2c314.496%2c503.566%2c319.317%2c547.65%2c317.258' fill='rgba(125%2c 125%2c 111%2c 0.13)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M1282.123057635354 541.663677401299L1341.6605590251193 475.54058325616523 1212.707167112536 419.2958782440842z' fill='rgba(125%2c 125%2c 111%2c 0.13)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M977.67 373.21 a113.93 113.93 0 1 0 227.86 0 a113.93 113.93 0 1 0 -227.86 0z' fill='rgba(125%2c 125%2c 111%2c 0.13)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M693.836%2c665.848C741.069%2c664.493%2c777.502%2c628.265%2c799.683%2c586.542C820.362%2c547.643%2c824.969%2c500.555%2c801.543%2c463.246C779.346%2c427.895%2c735.573%2c417.328%2c693.836%2c417.968C653.448%2c418.587%2c614.144%2c432.878%2c591.702%2c466.463C566.429%2c504.285%2c556.185%2c552.444%2c576.924%2c592.93C599.367%2c636.743%2c644.629%2c667.259%2c693.836%2c665.848' fill='rgba(125%2c 125%2c 111%2c 0.13)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M393.1 7.33 a134.88 134.88 0 1 0 269.76 0 a134.88 134.88 0 1 0 -269.76 0z' fill='rgba(125%2c 125%2c 111%2c 0.13)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M878.92 29.11 a164.05 164.05 0 1 0 328.1 0 a164.05 164.05 0 1 0 -328.1 0z' fill='rgba(125%2c 125%2c 111%2c 0.13)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1336.1671237608505 181.5176171570277L1325.378735630964 78.8729606156784 1233.522467219501 192.30600528691426z' fill='rgba(125%2c 125%2c 111%2c 0.13)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1015.313788270084 501.3218388833975L1110.792540731854 415.3523840223075 929.3443334089941 405.8430864216276z' fill='rgba(125%2c 125%2c 111%2c 0.13)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M199.579%2c430.726C256.179%2c431.415%2c314.862%2c414.044%2c343.966%2c365.496C373.765%2c315.789%2c364.933%2c253.587%2c335.809%2c203.482C306.847%2c153.657%2c257.158%2c114.655%2c199.579%2c117.094C145.132%2c119.4%2c108.782%2c166.789%2c81.972%2c214.234C55.735%2c260.665%2c35.7%2c315.189%2c61.158%2c362.052C87.51%2c410.561%2c144.378%2c430.054%2c199.579%2c430.726' fill='rgba(125%2c 125%2c 111%2c 0.13)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1236.19 500.3 a134.96 134.96 0 1 0 269.92 0 a134.96 134.96 0 1 0 -269.92 0z' fill='rgba(125%2c 125%2c 111%2c 0.13)' class='triangle-float2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1036'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section1 {
+    background-color: rgba(147, 189, 185, 65%);
+    padding: 10px 10px 10px 10px;
+    width: 500px;
+    border-radius: 8px;
+    margin-top: 150px;
+    z-index: 1;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+section {
+    width: 500px;
+    background-color: #000000;
+    border: 7px solid #749b97;
+    color: #000000;
+    padding: 7px;
+}
+
+
+h2 {
+    border-bottom: 1px solid #749b97;
+    text-align: center;
+    padding-bottom: 5px;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+#palabra {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.letra {
+    height: 50px;
+    width: 50px;
+    border: 2px solid #749b97;
+    text-align: center;
+    margin: 4px;
+    font-weight: 600;
+    font-size: 30px;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.pintar {
+    background-color: #84c46f;
+    ;
+}
+
+.pintarError {
+    background-color: #e37171;
+}
+
+h3 {
+    margin: 4px 0;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+    h3 span {
+        font-style: italic;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+button {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    background-color: #02bfa4;
+    border: 2px solid #02bfa4;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+    button:hover {
+        background-color: #02bfa4;
+    }
+
+.decoracion2 {
+    position: relative;
+    margin-top: -60%;
+    margin-left: -290px;
+    z-index: 2;
+}
+.decoracion3 {
+    z-index: 3;
+    position: absolute;
+    top: 22%;
+    right: 0%; 
+}
+.decoracion4 {
+    z-index: 4;
+    position: absolute;
+    bottom: 90%;
+    right: 0%;
+}
+/*.decoracion3 {
+    width:15%;
+    z-index: 3;
+    position: relative;
+    margin-top: -35%;
+    margin-left: 70%;
+} */
+/* FOOTER*/
+footer {
+    background-color: #000000;
+    color: #b7b7b7;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    font-weight: normal;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    height: 65px;
+    width: 100%;
+    text-align: center;
+}
+
+    footer .links {
+        display: flex;
+        gap: 30px;
+    }
+
+    footer a {
+        color: white;
+        text-decoration: none;
+        font-weight: normal;
+    }
+
+        footer a:hover {
+            text-decoration: underline;
+            color: white;
+        }
+
+        footer a:active {
+            color: white;
+        }
+
+    footer .copyright {
+        font-size: 13px;
+    }
+
+        footer .copyright::after {
+            content: '';
+            position: absolute;
+            right: 25px;
+            top: 10px;
+            height: 30px;
+            width: 0.1px;
+            background-color: #b7b7b7;
+        }
+
+/*Alerts*/
+.ganar {
+    width: 35%;
+    border: none;
+}
+
+.footer {
+    font-size: 19px;
+    color: rgb(29,29,29);
+    text-align: center;
+}
+
+.quitar {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.quitar2 {
+    text-decoration: none;
+    color: black;
+    font-size: 19px;
+    font-family: 'Share Tech Mono', monospace;
+    text-align: left;
+}
+
+.titulo {
+    color: #E1653E;
+}
+
+.perder {
+    width: 60%;
+}
+
+.titulo_ganar {
+    color: #7EC875;
+}
+
+
+
+

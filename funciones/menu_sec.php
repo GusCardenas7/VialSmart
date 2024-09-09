@@ -1,5 +1,5 @@
 <div class="menu">
-    <img class="logo" src="imagenes/logo.png" alt="" />
+    <img class="logo" src="../imagenes/logo.png" alt="" />
     <ul align="right">
         <li style="color:#6cda1a;"> <b>Bienvenid@ </b></li>
         <li> <b><a href="../Seguridad Vial/IndexSV.php">Inicio</a></b></li>

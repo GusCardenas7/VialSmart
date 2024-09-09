@@ -1,32 +1,27 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="style_memorama.css">
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/Juego2.css">
+    <!-- <script src="main.js"></script> -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <title> Minijuego Memoria</title>
+    <title> Memorama Lección 1.2 </title>
 
 </head>
 
 <body>
 
-    <!-- Menu -->
-    <div class="menu">
-        <a href="../../Index.php"><img class="casa" src="./imagenes/casa.png" alt="" /></a>
-        <a href="../../Index.php"><h2 class="nombre">PETSTORY</h2></a>
-        <ul align="right">
-            <li> <b><a href="../../Index.php">Pagina principal</a></b></li>
-            <li> <b><a href="../../capitulos.php">Capitulos</a></b></li>
-            <li> <b><a href="../../Cerrar_Sesion.php">Cerrar Sesi&#243;n</a></b></li>
-        </ul>
-    </div>
+    <!-- MENU -->
+    <?php 
+        include '../funciones/menu_sec.php'; 
+    ?>
     <br><br><br>
 
-    <h1> Juego Memorama</h1>
-    <h3 class="desc"> Encuentra todos los pares al hacer click sobre cada una de los recuadros <br> y al ganar desbloquea el capitulo 1 de la historia!</h3><br>
+    <!-- Juego -->
+    <h1 style="color:#000000;">🚥 Usuarios de la via 🚥</h1>
+    <h3 class="desc"> Encuentra todos los pares al hacer click sobre cada una de los recuadros.</h3><br>
     <main>
         <section class="section1">
             <table>
@@ -59,7 +54,7 @@
 
         </section>
         <section class="section2">
-
+            <div> <img class="sol" src="../imagenes/dom.png" alt="" > </div>
             <h2 id="aciertos" class="estadisticas">Aciertos = <span id="input2"></h2>
             <h2 id="t-restante" class="estadisticas">Tiempo = <span id="input3"></h2>
             <h2 id="movimientos" class="estadisticas">Movimientos = <span id="input"></h2>
@@ -67,17 +62,16 @@
         </section>
 
     </main>
-    <div id="huella" class="decoracion"> <img src="./imagenes/huellas.png" alt=""> </div>
-    <div id="mascota" class="decoracion2"> <img src="./imagenes/mascota.png" alt=""> </div>
-    <div id="patas" class="decoracion3"> <img src="./imagenes/patas.png" alt=""> </div>
-
-    <div class="opciones" align="center">
-        <br><a href="../../capitulos.php"><b>Listado de <br> capitulos </b></a><br><br>
-        <a href="index_memorama.php"> <b> Reiniciar <br> Juego </b> </a><br>
-
-        <img class="volver" src="./imagenes/volver.png" alt="">
-        <img class="deshacer" src="./imagenes/deshacer.png" alt="">
-    </div>
+    <div id="mascota" class="decoracion2"> <img src="../imagenes/calle.png" alt=""> </div>
+     <!-- footer -->
+<footer>
+        <div class="links">
+            <a href="">Términos y condiciones</a>
+            <a href="">Política de privacidad</a>
+            <a href="../contacto_formulario.php">Contáctanos</a>
+        </div>
+        <span class="copyright">&copy; VialSmart 2024</span>
+</footer>
 
 </body>
 
@@ -97,11 +91,11 @@ let temporizador = false;
 let timer = 30;
 let tiempoAtras = null;
 
-let winAudio = new Audio('./sonidos/WinGame.wav');
-let LoseAudio = new Audio('./sonidos/Lose.wav');
-let CorrectAudio = new Audio('./sonidos/right.wav');
-let IncorrectAudio = new Audio('./sonidos/TimeOut.wav');
-let ClickAudio = new Audio('./sonidos/Click.wav');
+let winAudio = new Audio('../audios/WinGame.wav');
+let LoseAudio = new Audio('../audios/Lose2.wav');
+let CorrectAudio = new Audio('../audios/right.wav');
+let IncorrectAudio = new Audio('../audios/TimeOut.wav');
+let ClickAudio = new Audio('../audios/Click2.wav');
 
 
 
@@ -126,9 +120,9 @@ function Cronometro() {
             LoseAudio.play();
 
             Swal.fire({
-                title: '<span class="titulo"> &iexcl;Se acabo el tiempo!</span><br><span class="footer">Vuelve  a jugar para lograr desbloquear el capitulo 1 de la historia.</span>',
+                title: '<span class="titulo"> &iexcl;Se acabo el tiempo!</span><br><span class="footer">Vuelve  a jugar para lograr desbloquear la siguiente lecci&#243;n.</span>',
                 padding: '3em',
-                html: '<img class="perder" src="./imagenes/gato_triste.gif" alt="" >',
+                html: '<img class="perder" src="../imagenes/gato_triste.gif" alt="" >',
                 color: '#000000',
                 background: '#ffffff',
                 backdrop: `rgba(0,0,123,0.4)`,
@@ -138,9 +132,9 @@ function Cronometro() {
                 stopKeydownPropagation: false,
                 showCancelButton: true,
                 confirmButtonColor: '#E1A293',
-                cancelButtonText: '<a class="quitar" href="index_memorama.php">Volver a jugar</a>',
+                cancelButtonText: '<a class="quitar" href="Juego2.php">Volver a jugar</a>',
                 cancelButtonColor: '#C1BDBC',
-                confirmButtonText: '<a class="quitar" href="../../Index.php">Ir a Inicio</a>'
+                confirmButtonText: '<a class="quitar" href="IndexSV.php">P&#225;gina principal</a>'
             })
            //-------
 
@@ -155,7 +149,7 @@ function bloquearTarjetas() {
     for (let i = 0; i <= 15; i++) {
         let tarjetaBloqueada = document.getElementById(i);
         //tarjetaBloqueada.innerHTML = numeros[i];
-        tarjetaBloqueada.innerHTML = `<img src="./imagenes/${numeros[i]}.png" alt="">`;
+        tarjetaBloqueada.innerHTML = `<img src="../imagenes/Puzzle/Leccion1/${numeros[i]}.png" alt="">`;
         tarjetaBloqueada.disabled = true;
     }
 
@@ -176,7 +170,7 @@ function destapar(id) {
         Tarjeta1 = document.getElementById(id);
         primerResultado = numeros[id];
         //Tarjeta1.innerHTML = primerResultado;
-        Tarjeta1.innerHTML = `<img src="./imagenes/${primerResultado}.png" alt="">`;
+        Tarjeta1.innerHTML = `<img src="../imagenes/Puzzle/Leccion1/${primerResultado}.png" alt="">`;
         ClickAudio.play();
 
         Tarjeta1.disabled = true;
@@ -185,7 +179,7 @@ function destapar(id) {
         Tarjeta2 = document.getElementById(id);
         segundoResultado = numeros[id];
         //Tarjeta2.innerHTML = segundoResultado;
-        Tarjeta2.innerHTML = `<img src="./imagenes/${segundoResultado}.png" alt="">`;
+        Tarjeta2.innerHTML = `<img src="../imagenes/Puzzle/Leccion1/${segundoResultado}.png" alt="">`;
 
         Tarjeta2.disabled = true;
         
@@ -206,35 +200,23 @@ function destapar(id) {
           
                 winAudio.play();
                 Swal.fire({
-                    title: '<span class="titulo_ganar">&iexcl;Lo lograste!</span><br><span class="footer">Has completado este minijuego y has desbloqueado el capitulo 1.</span>',
-                    padding: '3em',
-                    html: '<img class="ganar" src="./imagenes/perrito_bailando.gif" alt="" >',
-                    color: '#000000',
-                    backdrop: `rgba(0,0,123,0.4)`,
-                    allowOutsideClick: false,
-                    allowEscapeKey: false,
-                    allowEnterKey: false,
-                    stopKeydownPropagation: false,
-                    showCancelButton: true,
-                    confirmButtonColor: '#6294D5',
-                    cancelButtonText: '<a class="quitar" href="index_memorama.php">Volver a jugar</a>',
-                    cancelButtonColor: '#F3F4AC',
-                    confirmButtonText: '<a class="quitar2" href="../../capitulos.php">Capitulos</a>'
-                })
+                title: '&iexcl;Lo lograste!<br><span class="footer">Has completado este juego y has desbloqueado la siguiente lecci&#243;n.</span>',
+                padding: '1em',
+                html: '<img class="ganar" src="../imagenes/perrito_bailando.gif" alt="" >',
+                color: '#000000',
+                backdrop: `rgba(0,0,123,0.4)`,
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                allowEnterKey: false,
+                stopKeydownPropagation: false,
+                showCancelButton: false,
+                confirmButtonColor: '#6294D5',
+                cancelButtonText: '<a class="quitar" href="Juego2.php">Volver a jugar</a>',
+                cancelButtonColor: '#F3F4AC',
+                confirmButtonText: '<a class="quitar" href="IndexSV.php"><b>Siguiente</center></b>'
+            })
            //---BD----
-                <?php   
-                   require "../../principal/capitulos/conecta.php";
-                   $con = conecta();
-
-                   if($minijuego2 == 0){
-	                 $sql = "UPDATE jugadores
-                     SET minijuego2 = 1, capitulo1 = 1
-                     WHERE id =$id ";
-                     $res = $con->query($sql);
-                   }
-                
-                ?>
-
+          
             }
 
         } else {

@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Puzzle Lecci&#243;n 7</title>
+    <title>Puzzle Lecci&#243;n 3.1</title>
     <link rel="stylesheet" href="../CSS/puzzle.css"> 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
@@ -12,7 +12,7 @@
 
  <!-- MENU -->
     <?php 
-        include '../funciones/menu.php'; 
+        include '../funciones/menu_sec.php'; 
     ?>
     <br><br><br>
 
@@ -84,9 +84,9 @@
  <!-- footer -->
 <footer>
         <div class="links">
-            <a href="">Términos y condiciones</a>
-            <a href="">Política de privacidad</a>
-            <a href="../contacto_formulario.php">Contáctanos</a>
+            <a href="">T&#233;rminos y condiciones</a>
+            <a href="">Pol&#237;tica de privacidad</a>
+            <a href="../contacto_formulario.php">Cont&#225;ctanos</a>
         </div>
         <span class="copyright">&copy; VialSmart 2024</span>
 </footer>
