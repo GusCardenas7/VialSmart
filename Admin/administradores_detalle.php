@@ -1,26 +1,4 @@
 <?php
-    include 'funciones/comprobarSesion.php';
-    include 'funciones/menu.php';
-    require "funciones/conecta.php";
-    $con = conecta();
-
-    //Recibe variables
-    $id = $_REQUEST['id'];
-
-    $sql = "SELECT * FROM administradores WHERE id = $id";
- 
-    $res = $con->query($sql);
-
-    $row = $res->fetch_array();
-    $foto = $row["archivo"];
-    $nombre = $row["nombre"];
-    $apellidos = $row["apellidos"];
-    $correo = $row["correo"];
-    $rol = $row["rol"];
-    $rol = ($rol == 1) ? "Gerente" : "Ejecutivo";
-    $status = $row["status"];
-    $status = ($status == 1) ? "Activo" : "Inactivo";
-
     echo "<div class='link divALaIzquierda'><a href=\"administradores_lista.php\">Regresar al listado</a></div><br>";
     echo "<div align='center' style='font-weight: bold; font-size: 40px;'>Detalles del Administrador:</div><br>";
     echo "<HR noshade align='center' style='margin-bottom: 30;'><br><br><br>";
@@ -28,20 +6,20 @@
     echo "<div class='card-container'>
             <div class='upper-container'>
                 <div class='image-container'>
-                <img src='imagenes/fotosAdministradores/$foto'/>
+                <img src='imagenes/fotosAdministradores/fc636e3129563f4e81b4ab885ca5a78b.jpg'/>
                 </div>
             </div>
             <div class='lower-container'>
                 <div>
-                    <h3>$nombre $apellidos</h3>
+                    <h3>Gustavo Cardenas</h3>
                     <h4 style='margin-right: 10px;'>Correo:</h4>
-                    <p>$correo</p>
+                    <p>guscardenas63@gmail.com</p>
                     <br>
-                    <h4 style='margin-right: 33px;'>Rol:</h4>
-                    <p>$rol</p>
+                    <h4 style='margin-right: 33px;'>Nivel:</h4>
+                    <p>7</p>
                     <br>
                     <h4 style='margin-right: 15px;'>Status:</h4>
-                    <p>$status</p>
+                    <p>Activo</p>
                 </div>
             </div>
         </div>";

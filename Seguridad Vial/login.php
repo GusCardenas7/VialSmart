@@ -71,12 +71,13 @@
                 <input type='password' name='pass' id="pass" placeholder='Contraseña'>
             </div>
             <div class='row button'>
-                <input onclick='return valida();' type='submit' value='Login'>
+                <input onclick='return valida();' type='submit' value='Iniciar sesión'>
             </div>
             </form>
         </div>
         <div id='mensaje'></div>
     </div>
+    <div class="linkToSignUp">¿Todavía no tienes una cuenta? <a href="signup.php">Regístrate</a></div>
     <div class='link divALaIzquierda'><a href="IndexSV.php"><img src="../imagenes/regresar.png" width="90px" height="90px"></a></div>
 </body>
 </html>

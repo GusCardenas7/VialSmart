@@ -1,8 +1,22 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 * {
     box-sizing: border-box;
 }
+
 body {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1029%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(156%2c 208%2c 131%2c 1)'%3e%3c/rect%3e%3cpath d='M294.87 425.06 a181.42 181.42 0 1 0 362.84 0 a181.42 181.42 0 1 0 -362.84 0z' fill='rgba(80%2c 151%2c 87%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M113.53 98.79 a100.16 100.16 0 1 0 200.32 0 a100.16 100.16 0 1 0 -200.32 0z' fill='rgba(80%2c 151%2c 87%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M122.341%2c491.179C157.966%2c490.108%2c196.623%2c485.859%2c215.566%2c455.669C235.448%2c423.983%2c230.391%2c382.612%2c210.234%2c351.1C191.549%2c321.889%2c157.015%2c309.52%2c122.341%2c309.929C88.477%2c310.328%2c57.052%2c325.156%2c37.965%2c353.131C15.792%2c385.63%2c-1.645%2c428.015%2c18.872%2c461.583C38.923%2c494.389%2c83.91%2c492.334%2c122.341%2c491.179' fill='rgba(80%2c 151%2c 87%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1363.6061287058105 410.37354174870694L1469.0753540392852 419.6009033162471 1478.3027156068254 314.13167798277243 1372.8334902733507 304.90431641523224z' fill='rgba(80%2c 151%2c 87%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1037.16 171.34 a158.43 158.43 0 1 0 316.86 0 a158.43 158.43 0 1 0 -316.86 0z' fill='rgba(80%2c 151%2c 87%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M542.5132165867051 113.50373937698447L467.0549702465395 158.84362798367053 512.3948588532255 234.3018743238361 587.8531051933911 188.96198571715004z' fill='rgba(80%2c 151%2c 87%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1016.276%2c235.59C1068.877%2c237.14%2c1121.283%2c217.87%2c1149.961%2c173.747C1181.319%2c125.5%2c1191.236%2c61.963%2c1160.913%2c13.059C1131.786%2c-33.917%2c1071.482%2c-44.573%2c1016.276%2c-41.857C966.455%2c-39.406%2c919.378%2c-16.978%2c894.352%2c26.171C869.243%2c69.464%2c870.397%2c122.999%2c895.578%2c166.25C920.6%2c209.228%2c966.567%2c234.125%2c1016.276%2c235.59' fill='rgba(80%2c 151%2c 87%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M386.246%2c332.035C418.351%2c330.654%2c438.743%2c301.886%2c455.209%2c274.29C472.277%2c245.687%2c489.878%2c213.028%2c475.058%2c183.198C459.032%2c150.94%2c422.171%2c132.859%2c386.246%2c135.477C353.874%2c137.836%2c333.014%2c166.268%2c317.343%2c194.692C302.383%2c221.826%2c292.287%2c253.004%2c306.181%2c280.699C321.418%2c311.07%2c352.298%2c333.495%2c386.246%2c332.035' fill='rgba(80%2c 151%2c 87%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1029'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.content {
+    flex: 1;
 }
 
 h1 {
@@ -176,45 +190,39 @@ footer {
     align-items: center;
     font-size: 15px;
     font-weight: normal;
-    position: absolute;
-    top: 800px;
-    left:0%;
-    height: 50px;
-    width: 100%;
-    text-align: center;
+    position: relative;
 }
 
-    footer .links {
-        display: flex;
-        gap: 30px;
-    }
+footer .links {
+    display: flex;
+    gap: 30px;
+}
 
-    footer a {
-        color: white;
-        text-decoration: none;
-        font-weight: normal;
-    }
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+}
 
-        footer a:hover {
-            text-decoration: underline;
-            color: white;
-        }
+footer a:hover {
+    text-decoration: underline;
+    color: white;
+}
 
-        footer a:active {
-            color: white;
-        }
+footer a:active {
+    color: white;
+}
 
-    footer .copyright {
-        font-size: 13px;
-    }
+footer .copyright {
+    font-size: 13px;
+}
 
-        footer .copyright::after {
-            content: '';
-            position: absolute;
-            right: 25px;
-            top: 10px;
-            height: 30px;
-            width: 0.1px;
-            background-color: #b7b7b7;
-        }
-
+footer .copyright::after {
+    content: '';
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    height: 30px;
+    width: 0.1px;
+    background-color: #b7b7b7;
+}

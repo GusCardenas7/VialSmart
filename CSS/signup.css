@@ -15,7 +15,7 @@
 .logo {
     width: 202px;
     height: 100px;
-    position: absolute;
+    position: relative;
     top: 12%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -35,7 +35,7 @@ body {
     background: #FFF;
     border-radius: 6px;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%,-50%);
     box-shadow: 0px 1px 10px 1px #000;
@@ -128,6 +128,29 @@ form .button input:hover{
     border: 1px solid #00ac00;
 }
 
+form .button input:focus {
+    outline: none;
+    border-color: initial;
+    box-shadow: none; 
+}
+
+.linkToLogin {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+    font-family: 'Poppins',sans-serif;
+}
+
+.linkToLogin a {
+    color: black;
+}
+
 .divALaIzquierda {
-    margin: 32% 0px 0px 11%;
+    margin: 34% 0px 0px 11%;
 }
