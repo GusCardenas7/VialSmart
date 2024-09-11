@@ -5,7 +5,7 @@
         <li> <b><a href="../Seguridad Vial/IndexSV.php">Inicio</a></b></li>
         <li> <b><a href="/">Lecciones</a></b></li>
         <li> <b><a href="../Seguridad Vial/videos.php">Videos</a></b></li>
-        <li> <b><a href="/">Juegos</a></b></li>
+        <li> <b><a href="../Seguridad Vial/Juegos.php">Juegos</a></b></li>
         <li> <b><a href="/">Logros</a></b></li>
         <li> <b><a href="/">Perfil</a></b></li>
 
