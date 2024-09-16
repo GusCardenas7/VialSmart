@@ -131,7 +131,7 @@ function navigateSlider() {
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-2">
         <div class="container">
           <div class="card mt-5" style="width: 20rem; box-shadow: 0px 1px 10px 1px #000;">
-            <a href="../Seguridad Vial/Juego1.php">
+            <a href="../Seguridad Vial/Juegos.php">
               <div class="cover-small" style="background-image: url('../imagenes/juegos2.jpg');">
               </div>
             </a>

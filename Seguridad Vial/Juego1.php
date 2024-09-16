@@ -1,209 +1,99 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="../CSS/juego1.css">
-
-   
-    <title>Quiz Introduccion a la seguridad vial</title>
+    <meta charset="utf-8" />
+    <title>Puzzle Lecci&#243;n 1.1</title>
+    <link rel="stylesheet" href="../CSS/puzzle.css"> 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
-<!-- MENU -->
+
+ <!-- MENU -->
     <?php 
-        include '../funciones/menu.php'; 
+        include '../funciones/menu_sec.php'; 
     ?>
     <br><br><br>
-<div class="content">
-  <!-- Juego quizz Inicio-->
-  <h1>¡Pon a prueba tus conocimientos!</h1>
-  <div id="pantalla-inicial">
-    <p class="leccion"> Modulo 1. Introducci&#243;n a la seguridad vial</p>
-    
-    <center><img src="../imagenes/InicioJ1.jpg" alt="" class="InicioJ1"></center>
-    <br> <button class="btn" onclick="comenzarJuego()"> COMENZAR A JUGAR</button> 
-  </div>
-  <!-- Pantalla Juego -->
-  <div class="´pantalla-juego" id="pantalla-juego">
-    <p class="Preguntas" id="pregunta"> <b>Pregunta</b> </p>
-    <center><img src="../imagenes/J1seguridad.png" alt="" id="J1seguridad"></center>
-    <div class="opciones"> 
-      <div class="opcion" id="op0" onclick="comprobarRespuesta(0)"> 
-        <div class="letra" id="l0">A</div>
-        <div class="nombre font" id="n0">OPCION A</div>
-      </div>
-      <div class="opcion" id="op1" onclick="comprobarRespuesta(1)"> 
-        <div class="letra" id="l1">B</div>
-        <div class="nombre font" id="n1">OPCION B</div>
-      </div>
-      <div class="opcion" id="op2" onclick="comprobarRespuesta(2)"> 
-        <div class="letra" id="l2">C</div>
-        <div class="nombre font" id="n2">OPCION C</div>
-      </div>
-      <div class="opcion" id="op3" onclick="comprobarRespuesta(3)"> 
-        <div class="letra" id="l3">D</div>
-        <div class="nombre font" id="n3">OPCION D</div>
-      </div>
-    </div>
-  </div>
-  <!-- Pantalla final -->
-  <div id="pantalla-final">
-    <h2> CORRECTAS: <span id="numCorrectas" style="color:#fffb9d;">3</span></h2>
-    <h2>INCORRECTAS: <span id="numIncorrectas" style="color:#f0e0e0;">2</span></h2>
-    <p id="PNP"></p>
-    <button class="btn" onclick="volverAlInicio()"> VOLVER AL INICIO</button>
-  </div>
+
+<!-- Juego Puzzle Inicio-->
+
+<!-- <h1 align="center">Rompecabezas</h1> -->
+
+ <main> 
+ <section class="section1">
+<table>
+   <tr>
+       <td><img id="0" src="../imagenes/memoramas/Leccion1/0.png" onclick="seleccionar(0)"></td>
+       <td><img id="1" src="../imagenes/memoramas/Leccion1/1.png" onclick="seleccionar(1)"></td>
+       <td><img id="2" src="../imagenes/memoramas/Leccion1/2.png" onclick="seleccionar(2)"></td>
+       <td><img id="3" src="../imagenes/memoramas/Leccion1/3.png" onclick="seleccionar(3)"></td>
+       <td><img id="4" src="../imagenes/memoramas/Leccion1/4.png" onclick="seleccionar(4)"></td>
+   </tr
+   <tr>
+       <td><img id="5" src="../imagenes/memoramas/Leccion1/5.png" onclick="seleccionar(5)"></td>
+       <td><img id="6" src="../imagenes/memoramas/Leccion1/6.png" onclick="seleccionar(6)"></td>
+       <td><img id="7" src="../imagenes/memoramas/Leccion1/7.png" onclick="seleccionar(7)"></td>
+       <td><img id="8" src="../imagenes/memoramas/Leccion1/8.png" onclick="seleccionar(8)"></td>
+       <td><img id="9" src="../imagenes/memoramas/Leccion1/9.png" onclick="seleccionar(9)"></td>
+   </tr>
+   <tr>
+       <td><img id="10" src="../imagenes/memoramas/Leccion1/10.png" onclick="seleccionar(10)"></td>
+       <td><img id="11" src="../imagenes/memoramas/Leccion1/11.png" onclick="seleccionar(11)"></td>
+       <td><img id="12" src="../imagenes/memoramas/Leccion1/12.png" onclick="seleccionar(12)"></td>
+       <td><img id="13" src="../imagenes/memoramas/Leccion1/13.png" onclick="seleccionar(13)"></td>
+       <td><img id="14" src="../imagenes/memoramas/Leccion1/14.png" onclick="seleccionar(14)"></td>
+   </tr>
+   <tr>
+       <td><img id="15" src="../imagenes/memoramas/Leccion1/15.png" onclick="seleccionar(15)"></td>
+       <td><img id="16" src="../imagenes/memoramas/Leccion1/16.png" onclick="seleccionar(16)"></td>
+       <td><img id="17" src="../imagenes/memoramas/Leccion1/17.png" onclick="seleccionar(17)"></td>
+       <td><img id="18" src="../imagenes/memoramas/Leccion1/18.png" onclick="seleccionar(18)"></td>
+       <td><img id="19" src="../imagenes/memoramas/Leccion1/19.png" onclick="seleccionar(19)"></td>
+   </tr>
+   <tr>
+       <td><img id="20" src="../imagenes/memoramas/Leccion1/20.png" onclick="seleccionar(20)"></td>
+       <td><img id="21" src="../imagenes/memoramas/Leccion1/21.png" onclick="seleccionar(21)"></td>
+       <td><img id="22" src="../imagenes/memoramas/Leccion1/22.png" onclick="seleccionar(22)"></td>
+       <td><img id="23" src="../imagenes/memoramas/Leccion1/23.png" onclick="seleccionar(23)"></td>
+       <td><img id="24" src="../imagenes/memoramas/Leccion1/24.png" onclick="seleccionar(24)"></td>
+   </tr
+</table>
+</section>
+<!--Como Jugar-->
+ <div class="jugar">
+   <div> <img class="pregunta" src="../imagenes/pregunta.png" alt="" > </div>
+   <h2 class="recuadro">&iquest;Como Jugar?</h2>
+   <h3 class="descripcion">Intercambia cada pieza de lugar hasta obtener la im&aacute;gen correcta.</h3>
+ </div>
+<!-- Imagen Correcta -->
+ <div class="imagen_correcta">
+   
+   <div> <img class="fondo" src="../imagenes/memoramas/Leccion1/SV_memorama.jfif" alt="" > </div>
+ </div>
 </div>
-<!-- footer -->
+<!-- Tiempo -->
+<section class="section2" align="center">
+    <div> <img class="sol" src="../imagenes/dom.png" alt="" > </div>
+    <h2 id="t-restante" class="estadisticas">Tiempo = <br><span id="input3"></h2>
+</section>
+<!-- Rompecabezas -->
+<div class="mano"> <img class="rompecabezas" src="../imagenes/rompecabezas.png" alt="" > </div>
+
+ </main>
+ <!-- footer -->
 <footer>
         <div class="links">
-            <a href="">Términos y condiciones</a>
-            <a href="">Política de privacidad</a>
-            <a href="../contacto_formulario.php">Contáctanos</a>
+            <a href="">T&#233;rminos y condiciones</a>
+            <a href="">Pol&#237;tica de privacidad</a>
+            <a href="../contacto_formulario.php">Cont&#225;ctanos</a>
         </div>
         <span class="copyright">&copy; VialSmart 2024</span>
 </footer>
 
+   <script type="text/javascript" src="../JS/puzzle.js"></script> 
 
 </body>
 
-<script>
+</html>
 
-//Audios
-let Click = new Audio('../audios/click.wav');
-let Lose = new Audio('../audios/Lose.wav');
-let Win = new Audio('../audios/win.wav');
-
-//en un arreglo se colocan las imágenes?
-let imagenes = []
-
-//en un arreglo se colocan las preguntas
-let preguntas = [];
-
-preguntas.push("&#191;Cu&#225;l de los siguientes S&#237; es un objetivo de la seguridad v&#237;al?");
-preguntas.push("&#191;Cu&#225;l de las siguientes opciones NO deben de hacer los peatones?");
-preguntas.push("Es recomendable que los ciclistas vayan por...");
-preguntas.push("&#191;Cu&#225;les son los elementos de la v&#237;a p&#250;blica?");
-preguntas.push("&#191;Qui&#233;nes deben de usar la acera?");
-preguntas.push("Las líneas blancas que se encuentran marcadas en las calles o avenidas son:");
-preguntas.push("¿Cuál elemento víal nos indican cuándo cruzar o parar?");
-preguntas.push("Cuando vamos caminando por la calle somos...");
-preguntas.push("¿Qué NO se debe hacer cuando somos pasajeros?");
-preguntas.push("La seguridad víal es el conjunto de reglas y prácticas que nos ayudan cuando usamos...");
-
-//arreglo que guarda la opción correcta
-let correcta = [0,3,0,3,1,2,0,1,2,3];
-
-//arreglo para opciones a mostrar 
-let opciones = [];
-
-//se carga en el arreglo opciones a mostrar en cada jugada
-opciones.push(["Prevenir accidentes", "Promover la venta de vehiculos", "Fomentar las carreras de vehiculos", "Aumentar la congesti&#243;n vehicular"]);
-opciones.push(["Caminar por la acera", "Estar atentos", "Cruzar por los pasos peatonales", "Distraerse con el celular"]);
-opciones.push(["ciclov&#237;as","aceras", "calles", "autopistas"]);
-opciones.push(["Señales de tr&#225;nsito", "Bancos y papeleras", "Sem&#225;foros", "Todos los anteriores"]);
-opciones.push(["Bicicletas", "Peatones", "Camiones", "Autos"]);
-opciones.push(["zonas de estacionamiento", "límites de velocidad", "cruces peatonales", "pinturas"]);
-opciones.push(["Semáforos", "Nuestra mamá", "Ciclovías", "Camiones"]);
-opciones.push(["conductores", "peatones", "ciclistas", "pasajeros"]);
-opciones.push(["Usar el cinturón de seguridad", "Sentarse correctamente", "Distraer al conductor", "Todas las anteriores"]);
-opciones.push(["calles y carreteras", "vehículos", "bicicletas o patinetas", "Todas las anteriores"]);
-
-//variable que guarda la posición actual
-let posicion = 0;
-let aciertos = 0;
-function comenzarJuego(){
-    Click.play();
-  //variable que guarda la cantidad acertadas hasta el momento
-    posicion = 0;
-    aciertos = 0;
-    //se activan las pantallas necesarias
-    document.getElementById("pantalla-inicial").style.display = "none"
-    document.getElementById("pantalla-juego").style.display = "block"
-    cargarPregunta();
-}
-function cargarPregunta(){
-    if (preguntas.length <= posicion){
-        terminarJuego();
-    }
-    else{
-       //limpiamos las clases que se asignaron
-       limpiarOpciones();
-       document.getElementById("pregunta").innerHTML = preguntas[posicion];
-       document.getElementById("n0").innerHTML = opciones[posicion][0];
-       document.getElementById("n1").innerHTML = opciones[posicion][1];
-       document.getElementById("n2").innerHTML = opciones[posicion][2];
-       document.getElementById("n3").innerHTML = opciones[posicion][3];
-    }
-}
-
-function limpiarOpciones(){
-       document.getElementById("n0").className="nombre font";
-       document.getElementById("n1").className="nombre font";
-       document.getElementById("n2").className="nombre font";
-       document.getElementById("n3").className="nombre font";
-
-       document.getElementById("l0").className="letra";
-       document.getElementById("l1").className="letra";
-       document.getElementById("l2").className="letra";
-       document.getElementById("l3").className="letra";
-}
-
-function comprobarRespuesta(opcionElegida){
-    if(opcionElegida==correcta[posicion]){ //si acerto
-         Win.play();
-        //se agregan las clases para colocar el color verde del css
-        document.getElementById("n"+opcionElegida).className = "nombre nombreAcertada";
-        document.getElementById("l"+opcionElegida).className = "letra letraAcertada";
-        aciertos++;
-    }
-    else{ // si no acerto
-        Lose.play();
-        //se agrega el css de incorrectas
-        document.getElementById("n"+opcionElegida).className = "nombre nombreIncorrecta";
-        document.getElementById("l"+opcionElegida).className = "letra letraIncorrecta"; 
-        
-        //opcion correcta
-        document.getElementById("n"+correcta[posicion]).className = "nombre nombreAcertada"; 
-        document.getElementById("l"+correcta[posicion]).className = "letra letraAcertada"; 
-    }   
-    posicion++;
-    //damos 1 segundo para pasar a la siguiente pregunta.
-    setTimeout(cargarPregunta,1000);
-}
-
-function terminarJuego(){
-    //se activa la página de final de Juego
-    document.getElementById("pantalla-juego").style.display = "none";
-    document.getElementById("pantalla-final").style.display = "block";
-
-    //se agregan los resultados
-    document.getElementById("numCorrectas").innerHTML = aciertos;
-    document.getElementById("numIncorrectas").innerHTML = preguntas.length - aciertos;
-
-    revisarpuntaje();
-}
-
-function revisarpuntaje(){
-    if(aciertos >= 6){
-       Win.play();
-       document.getElementById("PNP").className = "pasa";
-       document.getElementById("PNP").innerHTML = "&#161;Has logrado aprobar&#33; 🤩";
-       //aqui iria alguna función para desbloquear la siguiente función, ya que logro pasar
-    }else{
-       Lose.play();
-       document.getElementById("PNP").className = "Nopasa";
-       document.getElementById("PNP").innerHTML = "&#161;No has obtenido los puntos suficientes&#33; 😱";
-    }
-}
-
-function volverAlInicio(){
-    Click.play();
-    document.getElementById("pantalla-final").style.display = "none";
-    document.getElementById("pantalla-inicial").style.display = "block";
-    document.getElementById("pantalla-juego").style.display = "none";  
-}
-
-</script>

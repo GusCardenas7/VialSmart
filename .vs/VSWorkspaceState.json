@@ -1,11 +1,14 @@
 {
   "ExpandedNodes": [
     "",
+    "\\audios",
     "\\CSS",
     "\\funciones",
+    "\\imagenes",
+    "\\JavaScript",
     "\\JS",
     "\\Seguridad Vial"
   ],
-  "SelectedNode": "\\JS\\JSJuego1.js",
+  "SelectedNode": "\\funciones\\menu_sec.php",
   "PreviewInSolutionExplorer": false
 }

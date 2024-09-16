@@ -1,11 +1,11 @@
 <div class="menu">
-    <img class="logo" src="imagenes/logo.png" alt="" />
+    <img class="logo" src="../imagenes/logo.png" alt="" />
     <ul align="right">
         <li style="color:#6cda1a;"> <b>Bienvenid@ </b></li>
         <li> <b><a href="../Seguridad Vial/IndexSV.php">Inicio</a></b></li>
         <li> <b><a href="/">Lecciones</a></b></li>
         <li> <b><a href="../Seguridad Vial/videos.php">Videos</a></b></li>
-        <li> <b><a href="/">Juegos</a></b></li>
+        <li> <b><a href="../Seguridad Vial/Juegos.php">Juegos</a></b></li>
         <li> <b><a href="/">Logros</a></b></li>
         <li> <b><a href="/">Perfil</a></b></li>
 
