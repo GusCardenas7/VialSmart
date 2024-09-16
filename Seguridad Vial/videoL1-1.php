@@ -9,17 +9,19 @@
         include '../funciones/menu.php'; 
     ?>
     <br><br><br><br><br>
-    <div class="moduleTitle scale-up-top">Lección 1.1: ¿Qué es la seguridad vial?</div><br>
-    <div class="video-container scale-up-bottom">
-        <div id="central-video-title" class="video-title">Video 1.1: ¿Qué es la seguridad vial?</div>
-        <video id="central-video" controls poster="../imagenes/miniaturas/1.1 Que es la seguridad vial.jpg">
-            <source id="central-video-source" src="../Videos/1.1 Que es la seguridad vial.mp4" type="video/mp4">
-            Tu navegador no soporta la reproducción de videos.
-        </video>
-    </div>
-    <div class="arrowsContainer">
-        <div><a href="leccion1-1.php"><img src="../imagenes/regresar.png" width="90px" height="90px"></a></div>
-        <div><a href="Juego1.php"><img src="../imagenes/avanzar.png" width="90px" height="90px"></a></div>
+    <div class="content">
+        <div class="moduleTitle scale-up-top">Lección 1.1: ¿Qué es la seguridad vial?</div><br>
+        <div class="video-container scale-up-bottom">
+            <div id="central-video-title" class="video-title">Video 1.1: ¿Qué es la seguridad vial?</div>
+            <video id="central-video" controls poster="../imagenes/miniaturas/1.1 Que es la seguridad vial.jpg">
+                <source id="central-video-source" src="../Videos/1.1 Que es la seguridad vial.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </div>
+        <div class="arrowsContainer">
+            <div><a href="leccion1-1.php"><img src="../imagenes/regresar.png" width="90px" height="90px"></a></div>
+            <div><a href="Juego1.php"><img src="../imagenes/avanzar.png" width="90px" height="90px"></a></div>
+        </div>
     </div>
     <footer>
         <div class="links">

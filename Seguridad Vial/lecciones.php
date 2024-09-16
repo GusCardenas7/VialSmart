@@ -21,7 +21,7 @@
             <li><a id="a-module8" onclick="hideModules(8)">Módulo 8</a></li>
         </ul>
     </nav><br>
-    <div id="module1" class="module">
+    <div id="module1" class="module content">
         <div class="moduleTitle tracking-in-expand-forward-top">Módulo 1: Introducción a la Seguridad Vial</div><br>
         <div id="lessons" class="lessons">
             <div id="lesson1" class="lesson blur-in-expand" onclick="goToLesson(1,1)">
@@ -38,7 +38,7 @@
             </div>
         </div>
     </div>
-    <div id="module2" class="module" hidden>
+    <div id="module2" class="module content" hidden>
         <div class="moduleTitle">Módulo 1: Introducción a la Seguridad Vial</div><br>
         <div id="lessons" class="lessons">
             <div id="lesson1" class="lesson">
@@ -55,7 +55,7 @@
             </div>
         </div>
     </div>
-    <div id="module3" class="module" hidden>
+    <div id="module3" class="module content" hidden>
         <div class="moduleTitle">Módulo 1: Introducción a la Seguridad Vial</div><br>
         <div id="lessons" class="lessons">
             <div id="lesson1" class="lesson">
@@ -72,7 +72,7 @@
             </div>
         </div>
     </div>
-    <div id="module4" class="module" hidden>
+    <div id="module4" class="module content" hidden>
         <div class="moduleTitle">Módulo 1: Introducción a la Seguridad Vial</div><br>
         <div id="lessons" class="lessons">
             <div id="lesson1" class="lesson">
@@ -89,7 +89,7 @@
             </div>
         </div>
     </div>
-    <div id="module5" class="module" hidden>
+    <div id="module5" class="module content" hidden>
         <div class="moduleTitle">Módulo 1: Introducción a la Seguridad Vial</div><br>
         <div id="lessons" class="lessons">
             <div id="lesson1" class="lesson">
@@ -106,7 +106,7 @@
             </div>
         </div>
     </div>
-    <div id="module6" class="module" hidden>
+    <div id="module6" class="module content" hidden>
         <div class="moduleTitle">Módulo 1: Introducción a la Seguridad Vial</div><br>
         <div id="lessons" class="lessons">
             <div id="lesson1" class="lesson">
@@ -123,7 +123,7 @@
             </div>
         </div>
     </div>
-    <div id="module7" class="module" hidden>
+    <div id="module7" class="module content" hidden>
         <div class="moduleTitle">Módulo 1: Introducción a la Seguridad Vial</div><br>
         <div id="lessons" class="lessons">
             <div id="lesson1" class="lesson">
@@ -140,7 +140,7 @@
             </div>
         </div>
     </div>
-    <div id="module8" class="module" hidden>
+    <div id="module8" class="module content" hidden>
         <div class="moduleTitle">Módulo 1: Introducción a la Seguridad Vial</div><br>
         <div id="lessons" class="lessons">
             <div id="lesson1" class="lesson">

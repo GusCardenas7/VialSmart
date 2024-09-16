@@ -15,7 +15,7 @@
 .logo {
     width: 202px;
     height: 100px;
-    position: absolute;
+    position: relative;
     top: 12%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -126,6 +126,29 @@ form .row input::placeholder{
 form .button input:hover{
     background: #00ac00;
     border: 1px solid #00ac00;
+}
+
+form .button input:focus {
+    outline: none;
+    border-color: initial;
+    box-shadow: none; 
+}
+
+.linkToSignUp {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+    font-family: 'Poppins',sans-serif;
+}
+
+.linkToSignUp a {
+    color: black;
 }
 
 .divALaIzquierda {

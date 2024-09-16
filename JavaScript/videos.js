@@ -19,7 +19,73 @@ const modules = {
         },
         thumbnails: [
             { src: "../Videos/2.2 Señales de tránsito más comunes.mp4", poster: "../imagenes/miniaturas/2.2 Señales de transito mas comunes.jpg", title: "Video 2.2: Señales de tránsito más comunes", elementId: "thumbnail-image3", titleId: "thumb-vid-title3" },
-            { src: "../Videos/1.3 La via y sus partes.mp4", poster: "../imagenes/miniaturas/1.3 La via y sus partes.jpg", title: "Video 1.3: La vía y sus partes", elementId: "thumbnail-image4", titleId: "thumb-vid-title4" }
+            { src: "../Videos/2.3 Señales especiales para niños.mp4", poster: "../imagenes/miniaturas/2.3 Señales especiales para niños.jpg", title: "Video 2.3: Señales especiales para niños", elementId: "thumbnail-image4", titleId: "thumb-vid-title4" }
+        ]
+    },
+    3: {
+        centralVideo: {
+            src: "../Videos/3.1 Cruce seguro de la calle.mp4",
+            poster: "../imagenes/miniaturas/3.1 Cruce seguro de la calle.jpg",
+            title: "Video 3.1: Cruce seguro en las calles"
+        },
+        thumbnails: [
+            { src: "../Videos/3.2 Comportamiento peatonal seguro.mp4", poster: "../imagenes/miniaturas/3.2 Comportamiento peatonal seguro.jpg", title: "Video 3.2: Comportamiento peatonal seguro", elementId: "thumbnail-image5", titleId: "thumb-vid-title5" },
+            { src: "../Videos/3.3 Uso seguro de la bicicleta.mp4", poster: "../imagenes/miniaturas/3.3 Uso seguro de la bicicleta.jpg", title: "Video 3.3: Uso seguro de la bicicleta", elementId: "thumbnail-image6", titleId: "thumb-vid-title6" }
+        ]
+    },
+    4: {
+        centralVideo: {
+            src: "../Videos/4.1 Uso del cinturón de seguridad.mp4",
+            poster: "../imagenes/miniaturas/4.1 Uso del cinturón de seguridad.jpg",
+            title: "Video 4.1: Uso del cinturón de seguridad"
+        },
+        thumbnails: [
+            { src: "../Videos/4.2 Comportamiento seguro en el automovil.mp4", poster: "../imagenes/miniaturas/4.2 Comportamiento seguro en el automovil.jpg", title: "Video 4.2: Comportamiento seguro en el automóvil", elementId: "thumbnail-image7", titleId: "thumb-vid-title7" },
+            { src: "../Videos/4.3 Transporte escolar.mp4", poster: "../imagenes/miniaturas/4.3 Transporte escolar.jpg", title: "Video 4.3: Transporte escolar", elementId: "thumbnail-image8", titleId: "thumb-vid-title8" }
+        ]
+    },
+    5: {
+        centralVideo: {
+            src: "../Videos/5.1 Que hacer en caso de un accidente.mp4",
+            poster: "../imagenes/miniaturas/5.1 Que hacer en caso de un accidente.jpg",
+            title: "Video 5.1: ¿Qué hacer en caso de accidente?"
+        },
+        thumbnails: [
+            { src: "../Videos/5.2 Primeros auxilios basicos.mp4", poster: "../imagenes/miniaturas/5.2 Primeros auxilios basicos.jpg", title: "Video 5.2: Primeros auxilios básicos", elementId: "thumbnail-image9", titleId: "thumb-vid-title9" },
+            { src: "../Videos/5.3 Prevencion y seguridad en caso de emergencias.mp4", poster: "../imagenes/miniaturas/5.3 Prevencion y seguridad en caso de emergencias.jpg", title: "Video 5.3: Prevención y seguridad en caso de emergencias", elementId: "thumbnail-image10", titleId: "thumb-vid-title10" }
+        ]
+    },
+    6: {
+        centralVideo: {
+            src: "../Videos/6.1 Identificacion de situaciones de riesgo.mp4",
+            poster: "../imagenes/miniaturas/6.1 Identificacion de situaciones de riesgo.jpg",
+            title: "Video 6.1: Identificación de situaciones de riesgo"
+        },
+        thumbnails: [
+            { src: "../Videos/6.2 Estrategias de prevencion.mp4", poster: "../imagenes/miniaturas/6.2 Estrategias de prevencion.jpg", title: "Video 6.2: Estrategias de prevención", elementId: "thumbnail-image11", titleId: "thumb-vid-title11" },
+            { src: "../Videos/6.3 Seguridad personal.mp4", poster: "../imagenes/miniaturas/6.3 Seguridad personal.jpg", title: "Video 6.3: Seguridad personal", elementId: "thumbnail-image12", titleId: "thumb-vid-title12" }
+        ]
+    },
+    7: {
+        centralVideo: {
+            src: "../Videos/7.1 Respuestas en casos de emergencias.mp4",
+            poster: "../imagenes/miniaturas/7.1 Respuestas en casos de emergencias.jpg",
+            title: "Video 7.1: Respuestas en casos de emergencias"
+        },
+        thumbnails: [
+            { src: "../Videos/7.2 Interaccion con extraños.mp4", poster: "../imagenes/miniaturas/7.2 Interaccion con extraños.jpg", title: "Video 7.2: Interacción con extraños", elementId: "thumbnail-image13", titleId: "thumb-vid-title13" },
+            { src: "../Videos/1.3 La via y sus partes.mp4", poster: "../imagenes/miniaturas/1.3 La via y sus partes.jpg", title: "Video 1.3: La vía y sus partes", elementId: "thumbnail-image14", titleId: "thumb-vid-title14" }
+        ]
+    },
+    8: {
+        centralVideo: {
+            src: "../Videos/8.1 Respeto mutuo en la via publica.mp4",
+            poster: "../imagenes/miniaturas/8.1 Respeto mutuo en la via publica.jpg",
+            title: "Video 8.1: Respeto mutuo en la vía pública"
+        },
+        thumbnails: [
+            { src: "../Videos/2.2 Señales de tránsito más comunes.mp4", poster: "../imagenes/miniaturas/2.2 Señales de transito mas comunes.jpg", title: "Video 2.2: Señales de tránsito más comunes", elementId: "thumbnail-image15", titleId: "thumb-vid-title15" },
+            { src: "../Videos/1.3 La via y sus partes.mp4", poster: "../imagenes/miniaturas/1.3 La via y sus partes.jpg", title: "Video 1.3: La vía y sus partes", elementId: "thumbnail-image16", titleId: "thumb-vid-title16" }
         ]
     }
 };
