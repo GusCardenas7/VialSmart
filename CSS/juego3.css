@@ -156,6 +156,29 @@ img{
         border: 4px solid #fff;
     }
 
+#pantalla-finalAprobado {
+    display: none;
+    text-align: center;
+}
+
+    #pantalla-finalAprobado #numCorrectasA {
+        background-color: #718c5b;
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        border: 4px solid #fff;
+    }
+
+    #pantalla-finalAprobado #numIncorrectasA {
+        background-color: #cd6565;
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        border: 4px solid #fff;
+    }
+
 .Preguntas {
     font-size: 26px;
     text-align: center;
@@ -179,7 +202,6 @@ img{
     color: #d14f44;
 }
 
-/* footer */
 /* FOOTER*/
 footer {
     background-color: #000000;
@@ -190,39 +212,44 @@ footer {
     align-items: center;
     font-size: 15px;
     font-weight: normal;
-    position: relative;
-}
-
-footer .links {
-    display: flex;
-    gap: 30px;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-    font-weight: normal;
-}
-
-footer a:hover {
-    text-decoration: underline;
-    color: white;
-}
-
-footer a:active {
-    color: white;
-}
-
-footer .copyright {
-    font-size: 13px;
-}
-
-footer .copyright::after {
-    content: '';
     position: absolute;
-    right: 25px;
-    top: 10px;
-    height: 30px;
-    width: 0.1px;
-    background-color: #b7b7b7;
+    top: 800px;
+    left: 0%;
+    height: 50px;
+    width: 100%;
+    text-align: center;
 }
+
+    footer .links {
+        display: flex;
+        gap: 30px;
+    }
+
+    footer a {
+        color: white;
+        text-decoration: none;
+        font-weight: normal;
+    }
+
+        footer a:hover {
+            text-decoration: underline;
+            color: white;
+        }
+
+        footer a:active {
+            color: white;
+        }
+
+    footer .copyright {
+        font-size: 13px;
+    }
+
+        footer .copyright::after {
+            content: '';
+            position: absolute;
+            right: 25px;
+            top: 10px;
+            height: 30px;
+            width: 0.1px;
+            background-color: #b7b7b7;
+        }

@@ -56,6 +56,14 @@
   <button class="btn" onclick="volverAlInicio()"> VOLVER AL INICIO</button>
 </div>
 
+<!-- Pantalla final SÍ aprpbado -->
+<div id="pantalla-finalAprobado">
+  <h2> CORRECTAS: <span id="numCorrectasA" style="color:#fffb9d;">3</span></h2>
+  <h2>INCORRECTAS: <span id="numIncorrectasA" style="color:#f0e0e0;">2</span></h2>
+  <p id="PNP"></p>
+  <a href="leccion6-1.php"> <button class="btn" onclick="Siguiente()"> Siguiente</button> </a>
+</div>
+
 <!-- footer -->
 <footer>
         <div class="links">
@@ -128,7 +136,7 @@ function comenzarJuego(){
 }
 function cargarPregunta(){
     if (preguntas.length <= posicion){
-        terminarJuego();
+        revisarpuntaje();
     }
     else{
        //limpiamos las clases que se asignaron
@@ -176,26 +184,28 @@ function comprobarRespuesta(opcionElegida){
     setTimeout(cargarPregunta,1000);
 }
 
-function terminarJuego(){
-    //se activa la página de final de Juego
-    document.getElementById("pantalla-juego").style.display = "none";
-    document.getElementById("pantalla-final").style.display = "block";
-
-    //se agregan los resultados
-    document.getElementById("numCorrectas").innerHTML = aciertos;
-    document.getElementById("numIncorrectas").innerHTML = preguntas.length - aciertos;
-
-    revisarpuntaje();
-}
-
 function revisarpuntaje(){
     if(aciertos >= 6){
        WinGame.play();
+       //se activa la página de final de Juego
+       document.getElementById("pantalla-juego").style.display = "none";
+       document.getElementById("pantalla-finalAprobado").style.display = "block";
+
+       //se agregan los resultados
+       document.getElementById("numCorrectasA").innerHTML = aciertos;
+       document.getElementById("numIncorrectasA").innerHTML = preguntas.length - aciertos;
        document.getElementById("PNP").className = "pasa";
        document.getElementById("PNP").innerHTML = "&#161;Has logrado aprobar&#33; 🤩";
        //aqui iria alguna función para desbloquear la siguiente función, ya que logro pasar
     }else{
        LoseGame.play();
+       //se activa la página de final de Juego
+       document.getElementById("pantalla-juego").style.display = "none";
+       document.getElementById("pantalla-final").style.display = "block";
+
+       //se agregan los resultados
+       document.getElementById("numCorrectas").innerHTML = aciertos;
+       document.getElementById("numIncorrectas").innerHTML = preguntas.length - aciertos;
        document.getElementById("PNP").className = "Nopasa";
        document.getElementById("PNP").innerHTML = "&#161;No has obtenido los puntos suficientes&#33; 😱";
     }

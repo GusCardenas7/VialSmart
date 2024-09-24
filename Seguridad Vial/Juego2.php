@@ -211,9 +211,9 @@ function destapar(id) {
                 stopKeydownPropagation: false,
                 showCancelButton: false,
                 confirmButtonColor: '#6294D5',
-                cancelButtonText: '<a class="quitar" href="Juego2.php">Volver a jugar</a>',
+                cancelButtonText: '<a class="quitar" href="lecciones.php">Ir a lecciones</a>',
                 cancelButtonColor: '#F3F4AC',
-                confirmButtonText: '<a class="quitar" href="IndexSV.php"><b>Siguiente</center></b>'
+                confirmButtonText: '<a class="quitar" href="leccion1-3.php"><b>Siguiente</center></b>'
             })
            //---BD----
           

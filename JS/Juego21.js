@@ -120,9 +120,9 @@ function seleccionar(casilla) {
                 stopKeydownPropagation: false,
                 showCancelButton: true,
                 confirmButtonColor: '#6294D5',
-                cancelButtonText: '<a class="quitar" href="Juego21.php">Volver a jugar</a>',
+                cancelButtonText: '<a class="quitar" href="lecciones.php">Ir a lecciones</a>',
                 cancelButtonColor: '#F3F4AC',
-                confirmButtonText: '<a class="quitar" href="videos.php">Ir a lecciones</a>'
+                confirmButtonText: '<a class="quitar" href="leccion8-2.php">Siguiente</a>'
             })
             //-------
 

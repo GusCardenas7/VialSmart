@@ -192,7 +192,7 @@ function drop(event) {
                 confirmButtonColor: '#6294D5',
                 cancelButtonText: '<a class="quitar" href="Juego10.php">Volver a jugar</a>',
                 cancelButtonColor: '#F3F4AC',
-                confirmButtonText: '<a class="quitar" href="IndexSV.php"><b>Siguiente</center></b>'
+                confirmButtonText: '<a class="quitar" href="leccion4-2.php"><b>Siguiente</center></b>'
                  })
     } 
   }else{failedAttempts++; // Incrementar el contador de intentos fallidos

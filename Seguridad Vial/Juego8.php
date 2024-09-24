@@ -87,7 +87,7 @@ let segundoResultado = null;
 let movimientos = 0;
 let aciertos = 0;
 let temporizador = false;
-let timer = 30;
+let timer = 50;
 let tiempoAtras = null;
 
 let winAudio = new Audio('../audios/WinGame.wav');
@@ -205,9 +205,9 @@ function destapar(id) {
                 stopKeydownPropagation: false,
                 showCancelButton: false,
                 confirmButtonColor: '#6294D5',
-                cancelButtonText: '<a class="quitar" href="Juego8.php">Volver a jugar</a>',
+                cancelButtonText: '<a class="quitar" href="lecciones.php">Ir a lecciones</a>',
                 cancelButtonColor: '#F3F4AC',
-                confirmButtonText: '<a class="quitar" href="IndexSV.php"><b>Siguiente</center></b>'
+                confirmButtonText: '<a class="quitar" href="leccion3-3.php"><b>Siguiente</center></b>'
             })
            //---BD----
           

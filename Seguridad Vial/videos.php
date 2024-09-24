@@ -149,7 +149,7 @@
         </div>
 
         <div id="module7" class="module" hidden>
-            <div class="moduleTitle">Módulo 7: Convivencia Vial y Cultura de la Paz</div><br>
+            <div class="moduleTitle">Módulo 7: Disuación de delitos</div><br>
             <div class="video-container">
                 <div id="central-video-title" class="video-title">Video 7.1: Respuestas en casos de emergencias</div>
                 <video id="central-video" controls poster="../imagenes/miniaturas/7.1 Respuestas en casos de emergencias.jpg">
@@ -170,7 +170,7 @@
         </div>
 
         <div id="module8" class="module" hidden>
-            <div class="moduleTitle">Módulo 8: Texto de ejemplo</div><br>
+            <div class="moduleTitle">Módulo 8: Convivencia Vial y Cultura de la Paz</div><br>
             <div class="video-container">
                 <div id="central-video-title" class="video-title">Video 8.1: Respeto mutuo en la vía pública</div>
                 <video id="central-video" controls poster="../imagenes/miniaturas/8.1 Respeto mutuo en la via publica.jpg">
@@ -181,11 +181,11 @@
             <div id="thumbnails" class="thumbnails">
                 <div id="thumbnail15" class="thumbnail" onclick="swapVideos(1)">
                     <img id="thumbnail-image15" src="../imagenes/miniaturas/en_proceso.jpg" alt="Miniatura Video 1">
-                    <div id="thumb-vid-title15" class="thumb-vid-title">Video 8.2: Texto de ejemplo</div>
+                    <div id="thumb-vid-title15" class="thumb-vid-title">Video 8.2: Resolución de conflictos en la vía</div>
                 </div>
                 <div id="thumbnail16" class="thumbnail" onclick="swapVideos(2)">
                     <img id="thumbnail-image16" src="../imagenes/miniaturas/en_proceso.jpg" alt="Miniatura Video 2">
-                    <div id="thumb-vid-title16" class="thumb-vid-title">Video 8.3: Texto de ejemplo</div>
+                    <div id="thumb-vid-title16" class="thumb-vid-title">Video 8.3: Despedida</div>
                 </div>
             </div>
         </div>

@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (charIndex < text.length) {
                 currentParagraph.textContent += text.charAt(charIndex);
                 charIndex++;
-                setTimeout(typeWriter, 50); // Ajuste la velocidad de la escritura
+                setTimeout(typeWriter, 1.5); // Ajuste la velocidad de la escritura
             } else {
                 charIndex = 0; // Elimina el índice de caracteres para la línea siguiente
                 lineIndex++; // Pasa a la siguiente línea

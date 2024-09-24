@@ -105,9 +105,9 @@ function cargarNuevaPalabra(){
                 stopKeydownPropagation: false,
                 showCancelButton: false,
                 confirmButtonColor: '#6294D5',
-                cancelButtonText: '<a class="quitar" href="Juego4.php">Volver a jugar</a>',
+                cancelButtonText: '<a class="quitar" href="lecciones.php">Ir a lecciones</a>',
                 cancelButtonColor: '#F3F4AC',
-                confirmButtonText: '<a class="quitar" href="IndexSV.php"><b>Siguiente</center></b>'
+                confirmButtonText: '<a class="quitar" href="leccion2-2.php"><b>Siguiente</center></b>'
             })
            //-------
         }else{
