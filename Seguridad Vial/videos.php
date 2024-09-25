@@ -151,7 +151,7 @@
         </div>
     </div>
 
-        <div id="module7" class="module" hidden>
+        <div id="module7" class="module content" hidden>
             <div class="moduleTitle">Módulo 7: Disuación de delitos</div><br>
             <div class="video-container">
                 <div id="central-video-title" class="video-title">Video 7.1: Respuestas en casos de emergencias</div>
@@ -167,7 +167,7 @@
         </div>
     </div>
 
-        <div id="module8" class="module" hidden>
+        <div id="module8" class="module content" hidden>
             <div class="moduleTitle">Módulo 8: Convivencia Vial y Cultura de la Paz</div><br>
             <div class="video-container">
                 <div id="central-video-title" class="video-title">Video 8.1: Respeto mutuo en la vía pública</div>
