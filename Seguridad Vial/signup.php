@@ -1,10 +1,3 @@
-<?php
-    session_start();
-    if(isset($_SESSION['correoC'])) {
-        header("Location: index.php");
-    }
-?>
-
 <html>
 <head>
     <title>Sign Up</title>
@@ -22,37 +15,41 @@
         });
 
         function valida() {
-        var usuario = document.forma01.user.value;
-        var contraseña = document.forma01.pass.value;
-        
-        if((usuario == "") || (correo == "") || (contraseña == "")) {
-            $('#mensaje').html('Faltan campos por llenar');
-            setTimeout("$('#mensaje').html('')",5000);
-            return false;
-        }
-        else {
-            var user = $("#user").val();
-            var user = $("#correo").val();
-            var pass = $("#pass").val();
-            if(user && correo && pass) {
-                $.ajax ({
-                        url     : 'funciones/validaUsuario.php?user='+user+'&pass='+pass,
-                        type    : 'post',
-                        datatype : 'text',
-                        data    : {'user' : user, 'pass' : pass},
-                        success : function(res) {
+            var usuario = document.forma01.user.value;
+            var correo = document.forma01.mail.value;
+            var contraseña = document.forma01.pass.value;
+            
+            if((usuario == "") || (correo == "") || (contraseña == "")) {
+                $('#mensaje').html('Faltan campos por llenar');
+                setTimeout("$('#mensaje').html('')",5000);
+                return false;
+            } else {
+                var user = $("#user").val();
+                var mail = $("#mail").val();
+                var pass = $("#pass").val();
+                
+                if(user && mail && pass) {
+                    $.ajax({
+                        url: '../Admin/funciones/insertarUsuario.php',
+                        type: 'POST',
+                        data: { 'user': user, 'mail': mail, 'pass': pass },
+                        success: function(res) {
                             if (res == 1) {
-                                window.location.href = "index.php";
+                                window.location.href = "login.php";  // Redireccionar si es exitoso
+                            } else if(res == 2) {
+                                $('#mensaje').html('Usuario o correo ya en uso');
+                                setTimeout("$('#mensaje').html('')",5000);
                             } else {
-                                $('#mensaje').html('Usuario no valido');
+                                $('#mensaje').html('Error en el servidor');
                                 setTimeout("$('#mensaje').html('')",5000);
                             }
-                    },error: function() {
-                        alert('Error archivo no encontrado...');
-                    }
-                });
-            }
-            return false;
+                        },
+                        error: function() {
+                            alert('Error archivo no encontrado...');
+                        }
+                    });
+                }
+                return false;
             }
         }
     </script>
@@ -62,25 +59,25 @@
     <div class='container'>
         <div class='wrapper'>
             <div class='title'><span>¡Registrate!</span></div>
-            <form name="forma01" method="POST">
+            <form name="forma01" method="POST" onsubmit="return valida();">
             <!-- Usuario  -->
             <div class='row'>
                 <i class='bi bi-person'></i>
-                <input type="user" name="user" id="user" placeholder='Nombre de usuario'>
+                <input type="text" name="user" id="user" required placeholder='Nombre de usuario'>
             </div>
              <!-- Correo  -->
              <div class="row">
                     <i class="bi bi-envelope"></i>
-                    <input type="email" name="mail" id="mail" placeholder="Correo">
+                    <input type="email" name="mail" id="mail" required placeholder="Correo">
              </div>
              <!-- Contraseña  -->
             <div class='row'>
                 <i class='bi bi-lock'></i>
-                <input type='password' name='pass' id="pass" placeholder='Contraseña'>
+                <input type='password' name='pass' id="pass" required placeholder='Contraseña'>
             </div>
              <!-- Boton  -->
             <div class='row button'>
-                <input onclick='return valida();' type='submit' value='Registrarse'>
+                <input type='submit' value='Registrarse'>
             </div>
             </form>
         </div>

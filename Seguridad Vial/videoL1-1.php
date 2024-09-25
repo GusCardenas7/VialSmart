@@ -1,3 +1,7 @@
+<?php
+    require "../Admin/funciones/comprobarSesion.php";
+?>
+
 <html>
 <head>
     <title>Video 1.1</title>

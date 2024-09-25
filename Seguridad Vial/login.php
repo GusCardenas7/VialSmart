@@ -1,10 +1,3 @@
-<?php
-    session_start();
-    if(isset($_SESSION['correoC'])) {
-        header("Location: index.php");
-    }
-?>
-
 <html>
 <head>
     <title>Login</title>
@@ -35,15 +28,15 @@
             var pass = $("#pass").val();
             if(user && pass) {
                 $.ajax ({
-                        url     : '../funciones/validaUsuario.php?user='+user+'&pass='+pass,
+                        url     : '../Admin/funciones/validaUsuario.php',
                         type    : 'post',
                         datatype : 'text',
                         data    : {'user' : user, 'pass' : pass},
                         success : function(res) {
                             if (res == 1) {
-                                window.location.href = "index.php";
+                                window.location.href = "IndexSV.php";
                             } else {
-                                $('#mensaje').html('Usuario no valido');
+                                $('#mensaje').html('Usuario no válido');
                                 setTimeout("$('#mensaje').html('')",5000);
                             }
                     },error: function() {
@@ -61,17 +54,17 @@
     <div class='container'>
         <div class='wrapper'>
             <div class='title'><span>Bienvenid@</span></div>
-            <form name="forma01" method="POST">
+            <form name="forma01" method="POST" onsubmit="return valida();">
             <div class='row'>
                 <i class='bi bi-person'></i>
-                <input type="email" name="user" id="user" placeholder='Nombre de usuario'>
+                <input type="text" name="user" id="user" required placeholder='Nombre de usuario'>
             </div>
             <div class='row'>
                 <i class='bi bi-lock'></i>
-                <input type='password' name='pass' id="pass" placeholder='Contraseña'>
+                <input type='password' name='pass' id="pass" required placeholder='Contraseña'>
             </div>
             <div class='row button'>
-                <input onclick='return valida();' type='submit' value='Iniciar sesión'>
+                <input type='submit' value='Iniciar sesión'>
             </div>
             </form>
         </div>

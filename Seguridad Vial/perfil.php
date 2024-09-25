@@ -1,12 +1,28 @@
+<?php 
+    require "../Admin/funciones/comprobarSesion.php";
+    include '../funciones/menu.php';
+    require "../Admin/funciones/conecta.php";
+
+    $con = conecta();
+
+    if(isset($_SESSION['idU'])) {
+        $id = $_SESSION['idU'];
+        $sql = "SELECT * FROM usuarios WHERE id = $id";
+        $res = $con->query($sql);
+
+        $row = $res->fetch_array();
+        $nombre = $row["nombre"];
+        $correo = $row["correo"];
+        $nivel = $row["nivel"];
+    }
+?>
+
 <html>
 <head>
     <title>Perfil</title>
     <link rel="stylesheet" href="../CSS/perfil.css">
 </head>
 <body>
-    <?php 
-        include '../funciones/menu.php'
-    ?>
     <br><br><br><br><br>
     <div align='center' style='font-weight: bold; font-size: 40px;'>Detalles del perfil:</div>
     <div class="content">
@@ -17,17 +33,14 @@
                 </div>
             </div>
             <div class='lower-container'>
-                <div>
-                    <h3>Gustavo Cardenas</h3>
+                <?php echo "<div>
+                    <h3>$nombre</h3>
                     <h4 style='margin-right: 10px;'>Correo:</h4>
-                    <p>guscardenas63@gmail.com</p>
+                    <p>$correo</p>
                     <br>
                     <h4 style='margin-right: 22px;'>Nivel:</h4>
-                    <p>7</p>
-                    <br>
-                    <h4 style='margin-right: 15px;'>Status:</h4>
-                    <p>Activo</p>
-                </div>
+                    <p>$nivel</p>
+                </div>";?>
             </div>
         </div>
         <div class="arrowsContainer">

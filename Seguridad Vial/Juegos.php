@@ -1,4 +1,8 @@
-﻿<html>
+﻿<?php
+    require "../Admin/funciones/comprobarSesion.php";
+?>
+
+<html>
 <head>
     <title>Juegos</title>
     <link rel="stylesheet" href="../CSS/videos.css">
@@ -21,7 +25,7 @@
             <li><a id="a-module8" onclick="hideModules(8)">Módulo 8</a></li> 
         </ul>
     </nav><br>
-    <div id="module1" class="module">
+    <div id="module1" class="module content">
         <div class="moduleTitle">Módulo 1: Introducción a la Seguridad Vial</div><br>
         <div id="thumbnails" class="thumbnails">
             <div id="thumbnail1" class="thumbnail">
@@ -39,7 +43,7 @@
         </div>
     </div>
 
-    <div id="module2" class="module" hidden>
+    <div id="module2" class="module content" hidden>
         <div class="moduleTitle">Módulo 2: Señales de Tránsito</div><br>
         <div id="thumbnails" class="thumbnails">
             <div id="thumbnail4" class="thumbnail">
@@ -57,7 +61,7 @@
         </div>
     </div>
 
-    <div id="module3" class="module" hidden>
+    <div id="module3" class="module content" hidden>
         <div class="moduleTitle">Módulo 3: Reglas Básicas de Seguridad Vial</div><br>
         <div id="thumbnails" class="thumbnails">
             <div id="thumbnail7" class="thumbnail" onclick="swapVideos(1)">
@@ -75,7 +79,7 @@
         </div>
     </div>
 
-    <div id="module4" class="module" hidden>
+    <div id="module4" class="module content" hidden>
         <div class="moduleTitle">Módulo 4: Seguridad en el Vehículo</div><br>
         <div id="thumbnails" class="thumbnails">
             <div id="thumbnail10" class="thumbnail" onclick="swapVideos(1)">
@@ -93,7 +97,7 @@
         </div>
     </div>
 
-    <div id="module5" class="module" hidden>
+    <div id="module5" class="module content" hidden>
         <div class="moduleTitle">Módulo 5: Situaciones de Emergencia</div><br>
         <div id="thumbnails" class="thumbnails">
             <div id="thumbnail13" class="thumbnail" onclick="swapVideos(1)">
@@ -111,7 +115,7 @@
         </div>
     </div>
     <!-- AQUI -->
-    <div id="module6" class="module" hidden>
+    <div id="module6" class="module content" hidden>
         <div class="moduleTitle">Módulo 6: Seguridad Vial y Prevención de Delitos</div><br>
         <div id="thumbnails" class="thumbnails">
             <div id="thumbnail11" class="thumbnail">
@@ -129,7 +133,7 @@
         </div>
     </div>
 
-    <div id="module7" class="module" hidden>
+    <div id="module7" class="module content" hidden>
         <div class="moduleTitle">Módulo 7: Disuación de delitos</div><br>
         <div id="thumbnails" class="thumbnails">
             <div id="thumbnail13" class="thumbnail" onclick="swapVideos(1)">
@@ -143,7 +147,7 @@
         </div>
     </div>
 
-    <div id="module8" class="module" hidden>
+    <div id="module8" class="module content" hidden>
         <div class="moduleTitle">Módulo 8: Convivencia vial y cultura de la paz</div><br>
         <div id="thumbnails" class="thumbnails">
              <div id="thumbnail15" class="thumbnail" onclick="swapVideos(1)">

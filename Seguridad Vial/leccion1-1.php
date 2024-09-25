@@ -1,3 +1,7 @@
+<?php
+    require "../Admin/funciones/comprobarSesion.php";
+?>
+
 <html>
 <head>
     <title>Lección 1.1</title>
