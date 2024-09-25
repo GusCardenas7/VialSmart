@@ -1,14 +1,34 @@
-<div class="menu">
-    <img class="logo" src="../imagenes/logo.png" alt="" />
-    <ul align="right">
-        <li style="color:#6cda1a;"> <b>Bienvenid@ </b></li>
-        <li> <b><a href="../Seguridad Vial/IndexSV.php">Inicio</a></b></li>
-        <li> <b><a href="../Seguridad Vial/lecciones.php">Lecciones</a></b></li>
-        <li> <b><a href="../Seguridad Vial/videos.php">Videos</a></b></li>
-        <li> <b><a href="../Seguridad Vial/Juegos.php">Juegos</a></b></li>
-        <li> <b><a href="../Seguridad Vial/login.php">Registrarse/Iniciar Sesi&#243;n</a></b></li>
-    </ul>
-</div>
+<?php
+    if(isset($_SESSION['nombreU']) && !empty($_SESSION['nombreU'])) {
+        $nombre = $_SESSION['nombreU'];
+        echo "<div class='menu'>
+            <img class='logo' src='../imagenes/logo.png' alt='' />
+            <ul align='right'>
+                <li style='color:#6cda1a;'> <b>Bienvenid@ $nombre</b></li>
+                <li> <b><a href='../Seguridad Vial/IndexSV.php'>Inicio</a></b></li>
+                <li> <b><a href='../Seguridad Vial/lecciones.php'>Lecciones</a></b></li>
+                <li> <b><a href='../Seguridad Vial/videos.php'>Videos</a></b></li>
+                <li> <b><a href='../Seguridad Vial/Juegos.php'>Juegos</a></b></li>
+                <li> <b><a href='../Seguridad Vial/logros.php'>Logros</a></b></li>
+                <li> <b><a href='../Seguridad Vial/perfil.php'>Perfil</a></b></li>
+                <li> <b><a href='../Admin/funciones/cerrarSesion.php'>Cerrar sesión</a></b></li>
+            </ul>
+        </div>";
+    } else {
+        echo "<div class='menu'>
+            <img class='logo' src='../imagenes/logo.png' alt='' />
+            <ul align='right'>
+                <li style='color:#6cda1a;'> <b>Bienvenid@</b></li>
+                <li> <b><a href='../Seguridad Vial/IndexSV.php'>Inicio</a></b></li>
+                <li> <b><a href='../Seguridad Vial/lecciones.php'>Lecciones</a></b></li>
+                <li> <b><a href='../Seguridad Vial/videos.php'>Videos</a></b></li>
+                <li> <b><a href='../Seguridad Vial/Juegos.php'>Juegos</a></b></li>
+                <li> <b><a href='../Seguridad Vial/login.php'>Iniciar sesión</a></b></li>
+            </ul>
+        </div>";
+    }
+?>
+
 <style>
 .menu {
     padding: 0;
@@ -30,11 +50,11 @@
 }
 
 li {
-    font-size: 22px;
+    font-size: 21px;
     font-family: 'Share Tech Mono', monospace;
     list-style: none;
     display: flex;
-    margin: 0 15px;
+    margin: 0 8px;
 }
 
 .menu li {

@@ -1,3 +1,7 @@
+<?php
+    require "../Admin/funciones/comprobarSesion.php";
+?>
+
 <script>
 var autoplayInterval = 10000;
 var autoplayTimer = null;

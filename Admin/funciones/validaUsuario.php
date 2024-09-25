@@ -1,30 +1,45 @@
-<?php 
-    session_start();
+<?php
+    session_start();  
+    
     require "conecta.php";
     $con = conecta();
-    $correo = $_REQUEST['user'];
-    $password = $_REQUEST['pass'];
-    $passEnc = md5($password);
-    $sql = "SELECT * FROM administradores WHERE correo = '$correo' AND pass = '$passEnc' AND status = 1 AND eliminado = 0";
-    $res = $con->query($sql);
 
-    $num = $res->num_rows;
+    // Recoger los datos enviados por el formulario
+    $user = $_POST['user'];
+    $pass = $_POST['pass'];
 
-    $row = $res->fetch_array();
-    
-    if($num>0) {
-        $idU = $row["id"];
-        $nombre = $row["nombre"].' '.$row["apellidos"];
-        $correo = $row["correo"];
+    // Validar si los campos no están vacíos
+    if (!empty($user) && !empty($pass)) {
+        // Escapar los caracteres especiales para evitar inyecciones SQL
+        $user = $con->real_escape_string($user);
+        $pass = $con->real_escape_string($pass);
 
-        $_SESSION['idU'] = $idU;
-        $_SESSION['nombre'] = $nombre;
-        $_SESSION['correo'] = $correo;
-        
-       $bandera = 1;
+        // Comprobar si existe el usuario
+        $sqlCheck = "SELECT * FROM usuarios WHERE nombre = '$user'";
+        $result = $con->query($sqlCheck);
+
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            
+            // Verificar la contraseña
+            if (password_verify($pass, $row['contraseña'])) {
+                session_regenerate_id(true);
+
+                $_SESSION['idU'] = $row['id']; 
+                $_SESSION['nombreU'] = $row['nombre']; 
+                $_SESSION['correoU'] = $row['correo'];
+                echo 1;  // Si el usuario y la contraseña son correctos
+            } else {
+                echo 0;  // Contraseña incorrecta
+            }
+        } else {
+            echo 0;  // Usuario no encontrado
+        }
     } else {
-        $bandera = 0;
+        // Si algún campo está vacío
+        echo 0;  // Devuelve 0 si faltan campos
     }
 
-    echo $bandera;
+    // Cerrar la conexión
+    $con->close();
 ?>
