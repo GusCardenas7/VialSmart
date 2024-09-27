@@ -3,6 +3,7 @@
     define("BD", 'vialsmart');
     define("USER_BD", 'root');
     define("PASS_BD", '');
+    
 
     function conecta() {
         // Crear conexión
@@ -15,4 +16,6 @@
 
         return $con;
     }
+
+
 ?>

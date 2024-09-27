@@ -12,7 +12,7 @@
 
  <!-- MENU -->
     <?php 
-        include '../funciones/menu_sec.php'; 
+        include '../funciones/menu.php'; 
     ?>
     <br><br><br>
 
