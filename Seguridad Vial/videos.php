@@ -151,43 +151,42 @@
         </div>
     </div>
 
-        <div id="module7" class="module content" hidden>
-            <div class="moduleTitle">Módulo 7: Disuación de delitos</div><br>
-            <div class="video-container">
-                <div id="central-video-title" class="video-title">Video 7.1: Respuestas en casos de emergencias</div>
-                <video id="central-video" controls poster="../imagenes/miniaturas/7.1 Respuestas en casos de emergencias.jpg">
-                    <source id="central-video-source" src="../Videos/7.1 Respuestas en casos de emergencias.mp4" type="video/mp4">
-                    Tu navegador no soporta la reproducción de videos.
-                </video>
-            </div>
-            <div id="thumbnail14" class="thumbnail" onclick="swapVideos(2)">
-                <img id="thumbnail-image14" src="../imagenes/miniaturas/en_proceso.jpg" alt="Miniatura Video 2">
-                <div id="thumb-vid-title14" class="thumb-vid-title">Video 7.3: Texto de ejemplo</div>
-            </div>
+    <div id="module7" class="module content" hidden>
+        <div class="moduleTitle">Módulo 7: Disuación de delitos</div><br>
+        <div class="video-container">
+            <div id="central-video-title" class="video-title">Video 7.1: Respuestas en casos de emergencias</div>
+            <video id="central-video" controls poster="../imagenes/miniaturas/7.1 Respuestas en casos de emergencias.jpg">
+                <source id="central-video-source" src="../Videos/7.1 Respuestas en casos de emergencias.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </div>
+        <div id="thumbnail14" class="thumbnail" onclick="swapVideos(2)">
+            <img id="thumbnail-image14" src="../imagenes/miniaturas/en_proceso.jpg" alt="Miniatura Video 2">
+            <div id="thumb-vid-title14" class="thumb-vid-title">Video 7.3: Texto de ejemplo</div>
         </div>
     </div>
 
-        <div id="module8" class="module content" hidden>
-            <div class="moduleTitle">Módulo 8: Convivencia Vial y Cultura de la Paz</div><br>
-            <div class="video-container">
-                <div id="central-video-title" class="video-title">Video 8.1: Respeto mutuo en la vía pública</div>
-                <video id="central-video" controls poster="../imagenes/miniaturas/8.1 Respeto mutuo en la via publica.jpg">
-                    <source id="central-video-source" src="../Videos/8.1 Respeto mutuo en la via publica.mp4" type="video/mp4">
-                    Tu navegador no soporta la reproducción de videos.
-                </video>
+    <div id="module8" class="module content" hidden>
+        <div class="moduleTitle">Módulo 8: Convivencia Vial y Cultura de la Paz</div><br>
+        <div class="video-container">
+            <div id="central-video-title" class="video-title">Video 8.1: Respeto mutuo en la vía pública</div>
+            <video id="central-video" controls poster="../imagenes/miniaturas/8.1 Respeto mutuo en la via publica.jpg">
+                <source id="central-video-source" src="../Videos/8.1 Respeto mutuo en la via publica.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </div>
+        <div id="thumbnails" class="thumbnails">
+            <div id="thumbnail15" class="thumbnail" onclick="swapVideos(1)">
+                <img id="thumbnail-image15" src="../imagenes/miniaturas/en_proceso.jpg" alt="Miniatura Video 1">
+                <div id="thumb-vid-title15" class="thumb-vid-title">Video 8.2: Resolución de conflictos en la vía</div>
             </div>
-            <div id="thumbnails" class="thumbnails">
-                <div id="thumbnail15" class="thumbnail" onclick="swapVideos(1)">
-                    <img id="thumbnail-image15" src="../imagenes/miniaturas/en_proceso.jpg" alt="Miniatura Video 1">
-                    <div id="thumb-vid-title15" class="thumb-vid-title">Video 8.2: Resolución de conflictos en la vía</div>
-                </div>
-                <div id="thumbnail16" class="thumbnail" onclick="swapVideos(2)">
-                    <img id="thumbnail-image16" src="../imagenes/miniaturas/en_proceso.jpg" alt="Miniatura Video 2">
-                    <div id="thumb-vid-title16" class="thumb-vid-title">Video 8.3: Despedida</div>
-                </div>
+            <div id="thumbnail16" class="thumbnail" onclick="swapVideos(2)">
+                <img id="thumbnail-image16" src="../imagenes/miniaturas/en_proceso.jpg" alt="Miniatura Video 2">
+                <div id="thumb-vid-title16" class="thumb-vid-title">Video 8.3: Despedida</div>
             </div>
         </div>
     </div>
+    
     <footer>
         <div class="links">
             <a href="">Términos y condiciones</a>

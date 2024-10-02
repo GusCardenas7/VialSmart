@@ -52,11 +52,11 @@
             </div>
             <div id="thumbnail5" class="thumbnail">
                 <a href="Juego5.php"><img id="thumbnail-image3" src="../imagenes/miniaturas/Juego Unir.png" alt="Miniatura Video 1"></a>
-                <div id="thumb-vid-title3" class="thumb-vid-title">Video 2.2: Señales de tránsito más comunes</div>
+                <div id="thumb-vid-title3" class="thumb-vid-title">Juego 2.2: Señales de tránsito más comunes</div>
             </div>
             <div id="thumbnail6" class="thumbnail">
-               <a href="Juego6.php"><img id="thumbnail-image2" src="../imagenes/miniaturas/Juego Quiz.webp" alt="Miniatura Video 2"></a>
-                <div id="thumb-vid-title4" class="thumb-vid-title"> Juego.3: La vía y sus partes</div>
+                <a href="Juego6.php"><img id="thumbnail-image2" src="../imagenes/miniaturas/Juego Quiz.webp" alt="Miniatura Video 2"></a>
+                <div id="thumb-vid-title4" class="thumb-vid-title">Juego 2.3: La vía y sus partes</div>
             </div>
         </div>
     </div>

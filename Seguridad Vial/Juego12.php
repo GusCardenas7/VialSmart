@@ -17,51 +17,53 @@
     ?>
     <br><br><br>
 
-<!-- Juego quizz Inicio-->
-<h1>&#33;Pon a prueba tus conocimientos!</h1>
-<div id="pantalla-inicial">
-  <p class="leccion"> Modulo 4. Seguridad en el vehículo</p>
-  
-  <center><img src="../imagenes/Juego12.jpg" alt="" class="InicioJ1"></center>
-  <br> <button class="btn" onclick="comenzarJuego()"> COMENZAR A JUGAR</button> 
-</div>
-<!-- Pantalla Juego -->
-<div class="´pantalla-juego" id="pantalla-juego">
-  <p class="Preguntas" id="pregunta"> <b>Pregunta</b> </p>
-  <center><img src="../imagenes/AutoJ.jpg" alt="" id="J1seguridad"></center>
-  <div class="opciones"> 
-    <div class="opcion" id="op0" onclick="comprobarRespuesta(0)"> 
-      <div class="letra" id="l0">A</div>
-      <div class="nombre font" id="n0">OPCION A</div>
+<div class="content">
+    <!-- Juego quizz Inicio-->
+    <h1>¡Pon a prueba tus conocimientos!</h1>
+    <div id="pantalla-inicial">
+      <p class="leccion"> Modulo 4. Seguridad en el vehículo</p>
+      
+      <center><img src="../imagenes/Juego12.jpg" alt="" class="InicioJ1"></center>
+      <br> <button class="btn" onclick="comenzarJuego()"> COMENZAR A JUGAR</button> 
     </div>
-    <div class="opcion" id="op1" onclick="comprobarRespuesta(1)"> 
-      <div class="letra" id="l1">B</div>
-      <div class="nombre font" id="n1">OPCION B</div>
+    <!-- Pantalla Juego -->
+    <div class="´pantalla-juego" id="pantalla-juego">
+      <p class="Preguntas" id="pregunta"> <b>Pregunta</b> </p>
+      <center><img src="../imagenes/AutoJ.jpg" alt="" id="J1seguridad"></center>
+      <div class="opciones"> 
+        <div class="opcion" id="op0" onclick="comprobarRespuesta(0)"> 
+          <div class="letra" id="l0">A</div>
+          <div class="nombre font" id="n0">OPCION A</div>
+        </div>
+        <div class="opcion" id="op1" onclick="comprobarRespuesta(1)"> 
+          <div class="letra" id="l1">B</div>
+          <div class="nombre font" id="n1">OPCION B</div>
+        </div>
+        <div class="opcion" id="op2" onclick="comprobarRespuesta(2)"> 
+          <div class="letra" id="l2">C</div>
+          <div class="nombre font" id="n2">OPCION C</div>
+        </div>
+        <div class="opcion" id="op3" onclick="comprobarRespuesta(3)"> 
+          <div class="letra" id="l3">D</div>
+          <div class="nombre font" id="n3">OPCION D</div>
+        </div>
+      </div>
     </div>
-    <div class="opcion" id="op2" onclick="comprobarRespuesta(2)"> 
-      <div class="letra" id="l2">C</div>
-      <div class="nombre font" id="n2">OPCION C</div>
+    <!-- Pantalla final -->
+    <div id="pantalla-final">
+      <h2> CORRECTAS: <span id="numCorrectas" style="color:#fffb9d;">3</span></h2>
+      <h2>INCORRECTAS: <span id="numIncorrectas" style="color:#f0e0e0;">2</span></h2>
+      <p id="PNP"></p>
+      <button class="btn" onclick="volverAlInicio()"> VOLVER AL INICIO</button>
     </div>
-    <div class="opcion" id="op3" onclick="comprobarRespuesta(3)"> 
-      <div class="letra" id="l3">D</div>
-      <div class="nombre font" id="n3">OPCION D</div>
-    </div>
-  </div>
-</div>
-<!-- Pantalla final -->
-<div id="pantalla-final">
-  <h2> CORRECTAS: <span id="numCorrectas" style="color:#fffb9d;">3</span></h2>
-  <h2>INCORRECTAS: <span id="numIncorrectas" style="color:#f0e0e0;">2</span></h2>
-  <p id="PNP"></p>
-  <button class="btn" onclick="volverAlInicio()"> VOLVER AL INICIO</button>
-</div>
 
-<!-- Pantalla final SÍ aprpbado -->
-<div id="pantalla-finalAprobado">
-  <h2> CORRECTAS: <span id="numCorrectasA" style="color:#fffb9d;">3</span></h2>
-  <h2>INCORRECTAS: <span id="numIncorrectasA" style="color:#f0e0e0;">2</span></h2>
-  <p id="PNP"></p>
-  <a href="leccion5-1.php"> <button class="btn" onclick="Siguiente()"> Siguiente</button> </a>
+    <!-- Pantalla final SÍ aprpbado -->
+    <div id="pantalla-finalAprobado">
+      <h2> CORRECTAS: <span id="numCorrectasA" style="color:#fffb9d;">3</span></h2>
+      <h2>INCORRECTAS: <span id="numIncorrectasA" style="color:#f0e0e0;">2</span></h2>
+      <p id="PNP"></p>
+      <a href="leccion5-1.php"> <button class="btn" onclick="Siguiente()"> Siguiente</button> </a>
+    </div>
 </div>
 
 <!-- footer -->
