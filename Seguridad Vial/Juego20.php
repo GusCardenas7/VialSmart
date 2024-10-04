@@ -16,7 +16,7 @@
 <body>
 <!-- MENU -->
     <?php 
-        include '../funciones/menu_sec.php';
+        include '../funciones/menu.php';
         
         // Parte dónde se revisa si ya se ha desbloqueado antes o no
         require "../Admin/funciones/conecta.php";   
@@ -102,6 +102,7 @@
   <h2>INCORRECTAS: <span id="numIncorrectasA" style="color:#f0e0e0;">2</span></h2>
   <p id="PNP2"></p>
   <a href="leccion8-1.php"> <button class="btn" onclick="Siguiente()"> Siguiente</button> </a>
+</div>
 </div>
 
 <!-- footer -->

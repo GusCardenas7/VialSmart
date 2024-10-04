@@ -73,8 +73,7 @@ const modules = {
             title: "Video 7.1: Respuestas en casos de emergencias"
         },
         thumbnails: [
-            { src: "../Videos/7.2 Interaccion con extraños.mp4", poster: "../imagenes/miniaturas/7.2 Interaccion con extraños.jpg", title: "Video 7.2: Interacción con extraños", elementId: "thumbnail-image13", titleId: "thumb-vid-title13" },
-            { src: "../Videos/1.3 La via y sus partes.mp4", poster: "../imagenes/miniaturas/1.3 La via y sus partes.jpg", title: "Video 1.3: La vía y sus partes", elementId: "thumbnail-image14", titleId: "thumb-vid-title14" }
+            { src: "../Videos/7.2 Interaccion con extraños.mp4", poster: "../imagenes/miniaturas/7.2 Interaccion con extraños.jpg", title: "Video 7.2: Interacción con extraños", elementId: "thumbnail-image13", titleId: "thumb-vid-title13" }
         ]
     },
     8: {
@@ -84,8 +83,8 @@ const modules = {
             title: "Video 8.1: Respeto mutuo en la vía pública"
         },
         thumbnails: [
-            { src: "../Videos/2.2 Señales de tránsito más comunes.mp4", poster: "../imagenes/miniaturas/2.2 Señales de transito mas comunes.jpg", title: "Video 2.2: Señales de tránsito más comunes", elementId: "thumbnail-image15", titleId: "thumb-vid-title15" },
-            { src: "../Videos/1.3 La via y sus partes.mp4", poster: "../imagenes/miniaturas/1.3 La via y sus partes.jpg", title: "Video 1.3: La vía y sus partes", elementId: "thumbnail-image16", titleId: "thumb-vid-title16" }
+            { src: "../Videos/8.2 Resolucion de conflictos en la via.mp4", poster: "../imagenes/miniaturas/8.2 Resolucion de conflictos en la via.jpg", title: "Video 8.2: Resolución de conflictos en la vía", elementId: "thumbnail-image15", titleId: "thumb-vid-title15" },
+            { src: "../Videos/8.3 Despedida.mp4", poster: "../imagenes/miniaturas/8.3 Despedida.jpg", title: "Video 8.3: Despedida", elementId: "thumbnail-image16", titleId: "thumb-vid-title16" }
         ]
     }
 };

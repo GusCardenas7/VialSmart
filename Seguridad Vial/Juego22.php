@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿<?php
+    require "../Admin/funciones/comprobarSesion.php"; 
+?>
+
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -13,7 +17,7 @@
 <body>
 <!-- MENU -->
     <?php 
-        include '../funciones/menu_sec.php'; 
+        include '../funciones/menu.php'; 
     ?>
     <br><br><br>
 

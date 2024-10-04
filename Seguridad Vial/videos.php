@@ -160,9 +160,11 @@
                 Tu navegador no soporta la reproducción de videos.
             </video>
         </div>
-        <div id="thumbnail14" class="thumbnail" onclick="swapVideos(2)">
-            <img id="thumbnail-image14" src="../imagenes/miniaturas/en_proceso.jpg" alt="Miniatura Video 2">
-            <div id="thumb-vid-title14" class="thumb-vid-title">Video 7.3: Texto de ejemplo</div>
+        <div id="thumbnails" class="thumbnails">
+            <div id="thumbnail13" class="thumbnail" onclick="swapVideos(2)">
+                <img id="thumbnail-image13" src="../imagenes/miniaturas/7.2 Interaccion con extraños.jpg" alt="Miniatura Video 1">
+                <div id="thumb-vid-title13" class="thumb-vid-title">Video 7.2: Interacción con extraños</div>
+            </div>
         </div>
     </div>
 
@@ -177,11 +179,11 @@
         </div>
         <div id="thumbnails" class="thumbnails">
             <div id="thumbnail15" class="thumbnail" onclick="swapVideos(1)">
-                <img id="thumbnail-image15" src="../imagenes/miniaturas/en_proceso.jpg" alt="Miniatura Video 1">
+                <img id="thumbnail-image15" src="../imagenes/miniaturas/8.2 Resolucion de conflictos en la via.jpg" alt="Miniatura Video 1">
                 <div id="thumb-vid-title15" class="thumb-vid-title">Video 8.2: Resolución de conflictos en la vía</div>
             </div>
             <div id="thumbnail16" class="thumbnail" onclick="swapVideos(2)">
-                <img id="thumbnail-image16" src="../imagenes/miniaturas/en_proceso.jpg" alt="Miniatura Video 2">
+                <img id="thumbnail-image16" src="../imagenes/miniaturas/8.3 Despedida.jpg" alt="Miniatura Video 2">
                 <div id="thumb-vid-title16" class="thumb-vid-title">Video 8.3: Despedida</div>
             </div>
         </div>

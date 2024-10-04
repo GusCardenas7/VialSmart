@@ -17,7 +17,7 @@
 <body>
  <!-- MENU -->
     <?php 
-        include '../funciones/menu_sec.php'; 
+        include '../funciones/menu.php'; 
 
         // Parte dónde se revisa si ya se ha desbloqueado antes o no
         require "../Admin/funciones/conecta.php";   

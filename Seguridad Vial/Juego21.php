@@ -17,20 +17,20 @@
     <?php 
         include '../funciones/menu.php'; 
 
-         // Parte dónde se revisa si ya se ha desbloqueado antes o no
+         // Parte dï¿½nde se revisa si ya se ha desbloqueado antes o no
         require "../Admin/funciones/conecta.php";   
         $con = conecta();
         $id_usuario = $_SESSION['idU'];
        
        //checar el id de lecciones y modulos
-       $sql = "SELECT * FROM modulos WHERE nombre='Convivencia vial y cultura de la paz' AND usuarios_id = $id_usuario"; //aquí varía el nombre del módulo
+       $sql = "SELECT * FROM modulos WHERE nombre='Convivencia vial y cultura de la paz' AND usuarios_id = $id_usuario"; //aquï¿½ varï¿½a el nombre del mï¿½dulo
        $res = $con->query($sql);
 
        while($row =$res->fetch_array()){
          $id_modulos = $row["id"];
        } 
 
-       $sql = "SELECT * FROM lecciones WHERE nombre='Respeto mutuo' AND desbloqueado = 1 AND modulos_id = $id_modulos"; //aquí varía el nombre del módulo
+       $sql = "SELECT * FROM lecciones WHERE nombre='Respeto mutuo' AND desbloqueado = 1 AND modulos_id = $id_modulos"; //aquï¿½ varï¿½a el nombre del mï¿½dulo
        $res = $con->query($sql);
 
        while($row =$res->fetch_array()){
@@ -240,7 +240,7 @@ function seleccionar(casilla) {
 
         CambiarPiezas();
 
-        //comprobar que está correcto
+        //comprobar que estï¿½ correcto
         var fin = Finalizar();
         if (fin == true) {
             winAudio.play();
@@ -260,7 +260,7 @@ function seleccionar(casilla) {
                   }
                 }
             };
-            console.log("Enviando petición AJAX");
+            console.log("Enviando peticiï¿½n AJAX");
             xhr.send("id_juego=" + <?php echo $id_juego; ?> + "&puntaje=40" + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='Resolucion de conflictos en la via'");
 
 

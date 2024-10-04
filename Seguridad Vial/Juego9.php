@@ -16,7 +16,7 @@
 <body>
 <!-- MENU -->
     <?php 
-        include '../funciones/menu_sec.php'; 
+        include '../funciones/menu.php'; 
 
          // Parte dónde se revisa si ya se ha desbloqueado antes o no
         require "../Admin/funciones/conecta.php";   
@@ -104,7 +104,7 @@
   <p id="PNP2"></p>
   <a href="leccion4-1.php"> <button class="btn" onclick="Siguiente()"> Siguiente</button> </a>
 </div>
-
+</div>
 
 <!-- footer -->
 <footer>
