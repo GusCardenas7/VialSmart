@@ -1,12 +1,13 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Admin",
+    "\\Admin\\funciones",
     "\\CSS",
-    "\\funciones",
     "\\JavaScript",
     "\\JS",
     "\\Seguridad Vial"
   ],
-  "SelectedNode": "\\CSS\\juego3.css",
+  "SelectedNode": "\\Admin\\funciones\\actualizar_juegos.php",
   "PreviewInSolutionExplorer": false
 }

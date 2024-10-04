@@ -108,6 +108,8 @@ function seleccionar(casilla) {
             winAudio.play();
             clearInterval(tiempoAtras);
 
+
+
             Swal.fire({
                 title: '&iexcl;Lo lograste!<br><span class="footer">Has completado este juego y has desbloqueado la siguiente lecci&#243;n.</span>',
                 padding: '3em',

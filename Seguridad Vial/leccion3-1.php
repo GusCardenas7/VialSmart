@@ -1,4 +1,7 @@
-﻿<html>
+﻿<?php
+    require "../Admin/funciones/comprobarSesion.php"; 
+?>
+<html>
 <head>
     <title>Lección 3.1</title>
     <script src="../JavaScript/lecciones.js"></script>
@@ -8,6 +11,27 @@
 <body> 
     <?php 
         include '../funciones/menu_sec.php'; 
+
+       // Parte dónde se revisa si ya se ha desbloqueado antes o no
+        require "../Admin/funciones/conecta.php";   
+        $con = conecta();
+        $id_usuario = $_SESSION['idU'];
+        
+       //checar el id de lecciones y modulos
+       $sql = "SELECT * FROM modulos WHERE nombre='Reglas basicas' AND usuarios_id = $id_usuario"; //aquí varía el nombre del módulo
+       $res = $con->query($sql);
+
+       while($row =$res->fetch_array()){
+         $id_modulos = $row["id"];
+       } 
+
+       $sql = "SELECT * FROM lecciones WHERE nombre='Cruce seguro en las calles' AND desbloqueado = 1 AND modulos_id = $id_modulos"; //aquí varía el nombre del módulo
+       $res = $con->query($sql);
+
+       while($row =$res->fetch_array()){
+         $id_lecciones = $row["id"];
+       } 
+
     ?>
     <br><br><br><br><br>
     <div class="content">
@@ -22,15 +46,28 @@
                     <p style="font-weight:bold; color:#b32e18;">🛑 Mira a ambos lados: </p><p>Antes de cruzar, incluso si hay un semáforo, siempre debes mirar a ambos lados para asegurarte de que no vengan autos, bicicletas o motocicletas. A veces, los vehículos pueden no detenerse, así que asegúrate de que la vía esté libre antes de empezar a caminar.</p><br>
                     <p style="font-weight:bold; color:#b32e18;">🛑 Camina, NO corras: </p><p>Una vez que hayas verificado que es seguro cruzar, camina con calma. No corras, ya que podrías tropezar o perder el equilibrio. Mantén la vista al frente y sigue caminando en línea recta hasta llegar al otro lado de la calle.</p><br>
                     <p style="font-weight:bold; color:#b32e18;">🛑 Usa los puentes peatonales: </p><p> En calles muy grandes o con mucho tráfico, es posible que haya puentes peatonales. Estos puentes están diseñados para que cruces con total seguridad, por lo que siempre es mejor usarlos si están disponibles.</p><br><br>
-                    <p style="color:#4d4443;  font-style: italic;"><i>Con estos sencillos pasos, cruzar la calle será más seguro y evitarás accidentes. ¡Recuerda siempre estar atento y seguir las reglas de tránsito!</i></p>
-                
+                    <p style="color:#4d4443;  font-style: italic;"><i>Con estos sencillos pasos, cruzar la calle será más seguro y evitarás accidentes. ¡Recuerda siempre estar atento y seguir las reglas de tránsito!</i></p> 
                 </div>
+                <center> <button class="btn" id="boton" onclick="desbloquear()"> Marcar como completo </button> </center> <!-- Añadí esto-->
                 
         <div class="arrowsContainer">
             <div><a href="Juego6.php"><img src="../imagenes/regresar.png" width="90px" height="90px"></a></div>
-            <div><a href="videoL3-1.php"><img src="../imagenes/avanzar.png" width="90px" height="90px"></a></div>
+            <div id="FlechaDesbloqueada"><a href="videoL3-1.php"><img src="../imagenes/avanzar.png" width="90px" height="90px"></a></div>
         </div>
     </div> 
+
+     <?php    
+        // Verifico si existe ya un registro con esos datos
+        $sql = "SELECT * FROM videos WHERE nombre='Cruce seguro en las calles' AND desbloqueado = 1 AND lecciones_id = $id_lecciones AND lecciones_modulos_id = $id_modulos";
+        $res = $con->query($sql);
+        $fila= mysqli_num_rows($res);
+        
+        if($fila >= 1){
+          echo "<script> document.getElementById('FlechaDesbloqueada').style.display = 'block'; </script>";
+          echo "<script> document.getElementById('boton').style.display = 'none'; </script>";
+        }
+    ?>
+
     <footer>
         <div class="links">
             <a href="">Términos y condiciones</a>
@@ -75,6 +112,25 @@ body {
     margin: 0;
     width: 900px; 
     margin-left: 15px; 
+}
+
+.btn {
+    border: none;
+    box-shadow: 4px 4px 2px #2e3031;
+    background: #868889;
+    color: #252525;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .5s;
+    font-size: 24px;
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: bold;
+    text-align: center;
+}
+
+#FlechaDesbloqueada {
+    display: none;
 }
 
 .lessons {
@@ -188,3 +244,20 @@ footer .copyright::after {
     background-color: #b7b7b7;
 }
 </style>
+
+<script>
+
+function desbloquear(){
+   //aqui se tiene que evaluar que si ya hay un modulo introduccion con el id del usuario entonces que la flecha aparezca por sí sola y que no haga el insert.
+   document.getElementById("FlechaDesbloqueada").style.display = "block";
+   
+<?php 
+    
+    if($fila == 0){ 
+       $sql = "INSERT INTO videos (nombre, desbloqueado, lecciones_id, lecciones_modulos_id) VALUES ('Cruce seguro en las calles',1,$id_lecciones ,$id_modulos);";
+       $res = $con->query($sql);
+      }
+?>
+   
+}
+</script>

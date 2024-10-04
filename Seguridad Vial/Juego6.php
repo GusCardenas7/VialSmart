@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿<?php
+    require "../Admin/funciones/comprobarSesion.php"; 
+?>
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -14,6 +17,43 @@
 <!-- MENU -->
     <?php 
         include '../funciones/menu_sec.php'; 
+
+        // Parte dónde se revisa si ya se ha desbloqueado antes o no
+        require "../Admin/funciones/conecta.php";   
+        $con = conecta();
+        $id_usuario = $_SESSION['idU'];
+       
+       //checar el id de lecciones y modulos
+       $sql = "SELECT * FROM modulos WHERE nombre='Señales de transito' AND usuarios_id = $id_usuario"; //aquí varía el nombre del módulo
+       $res = $con->query($sql);
+
+       while($row =$res->fetch_array()){
+         $id_modulos = $row["id"];
+       } 
+
+       $sql = "SELECT * FROM lecciones WHERE nombre='Señales especiales para niños' AND desbloqueado = 1 AND modulos_id = $id_modulos"; //aquí varía el nombre del módulo
+       $res = $con->query($sql);
+
+       while($row =$res->fetch_array()){
+         $id_lecciones = $row["id"];
+       } 
+
+       // Verifico si existe ya un registro con esos datos
+        $sql = "SELECT * FROM juegos WHERE nombre='Señales especiales para niños' AND tipo='quiz'  AND lecciones_id = $id_lecciones AND lecciones_modulos_id = $id_modulos";
+        $res = $con->query($sql);
+        $fila= mysqli_num_rows($res);
+
+        while($row =$res->fetch_array()){
+         $id_juego = $row["id"];
+         $desbloqueado = $row["desbloqueado"];
+        } 
+        $fila= mysqli_num_rows($res);
+        //echo "<script>alert('fila=$fila , desbloqueado=$desbloqueado, id_juego=$id_juego');</script>";
+        if($fila == 0){
+        $sql = "INSERT INTO juegos (nombre, tipo, desbloqueado, puntaje, lecciones_id, lecciones_modulos_id) VALUES ('Señales especiales para niños','quiz',0,0,$id_lecciones ,$id_modulos);";
+        $res = $con->query($sql);
+        }
+
     ?>
     <br><br><br>
 
@@ -57,13 +97,12 @@
       <button class="btn" onclick="volverAlInicio()"> VOLVER AL INICIO</button>
     </div>
 
-    <!-- Pantalla final SÍ aprpbado -->
-    <div id="pantalla-finalAprobado">
-      <h2> CORRECTAS: <span id="numCorrectasA" style="color:#fffb9d;">3</span></h2>
-      <h2>INCORRECTAS: <span id="numIncorrectasA" style="color:#f0e0e0;">2</span></h2>
-      <p id="PNP"></p>
-      <a href="leccion3-1.php"> <button class="btn" onclick="Siguiente()"> Siguiente</button> </a>
-    </div>
+<!-- Pantalla final SÍ aprpbado -->
+<div id="pantalla-finalAprobado">
+  <h2> CORRECTAS: <span id="numCorrectasA" style="color:#fffb9d;">3</span></h2>
+  <h2>INCORRECTAS: <span id="numIncorrectasA" style="color:#f0e0e0;">2</span></h2>
+  <p id="PNP2"></p>
+  <a href="leccion3-1.php"> <button class="btn" onclick="Siguiente()"> Siguiente</button> </a>
 </div>
 
 <!-- footer -->
@@ -189,6 +228,24 @@ function comprobarRespuesta(opcionElegida){
 function revisarpuntaje(){
     if(aciertos >= 6){
        WinGame.play();
+
+       //---BD----
+       // --- Llamada AJAX para actualizar la base de datos ---
+       var xhr = new XMLHttpRequest();
+       xhr.open("POST", "../Admin/funciones/actualizar_Juego.php", true);
+       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+       xhr.onreadystatechange = function () {
+         if (xhr.readyState === 4) {
+             if (xhr.status === 200) {
+                console.log("Respuesta del servidor: ", xhr.responseText); // Verifica la respuesta del servidor
+             } else {
+                console.error("Error: ", xhr.statusText); // Si hay un error, lo mostramos
+             }
+         }
+       };
+       console.log("Enviando petición AJAX");
+       xhr.send("id_juego=" + <?php echo $id_juego; ?> + "&puntaje=40" + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='Cruce seguro en las calles'" + "&nombre_modulo='Reglas basicas'" + "&id_usuario=" + <?php echo $id_usuario; ?>);
+
        //se activa la página de final de Juego
        document.getElementById("pantalla-juego").style.display = "none";
        document.getElementById("pantalla-finalAprobado").style.display = "block";
@@ -196,8 +253,8 @@ function revisarpuntaje(){
        //se agregan los resultados
        document.getElementById("numCorrectasA").innerHTML = aciertos;
        document.getElementById("numIncorrectasA").innerHTML = preguntas.length - aciertos;
-       document.getElementById("PNP").className = "pasa";
-       document.getElementById("PNP").innerHTML = "&#161;Has logrado aprobar&#33; 🤩";
+       document.getElementById("PNP2").className = "pasa";
+       document.getElementById("PNP2").innerHTML = "&#161;Has logrado aprobar&#33; 🤩";
        //aqui iria alguna función para desbloquear la siguiente función, ya que logro pasar
     }else{
        LoseGame.play();

@@ -18,6 +18,7 @@
         $sqlCheck = "SELECT * FROM usuarios WHERE nombre = '$user' OR correo = '$mail'";
         $result = $con->query($sqlCheck);
 
+
         if ($result->num_rows > 0) {
             // Si se encuentra una coincidencia, no se inserta y se muestra un mensaje de error
             echo 2;
@@ -30,6 +31,8 @@
 
             if ($con->query($sql) === TRUE) {
                 // Si la inserción fue exitosa
+                //aquí seleccionar el id del usuario
+
                 echo 1;  // Devuelve 1 si es exitoso
             } else {
                 // Si hubo algún error al ejecutar la consulta

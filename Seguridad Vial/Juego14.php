@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿<?php
+    require "../Admin/funciones/comprobarSesion.php";
+   
+?>
+<!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -15,6 +19,43 @@
     <!-- MENU -->
     <?php 
         include '../funciones/menu_sec.php'; 
+
+        // Parte dónde se revisa si ya se ha desbloqueado antes o no
+        require "../Admin/funciones/conecta.php";   
+        $con = conecta();
+        $id_usuario = $_SESSION['idU'];
+       
+       //checar el id de lecciones y modulos
+       $sql = "SELECT * FROM modulos WHERE nombre='Situaciones de emergencia' AND usuarios_id = $id_usuario"; //aquí varía el nombre del módulo
+       $res = $con->query($sql);
+
+       while($row =$res->fetch_array()){
+         $id_modulos = $row["id"];
+       } 
+
+       $sql = "SELECT * FROM lecciones WHERE nombre='Primeros auxilios basicos' AND desbloqueado = 1 AND modulos_id = $id_modulos"; //aquí varía el nombre del módulo
+       $res = $con->query($sql);
+
+       while($row =$res->fetch_array()){
+         $id_lecciones = $row["id"];
+       } 
+
+       // Verifico si existe ya un registro con esos datos
+        $sql = "SELECT * FROM juegos WHERE nombre='Primeros auxilios basicos' AND tipo='memorama'  AND lecciones_id = $id_lecciones AND lecciones_modulos_id = $id_modulos";
+        $res = $con->query($sql);
+        $fila= mysqli_num_rows($res);
+
+        while($row =$res->fetch_array()){
+         $id_juego = $row["id"];
+         $desbloqueado = $row["desbloqueado"];
+        } 
+        $fila= mysqli_num_rows($res);
+        //echo "<script>alert('fila=$fila , desbloqueado=$desbloqueado, id_juego=$id_juego');</script>";
+        if($fila == 0){
+        $sql = "INSERT INTO juegos (nombre, tipo, desbloqueado, puntaje, lecciones_id, lecciones_modulos_id) VALUES ('Primeros auxilios basicos','memorama',0,0,$id_lecciones ,$id_modulos);";
+        $res = $con->query($sql);
+        }
+
     ?>
     <br><br><br>
 
@@ -87,7 +128,7 @@ let segundoResultado = null;
 let movimientos = 0;
 let aciertos = 0;
 let temporizador = false;
-let timer = 30;
+let timer = 40;
 let tiempoAtras = null;
 
 let winAudio = new Audio('../audios/WinGame.wav');
@@ -193,6 +234,25 @@ function destapar(id) {
                 clearInterval(tiempoAtras);
           
                 winAudio.play();
+
+                //---BD----
+            // --- Llamada AJAX para actualizar la base de datos ---
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "../Admin/funciones/actualizar_Juegos.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                  if (xhr.status === 200) {
+                    console.log("Respuesta del servidor: ", xhr.responseText); // Verifica la respuesta del servidor
+                  } else {
+                   console.error("Error: ", xhr.statusText); // Si hay un error, lo mostramos
+                  }
+                }
+            };
+            console.log("Enviando petición AJAX");
+            xhr.send("id_juego=" + <?php echo $id_juego; ?> + "&puntaje=40" + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='Prevencion y seguridad en caso de desastres'");
+
+
                 Swal.fire({
                 title: '<span class="titulo">&iexcl;Lo lograste!</span><br><span class="footer">Has completado este juego y has desbloqueado la siguiente lecci&#243;n.</span>',
                 padding: '1em',

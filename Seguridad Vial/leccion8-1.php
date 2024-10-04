@@ -1,4 +1,7 @@
-﻿<html>
+﻿<?php
+    require "../Admin/funciones/comprobarSesion.php"; 
+?>
+<html>
 <head>
     <title>Lección 8.1</title>
     <script src="../JavaScript/lecciones.js"></script>
@@ -7,6 +10,27 @@
 <body> 
     <?php 
         include '../funciones/menu_sec.php'; 
+
+        // Parte dónde se revisa si ya se ha desbloqueado antes o no
+        require "../Admin/funciones/conecta.php";   
+        $con = conecta();
+        $id_usuario = $_SESSION['idU'];
+        
+       //checar el id de lecciones y modulos
+       $sql = "SELECT * FROM modulos WHERE nombre='Convivencia vial y cultura de la paz' AND usuarios_id = $id_usuario"; //aquí varía el nombre del módulo
+       $res = $con->query($sql);
+
+       while($row =$res->fetch_array()){
+         $id_modulos = $row["id"];
+       } 
+
+       $sql = "SELECT * FROM lecciones WHERE nombre='Respeto mutuo' AND desbloqueado = 1 AND modulos_id = $id_modulos"; //aquí varía el nombre del módulo
+       $res = $con->query($sql);
+
+       while($row =$res->fetch_array()){
+         $id_lecciones = $row["id"];
+       } 
+
     ?>
     <br><br><br><br><br>
     <div class="content">
@@ -22,12 +46,26 @@
                     <p style="font-weight:bold; color:#bd1010;">🚗 Como conductor</p><br><p>Cede el paso a los peatones en las zonas de cruce y ten precaución con los ciclistas. No uses el claxon de forma innecesaria, ya que puede asustar o distraer a otros usuarios de la vía.</p><br><br>
                     <p style="font-weight:bold; color:#49954c;">🤝🏼 Construyendo una convivencia víal pacífica</p><br><p>El respeto mutuo no solo evita accidentes, sino que también promueve la tolerancia y la empatía en la calle. Cuando somos respetuosos con los demás, estamos contribuyendo a una convivencia más pacífica. Recuerda que todos somos responsables del bienestar y la seguridad de quienes comparten la vía con nosotros.</p><br><br>
                 </div>
+                <center> <button class="btn" id="boton" onclick="desbloquear()"> Marcar como completo </button> </center> <!-- Añadí esto-->
                 
         <div class="arrowsContainer">
             <div><a href="Juego20.php"><img src="../imagenes/regresar.png" width="90px" height="90px"></a></div>
-            <div><a href="videoL8-1.php"><img src="../imagenes/avanzar.png" width="90px" height="90px"></a></div>
+            <div id="FlechaDesbloqueada"><a href="videoL8-1.php"><img src="../imagenes/avanzar.png" width="90px" height="90px"></a></div>
         </div>
     </div> 
+
+    <?php    
+        // Verifico si existe ya un registro con esos datos
+        $sql = "SELECT * FROM videos WHERE nombre='Respeto mutuo' AND desbloqueado = 1 AND lecciones_id = $id_lecciones AND lecciones_modulos_id = $id_modulos";
+        $res = $con->query($sql);
+        $fila= mysqli_num_rows($res);
+        
+        if($fila >= 1){
+          echo "<script> document.getElementById('FlechaDesbloqueada').style.display = 'block'; </script>";
+          echo "<script> document.getElementById('boton').style.display = 'none'; </script>";
+        }
+     ?>
+
     <footer>
         <div class="links">
             <a href="">Términos y condiciones</a>
@@ -72,6 +110,25 @@ body {
     margin: 0;
     width: 900px; 
     margin-left: 15px; 
+}
+
+.btn {
+    border: none;
+    box-shadow: 4px 4px 2px #2e3031;
+    background: #868889;
+    color: #252525;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .5s;
+    font-size: 24px;
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: bold;
+    text-align: center;
+}
+
+#FlechaDesbloqueada {
+    display: none;
 }
 
 .lessons {
@@ -185,3 +242,18 @@ footer .copyright::after {
     background-color: #b7b7b7;
 }
 </style>
+<script>
+function desbloquear(){
+   //aqui se tiene que evaluar que si ya hay un modulo introduccion con el id del usuario entonces que la flecha aparezca por sí sola y que no haga el insert.
+   document.getElementById("FlechaDesbloqueada").style.display = "block";
+   
+<?php 
+    
+    if($fila == 0){ 
+       $sql = "INSERT INTO videos (nombre, desbloqueado, lecciones_id, lecciones_modulos_id) VALUES ('Respeto mutuo',1,$id_lecciones ,$id_modulos);";
+       $res = $con->query($sql);
+      }
+?>
+   
+}
+</script>
