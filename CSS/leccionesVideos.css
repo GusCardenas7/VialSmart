@@ -15,6 +15,10 @@ body {
     flex: 1;
 }
 
+#FlechaDesbloqueada {
+    display: none;
+}
+
 .moduleTitle {
     color: black;
     margin: 0 auto;

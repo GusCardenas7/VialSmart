@@ -28,6 +28,26 @@
                 $_SESSION['idU'] = $row['id']; 
                 $_SESSION['nombreU'] = $row['nombre']; 
                 $_SESSION['correoU'] = $row['correo'];
+
+                $id_usuario = $_SESSION['idU'];
+        
+                $sql = "SELECT * FROM modulos WHERE nombre='Introduccion' AND usuarios_id = $id_usuario";
+                $res = $con->query($sql);
+                $fila= mysqli_num_rows($res);
+                
+                if($fila == 0){
+                   $sql = "INSERT INTO modulos (nombre, usuarios_id) VALUES ('Introduccion',$id_usuario);";
+                   $res = $con->query($sql);
+
+                   $sql = "SELECT * FROM modulos WHERE nombre='Introduccion' AND usuarios_id = $id_usuario";
+                   $res = $con->query($sql);
+
+                   while($row =$res->fetch_array()){
+                      $id_modulos = $row["id"];
+                   }  
+                   $sql = "INSERT INTO lecciones (nombre, desbloqueado, modulos_id) VALUES ('Que es la seguridad vial',1, $id_modulos);";
+                   $res = $con->query($sql);
+                }
                 echo 1;  // Si el usuario y la contraseña son correctos
             } else {
                 echo 0;  // Contraseña incorrecta

@@ -1,12 +1,13 @@
 <?php
-    require "../Admin/funciones/comprobarSesion.php"; 
+    require "../Admin/funciones/comprobarSesion.php";
+   
 ?>
 <!DOCTYPE html>
 
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Puzzle Lecci&#243;n 8.1</title>
+    <title>Puzzle Lecci&#243;n 1.1</title>
     <link rel="stylesheet" href="../CSS/puzzle.css"> 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
@@ -17,20 +18,20 @@
     <?php 
         include '../funciones/menu.php'; 
 
-         // Parte dónde se revisa si ya se ha desbloqueado antes o no
+        // Parte dónde se revisa si ya se ha desbloqueado antes o no
         require "../Admin/funciones/conecta.php";   
         $con = conecta();
         $id_usuario = $_SESSION['idU'];
-       
+        
        //checar el id de lecciones y modulos
-       $sql = "SELECT * FROM modulos WHERE nombre='Convivencia vial y cultura de la paz' AND usuarios_id = $id_usuario"; //aquí varía el nombre del módulo
+       $sql = "SELECT * FROM modulos WHERE nombre='Introduccion' AND usuarios_id = $id_usuario"; //aquí varía el nombre del módulo
        $res = $con->query($sql);
 
        while($row =$res->fetch_array()){
          $id_modulos = $row["id"];
        } 
 
-       $sql = "SELECT * FROM lecciones WHERE nombre='Respeto mutuo' AND desbloqueado = 1 AND modulos_id = $id_modulos"; //aquí varía el nombre del módulo
+       $sql = "SELECT * FROM lecciones WHERE nombre='Introduccion' AND desbloqueado = 1 AND modulos_id = $id_modulos"; //aquí varía el nombre del módulo
        $res = $con->query($sql);
 
        while($row =$res->fetch_array()){
@@ -38,20 +39,21 @@
        } 
 
        // Verifico si existe ya un registro con esos datos
-        $sql = "SELECT * FROM juegos WHERE nombre='Respeto mutuo' AND tipo='Puzzle'  AND lecciones_id = $id_lecciones AND lecciones_modulos_id = $id_modulos";
+        $sql = "SELECT * FROM juegos WHERE nombre='Introduccion' AND tipo='Puzzle' AND desbloqueado = 1 AND lecciones_id = $id_lecciones AND lecciones_modulos_id = $id_modulos";
         $res = $con->query($sql);
-        $fila= mysqli_num_rows($res);
-
         while($row =$res->fetch_array()){
-         $id_juego = $row["id"];
          $desbloqueado = $row["desbloqueado"];
+         $id_juego = $row["id"];
         } 
         $fila= mysqli_num_rows($res);
-        //echo "<script>alert('fila=$fila , desbloqueado=$desbloqueado, id_juego=$id_juego');</script>";
+
+        //echo "<script>alert($fila);</script>";
         if($fila == 0){
-        $sql = "INSERT INTO juegos (nombre, tipo, desbloqueado, puntaje, lecciones_id, lecciones_modulos_id) VALUES ('Respeto mutuo','Puzzle',0,0,$id_lecciones ,$id_modulos);";
+        $sql = "INSERT INTO juegos (nombre, tipo, desbloqueado, puntaje, lecciones_id, lecciones_modulos_id) VALUES ('Introduccion','Puzzle',0,0,$id_lecciones ,$id_modulos);";
         $res = $con->query($sql);
         }
+
+
     ?>
     <br><br><br>
 
@@ -63,39 +65,39 @@
  <section class="section1">
 <table>
    <tr>
-       <td><img id="0" src="../imagenes/memoramas/Leccion8/0.jpg" onclick="seleccionar(0)"></td>
-       <td><img id="1" src="../imagenes/memoramas/Leccion8/1.jpg" onclick="seleccionar(1)"></td>
-       <td><img id="2" src="../imagenes/memoramas/Leccion8/2.jpg" onclick="seleccionar(2)"></td>
-       <td><img id="3" src="../imagenes/memoramas/Leccion8/3.jpg" onclick="seleccionar(3)"></td>
-       <td><img id="4" src="../imagenes/memoramas/Leccion8/4.jpg" onclick="seleccionar(4)"></td>
+       <td><img id="0" src="../imagenes/memoramas/Leccion1/0.png" onclick="seleccionar(0)"></td>
+       <td><img id="1" src="../imagenes/memoramas/Leccion1/1.png" onclick="seleccionar(1)"></td>
+       <td><img id="2" src="../imagenes/memoramas/Leccion1/2.png" onclick="seleccionar(2)"></td>
+       <td><img id="3" src="../imagenes/memoramas/Leccion1/3.png" onclick="seleccionar(3)"></td>
+       <td><img id="4" src="../imagenes/memoramas/Leccion1/4.png" onclick="seleccionar(4)"></td>
    </tr
    <tr>
-       <td><img id="5" src="../imagenes/memoramas/Leccion8/5.jpg" onclick="seleccionar(5)"></td>
-       <td><img id="6" src="../imagenes/memoramas/Leccion8/6.jpg" onclick="seleccionar(6)"></td>
-       <td><img id="7" src="../imagenes/memoramas/Leccion8/7.jpg" onclick="seleccionar(7)"></td>
-       <td><img id="8" src="../imagenes/memoramas/Leccion8/8.jpg" onclick="seleccionar(8)"></td>
-       <td><img id="9" src="../imagenes/memoramas/Leccion8/9.jpg" onclick="seleccionar(9)"></td>
+       <td><img id="5" src="../imagenes/memoramas/Leccion1/5.png" onclick="seleccionar(5)"></td>
+       <td><img id="6" src="../imagenes/memoramas/Leccion1/6.png" onclick="seleccionar(6)"></td>
+       <td><img id="7" src="../imagenes/memoramas/Leccion1/7.png" onclick="seleccionar(7)"></td>
+       <td><img id="8" src="../imagenes/memoramas/Leccion1/8.png" onclick="seleccionar(8)"></td>
+       <td><img id="9" src="../imagenes/memoramas/Leccion1/9.png" onclick="seleccionar(9)"></td>
    </tr>
    <tr>
-       <td><img id="10" src="../imagenes/memoramas/Leccion8/10.jpg" onclick="seleccionar(10)"></td>
-       <td><img id="11" src="../imagenes/memoramas/Leccion8/11.jpg" onclick="seleccionar(11)"></td>
-       <td><img id="12" src="../imagenes/memoramas/Leccion8/12.jpg" onclick="seleccionar(12)"></td>
-       <td><img id="13" src="../imagenes/memoramas/Leccion8/13.jpg" onclick="seleccionar(13)"></td>
-       <td><img id="14" src="../imagenes/memoramas/Leccion8/14.jpg" onclick="seleccionar(14)"></td>
+       <td><img id="10" src="../imagenes/memoramas/Leccion1/10.png" onclick="seleccionar(10)"></td>
+       <td><img id="11" src="../imagenes/memoramas/Leccion1/11.png" onclick="seleccionar(11)"></td>
+       <td><img id="12" src="../imagenes/memoramas/Leccion1/12.png" onclick="seleccionar(12)"></td>
+       <td><img id="13" src="../imagenes/memoramas/Leccion1/13.png" onclick="seleccionar(13)"></td>
+       <td><img id="14" src="../imagenes/memoramas/Leccion1/14.png" onclick="seleccionar(14)"></td>
    </tr>
    <tr>
-       <td><img id="15" src="../imagenes/memoramas/Leccion8/15.jpg" onclick="seleccionar(15)"></td>
-       <td><img id="16" src="../imagenes/memoramas/Leccion8/16.jpg" onclick="seleccionar(16)"></td>
-       <td><img id="17" src="../imagenes/memoramas/Leccion8/17.jpg" onclick="seleccionar(17)"></td>
-       <td><img id="18" src="../imagenes/memoramas/Leccion8/18.jpg" onclick="seleccionar(18)"></td>
-       <td><img id="19" src="../imagenes/memoramas/Leccion8/19.jpg" onclick="seleccionar(19)"></td>
+       <td><img id="15" src="../imagenes/memoramas/Leccion1/15.png" onclick="seleccionar(15)"></td>
+       <td><img id="16" src="../imagenes/memoramas/Leccion1/16.png" onclick="seleccionar(16)"></td>
+       <td><img id="17" src="../imagenes/memoramas/Leccion1/17.png" onclick="seleccionar(17)"></td>
+       <td><img id="18" src="../imagenes/memoramas/Leccion1/18.png" onclick="seleccionar(18)"></td>
+       <td><img id="19" src="../imagenes/memoramas/Leccion1/19.png" onclick="seleccionar(19)"></td>
    </tr>
    <tr>
-       <td><img id="20" src="../imagenes/memoramas/Leccion8/20.jpg" onclick="seleccionar(20)"></td>
-       <td><img id="21" src="../imagenes/memoramas/Leccion8/21.jpg" onclick="seleccionar(21)"></td>
-       <td><img id="22" src="../imagenes/memoramas/Leccion8/22.jpg" onclick="seleccionar(22)"></td>
-       <td><img id="23" src="../imagenes/memoramas/Leccion8/23.jpg" onclick="seleccionar(23)"></td>
-       <td><img id="24" src="../imagenes/memoramas/Leccion8/24.jpg" onclick="seleccionar(24)"></td>
+       <td><img id="20" src="../imagenes/memoramas/Leccion1/20.png" onclick="seleccionar(20)"></td>
+       <td><img id="21" src="../imagenes/memoramas/Leccion1/21.png" onclick="seleccionar(21)"></td>
+       <td><img id="22" src="../imagenes/memoramas/Leccion1/22.png" onclick="seleccionar(22)"></td>
+       <td><img id="23" src="../imagenes/memoramas/Leccion1/23.png" onclick="seleccionar(23)"></td>
+       <td><img id="24" src="../imagenes/memoramas/Leccion1/24.png" onclick="seleccionar(24)"></td>
    </tr
 </table>
 </section>
@@ -108,7 +110,7 @@
 <!-- Imagen Correcta -->
  <div class="imagen_correcta">
    
-   <div> <img class="fondo" src="../imagenes/memoramas/Leccion8/SV_memorama.jpg" alt="" > </div>
+   <div> <img class="fondo" src="../imagenes/memoramas/Leccion1/SV_memorama.jfif" alt="" > </div>
  </div>
 </div>
 <!-- Tiempo -->
@@ -130,11 +132,12 @@
         <span class="copyright">&copy; VialSmart 2024</span>
 </footer>
 
-   <!-- <script type="text/javascript" src="../JS/Juego21.js"></script> -->
+   <!-- <script type="text/javascript" src="../JS/puzzle.php"></script> -->
 
 </body>
 
 </html>
+
 <script>
 var piezas = [0, 1, 2, 3, 4,
     5, 6, 7, 8, 9,
@@ -177,7 +180,7 @@ function Cronometro() {
                 stopKeydownPropagation: false,
                 showCancelButton: true,
                 confirmButtonColor: '#E1A293',
-                cancelButtonText: '<a class="quitar" href="Juego21.php">Volver a jugar</a>',
+                cancelButtonText: '<a class="quitar" href="Juego1.php">Volver a jugar</a>',
                 cancelButtonColor: '#C1BDBC',
                 confirmButtonText: '<a class="quitar" href="IndexSV.php">Ir a p&#225;gina principal</a>'
             })
@@ -192,7 +195,7 @@ function bloquearTarjetas() {
     for (let i = 0; i <= 24; i++) {
         let tarjetaBloqueada = document.getElementById(i);
         //tarjetaBloqueada.innerHTML = numeros[i];
-        tarjetaBloqueada.innerHTML = `<img src="../imagenes/memoramas/Leccion8/${piezas[i]}.jpg" alt="">`;
+        tarjetaBloqueada.innerHTML = `<img src="../imagenes/memoramas/Leccion1/${piezas[i]}.png" alt="">`;
         tarjetaBloqueada.disabled = true;
     }
 
@@ -247,24 +250,13 @@ function seleccionar(casilla) {
             clearInterval(tiempoAtras);
 
            //---BD----
-            // --- Llamada AJAX para actualizar la base de datos ---
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "../Admin/funciones/actualizar_Juegos.php", true);
-            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4) {
-                  if (xhr.status === 200) {
-                    console.log("Respuesta del servidor: ", xhr.responseText); // Verifica la respuesta del servidor
-                  } else {
-                   console.error("Error: ", xhr.statusText); // Si hay un error, lo mostramos
-                  }
-                }
-            };
-            console.log("Enviando petición AJAX");
-            xhr.send("id_juego=" + <?php echo $id_juego; ?> + "&puntaje=40" + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='Resolucion de conflictos en la via'");
-
-
-            Swal.fire({
+          <?php  
+               if($desbloqueado == 0 & $fila == 1){
+	              $sql = "UPDATE juegos SET desbloqueado = 1, puntaje = 40 WHERE id = $id_juego ";
+                  $res = $con->query($sql);
+               }          
+          ?>
+                Swal.fire({
                 title: '&iexcl;Lo lograste!<br><span class="footer">Has completado este juego y has desbloqueado la siguiente lecci&#243;n.</span>',
                 padding: '3em',
                 html: '<img class="ganar" src="../imagenes/perrito_bailando.gif" alt="" >',
@@ -278,8 +270,24 @@ function seleccionar(casilla) {
                 confirmButtonColor: '#6294D5',
                 cancelButtonText: '<a class="quitar" href="lecciones.php">Ir a lecciones</a>',
                 cancelButtonColor: '#F3F4AC',
-                confirmButtonText: '<a class="quitar" href="leccion8-2.php">Siguiente</a>'
-            })
+                confirmButtonText: '<a class="quitar" href="leccion1-2.php">Siguiente</a>' 
+            })        
+            /*Swal.fire({
+                title: '&iexcl;Lo lograste!<br><span class="footer">Has completado este juego y has desbloqueado la siguiente lecci&#243;n.</span>',
+                padding: '3em',
+                html: '<img class="ganar" src="../imagenes/perrito_bailando.gif" alt="" >',
+                color: '#000000',
+                backdrop: `rgba(0,0,123,0.4)`,
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                allowEnterKey: false,
+                stopKeydownPropagation: false,
+                showCancelButton: true,
+                confirmButtonColor: '#6294D5',
+                cancelButtonText: '<a class="quitar" href="lecciones.php">Ir a lecciones</a>',
+                cancelButtonColor: '#F3F4AC',
+                confirmButtonText: '<a class="quitar" href="leccion1-2.php">Siguiente</a>'
+            })*/
             //-------
 
         }
@@ -299,7 +307,7 @@ function CambiarPiezas() {
     for (var casilla = 0; casilla <= 24; casilla++) {
         var imagen = piezas[casilla];
 
-        document.getElementById(casilla).src = "../imagenes/memoramas/Leccion8/" + imagen + ".jpg";
+        document.getElementById(casilla).src = "../imagenes/memoramas/Leccion1/" + imagen + ".png";
     }
 }
 

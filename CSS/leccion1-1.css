@@ -17,6 +17,28 @@ body {
     flex: 1;
 }
 
+.btn {
+    border: none;
+    box-shadow: 4px 4px 2px #2e3031;
+    background: #868889;
+    color: #252525;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .5s;
+    font-size: 24px;
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: bold;
+    text-align: center;
+}
+#FlechaDesbloqueada {
+    display: none;
+}
+
+#boton {
+    display: block;
+}
+
 .moduleTitle {
     color: black;
     text-align: center;
@@ -71,6 +93,7 @@ body {
     margin-left: 50px;
     animation: shake 3s ease-in-out infinite; /* Aplica la animación de agitación */
 }
+
 
 /* Animación de agitación */
 @keyframes shake {
@@ -143,3 +166,4 @@ footer .copyright::after {
     width: 0.1px;
     background-color: #b7b7b7;
 }
+

@@ -1,4 +1,9 @@
-﻿<html>
+﻿<?php
+    require "../Admin/funciones/comprobarSesion.php";
+   
+?>
+
+<html>
 <head>
     <title>Lección 1.2</title>
     <script src="../JavaScript/lecciones.js"></script>
@@ -8,6 +13,26 @@
 <body> 
     <?php 
         include '../funciones/menu_sec.php'; 
+
+        // Parte dónde se revisa si ya se ha desbloqueado antes o no
+        require "../Admin/funciones/conecta.php";   
+        $con = conecta();
+        $id_usuario = $_SESSION['idU'];
+        
+       //checar el id de lecciones y modulos
+       $sql = "SELECT * FROM modulos WHERE nombre='Introduccion' AND usuarios_id = $id_usuario"; //aquí varía el nombre del módulo
+       $res = $con->query($sql);
+
+       while($row =$res->fetch_array()){
+         $id_modulos = $row["id"];
+       } 
+
+       $sql = "SELECT * FROM lecciones WHERE nombre='Los usuarios de la via' AND desbloqueado = 1 AND modulos_id = $id_modulos"; //aquí varía el nombre del módulo
+       $res = $con->query($sql);
+
+       while($row =$res->fetch_array()){
+         $id_lecciones = $row["id"];
+       } 
     ?>
     <br><br><br><br><br>
     <div class="content">
@@ -27,14 +52,27 @@
                     <p>Los pasajeros son las personas que viajan dentro de un vehículo, pero no lo están conduciendo. A pesar de no manejar el auto, los pasajeros también tienen responsabilidades. Por ejemplo, deben siempre usar el cinturón de seguridad, mantener la calma dentro del vehículo y evitar hacer cosas que distraigan al conductor. También es importante subir y bajar del automóvil de manera segura, mirando siempre a ambos lados antes de abrir la puerta.</p><br><br>
                     <br><p style="font-weight:bold;">🚥 Conclusión 🚥</p>
                     <p>Cada uno de estos usuarios tiene una tarea importante para garantizar que todos se mantengan seguros en las calles. Saber cómo debemos comportarnos, ya sea caminando, en bicicleta o como pasajeros, es esencial para evitar accidentes y convivir de manera respetuosa y segura en la vía pública.</p><br><br>
-
                 </div>
+                <center> <button class="btn" id="boton" onclick="desbloquear()"> Marcar como completo </button> </center> <!-- Añadí esto-->
 
         <div class="arrowsContainer">
             <div><a href="Juego1.php"><img src="../imagenes/regresar.png" width="90px" height="90px"></a></div>
-            <div><a href="videoL1-2.php"><img src="../imagenes/avanzar.png" width="90px" height="90px"></a></div>
+            <div id="FlechaDesbloqueada"><a href="videoL1-2.php"><img src="../imagenes/avanzar.png" width="90px" height="90px"></a></div>
         </div>
     </div> 
+
+    <?php    
+        // Verifico si existe ya un registro con esos datos
+        $sql = "SELECT * FROM videos WHERE nombre='Los usuarios de la via' AND desbloqueado = 1 AND lecciones_id = $id_lecciones AND lecciones_modulos_id = $id_modulos";
+        $res = $con->query($sql);
+        $fila= mysqli_num_rows($res);
+        
+        if($fila >= 1){
+          echo "<script> document.getElementById('FlechaDesbloqueada').style.display = 'block'; </script>";
+          echo "<script> document.getElementById('boton').style.display = 'none'; </script>";
+        }
+  ?>
+
     <footer>
         <div class="links">
             <a href="">Términos y condiciones</a>
@@ -46,6 +84,7 @@
 </body>
 </html>
 <style>
+
 html, body {
     height: 100%;
     margin: 0;
@@ -146,6 +185,25 @@ body {
     padding: 20px 40px;
 }
 
+.btn {
+    border: none;
+    box-shadow: 4px 4px 2px #2e3031;
+    background: #868889;
+    color: #252525;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .5s;
+    font-size: 24px;
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: bold;
+    text-align: center;
+}
+
+#FlechaDesbloqueada {
+    display: none;
+}
+
 footer {
     background-color: #000000;
     color: #b7b7b7;
@@ -192,3 +250,21 @@ footer .copyright::after {
     background-color: #b7b7b7;
 }
 </style>
+
+
+<script>
+
+function desbloquear(){
+   //aqui se tiene que evaluar que si ya hay un modulo introduccion con el id del usuario entonces que la flecha aparezca por sí sola y que no haga el insert.
+   document.getElementById("FlechaDesbloqueada").style.display = "block";
+   
+<?php 
+    
+    if($fila == 0){ 
+       $sql = "INSERT INTO videos (nombre, desbloqueado, lecciones_id, lecciones_modulos_id) VALUES ('Los usuarios de la via',1,$id_lecciones ,$id_modulos);";
+       $res = $con->query($sql);
+      }
+?>
+   
+}
+</script>
