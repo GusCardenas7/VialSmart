@@ -6,6 +6,7 @@
 <head>
     <title>Logros</title>
     <link rel="stylesheet" href="../CSS/logros.css">
+    <script src="../JavaScript/logros.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
     var video = document.getElementById('background-video');
@@ -26,11 +27,11 @@
 </video>
     <div class="module content">
         <div id="lessons" class="lessons">
-            <div id="lesson1" class="lesson blur-in-expand" onclick="goToLesson(1,1)">
+            <div id="lesson1" class="lesson blur-in-expand" onclick="goToPage('ranking.php')">
                 <img src="../imagenes/ranking.png" alt="Ranking">
                 <div class="lesson-title">Ver ranking general</div>
             </div>
-            <div id="lesson2" class="lesson blur-in-expand">
+            <div id="lesson2" class="lesson blur-in-expand" onclick="goToPage('logrosConseguidos.php')">
                 <img src="../imagenes/logros.png" alt="Logros">
                 <div class="lesson-title">Ver logros conseguidos</div>
             </div>
