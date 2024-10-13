@@ -17,7 +17,7 @@
 
     <!-- MENU -->
     <?php 
-        include '../funciones/menu_sec.php'; 
+        include '../funciones/menu.php';  
 
         // Parte dónde se revisa si ya se ha desbloqueado antes o no
         require "../Admin/funciones/conecta.php";   
@@ -127,7 +127,7 @@ let segundoResultado = null;
 let movimientos = 0;
 let aciertos = 0;
 let temporizador = false;
-let timer = 30;
+let timer = 40;
 let tiempoAtras = null;
 
 let winAudio = new Audio('../audios/WinGame.wav');
@@ -230,6 +230,7 @@ function destapar(id) {
             CorrectAudio.play();
 
             if (aciertos == 8) {
+                var puntos = Puntos(movimientos);
                 clearInterval(tiempoAtras);
           
                 //---BD----
@@ -247,7 +248,7 @@ function destapar(id) {
                 }
             };
             console.log("Enviando petición AJAX");
-            xhr.send("id_juego=" + <?php echo $id_juego; ?> + "&puntaje=40" + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='Seguridad personal'");
+            xhr.send("id_juego=" + <?php echo $id_juego; ?> + "&puntaje="+puntos + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='Seguridad personal'");
 
 
                 winAudio.play();
@@ -285,6 +286,27 @@ function destapar(id) {
         }
 
     }
+
+}
+
+function Puntos(movimientos){
+    var puntaje = 0;
+    
+    if (movimientos <= 15 ){
+        puntaje = 100;
+    }else if(movimientos <= 25){
+        puntaje = 80;
+    }else if(movimientos <= 35){
+        puntaje = 60;
+    }else if(movimientos <= 40){
+        puntaje = 40;
+    }else if(movimientos <= 45){
+        puntaje = 20;
+    }else if(movimientos > 50){
+        puntaje = 10;
+    }
+
+    return puntaje;
 
 }
 

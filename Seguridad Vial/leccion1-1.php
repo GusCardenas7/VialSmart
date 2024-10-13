@@ -7,7 +7,6 @@
 <head>
     <title>Lección 1.1</title>
     <link rel="stylesheet" href="../CSS/leccion1-1.css">
-    <script src="../JavaScript/lecciones.js"></script>
     <script src="../JavaScript/lecciones_typewritter.js"></script>
 
 </head>

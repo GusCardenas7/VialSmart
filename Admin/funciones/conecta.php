@@ -1,4 +1,4 @@
-<?php
+<?php 
     define("HOST", 'localhost');
     define("BD", 'vialsmart');
     define("USER_BD", 'root');
@@ -15,9 +15,6 @@
         }
 
         return $con;
-    }
-    //
-
-
+    } 
 
 ?>

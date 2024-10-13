@@ -17,7 +17,7 @@
 <body>
 <!-- MENU -->
     <?php 
-        include '../funciones/menu_sec.php'; 
+        include '../funciones/menu.php';  
 
         // Parte dónde se revisa si ya se ha desbloqueado antes o no
         require "../Admin/funciones/conecta.php";   
@@ -241,7 +241,7 @@ function terminarJuego(){
 function revisarpuntaje(){
     if(aciertos >= 6){
        WinGame.play();
-
+       var puntos = Puntos(aciertos);
        //---BD----
        // --- Llamada AJAX para actualizar la base de datos ---
        var xhr = new XMLHttpRequest();
@@ -257,7 +257,7 @@ function revisarpuntaje(){
          }
        };
        console.log("Enviando petición AJAX");
-       xhr.send("id_juego=" + <?php echo $id_juego; ?> + "&puntaje=40" + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='Tipos de señales de transito'" + "&nombre_modulo='Señales de transito'" + "&id_usuario=" + <?php echo $id_usuario; ?>);
+       xhr.send("id_juego=" + <?php echo $id_juego; ?> + "&puntaje="+puntos + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='Tipos de señales de transito'" + "&nombre_modulo='Señales de transito'" + "&id_usuario=" + <?php echo $id_usuario; ?>);
 
        //se activa la página de final de Juego
        document.getElementById("pantalla-juego").style.display = "none";
@@ -287,6 +287,13 @@ function volverAlInicio(){
     document.getElementById("pantalla-final").style.display = "none";
     document.getElementById("pantalla-inicial").style.display = "block";
     document.getElementById("pantalla-juego").style.display = "none";  
+}
+
+function Puntos(aciertos){
+    var puntaje = aciertos * 10;
+
+    return puntaje;
+
 }
 
 </script>

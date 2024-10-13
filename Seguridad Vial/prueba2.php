@@ -63,15 +63,15 @@
     <div id="module1" class="module content">
         <div class="moduleTitle">Módulo 1: Introducción a la Seguridad Vial</div><br>
         <div id="thumbnails" class="thumbnails">
-            <div style="display:none;" id="thumbnail1" class="thumbnail" onclick="Sound()">
+            <div style="display:none;" id="thumbnail1" class="thumbnail">
                 <a href="Juego1.php"><img id="thumbnail-image1" src="../imagenes/miniaturas/Juego Puzzle.jpeg" alt="Miniatura Juego 1"></a>
                 <div id="thumb-vid-title1" class="thumb-vid-title">Juego 1.1: ¿Qué es la seguridad vial?</div>
             </div>
-            <div style="display:none;" id="thumbnail2" class="thumbnail" onclick="Sound()">
+            <div style="display:none;" id="thumbnail2" class="thumbnail">
                 <a href="Juego2.php"><img id="thumbnail-image1" src="../imagenes/miniaturas/Juego Memorama.png" alt="Miniatura Video 1"></a>
                 <div id="thumb-vid-title1" class="thumb-vid-title">Juego 1.2: Los usuarios de la vía</div>
             </div>
-            <div style="display:none;" id="thumbnail3" class="thumbnail" onclick="Sound()">
+            <div style="display:none;" id="thumbnail3" class="thumbnail">
                 <a href="Juego3.php"><img id="thumbnail-image2" src="../imagenes/miniaturas/Juego Quiz.webp" alt="Miniatura Video 2"></a>
                 <div id="thumb-vid-title2" class="thumb-vid-title">Juego 1.3: La vía y sus partes</div>
             </div>
@@ -94,15 +94,15 @@
     <div id="module2" class="module content" hidden>
         <div class="moduleTitle">Módulo 2: Señales de Tránsito</div><br>
         <div id="thumbnails" class="thumbnails">
-            <div style="display:none;" id="thumbnail4" class="thumbnail" onclick="Sound()">
+            <div style="display:none;" id="thumbnail4" class="thumbnail">
                 <a href="Juego4.php"><img id="thumbnail-image3" src="../imagenes/miniaturas/Juego Adivina.png" alt="Miniatura Video 1"></a>
                 <div id="thumb-vid-title3" class="thumb-vid-title">Juego 2.1: Tipos de señales de tránsito</div>
             </div>
-            <div style="display:none;" id="thumbnail5" class="thumbnail" onclick="Sound()">
+            <div style="display:none;" id="thumbnail5" class="thumbnail">
                 <a href="Juego5.php"><img id="thumbnail-image3" src="../imagenes/miniaturas/Juego Unir.png" alt="Miniatura Video 1"></a>
                 <div id="thumb-vid-title3" class="thumb-vid-title">Video 2.2: Señales de tránsito más comunes</div>
             </div>
-            <div style="display:none;" id="thumbnail6" class="thumbnail" onclick="Sound()">
+            <div style="display:none;" id="thumbnail6" class="thumbnail">
                <a href="Juego6.php"><img id="thumbnail-image2" src="../imagenes/miniaturas/Juego Quiz.webp" alt="Miniatura Video 2"></a>
                 <div id="thumb-vid-title4" class="thumb-vid-title"> Juego.3: La vía y sus partes</div>
             </div>
@@ -125,15 +125,15 @@
     <div id="module3" class="module content" hidden>
         <div class="moduleTitle">Módulo 3: Reglas Básicas de Seguridad Vial</div><br>
         <div id="thumbnails" class="thumbnails">
-            <div style="display:none;" id="thumbnail7" class="thumbnail" onclick="Sound()">
+            <div style="display:none;" id="thumbnail7" class="thumbnail">
                 <a href="Juego7.php"><img id="thumbnail-image1" src="../imagenes/miniaturas/Juego Puzzle.jpeg" alt="Miniatura Juego 1"></a>
                 <div id="thumb-vid-title5" class="thumb-vid-title">Juego 3.1: Cruce seguro de la calle</div>
             </div>
-            <div style="display:none;" id="thumbnail8" class="thumbnail" onclick="Sound()">
+            <div style="display:none;" id="thumbnail8" class="thumbnail">
                 <a href="Juego8.php"><img id="thumbnail-image1" src="../imagenes/miniaturas/Juego Memorama.png" alt="Miniatura Video 1"></a>
                 <div id="thumb-vid-title5" class="thumb-vid-title">Juego 3.2 Comportamiento peatonal seguro</div>
             </div>
-            <div style="display:none;" id="thumbnail9" class="thumbnail" onclick="Sound()">
+            <div style="display:none;" id="thumbnail9" class="thumbnail">
                <a href="Juego9.php"><img id="thumbnail-image2" src="../imagenes/miniaturas/Juego Quiz.webp" alt="Miniatura Video 2"></a>
                 <div id="thumb-vid-title6" class="thumb-vid-title">Juego 3.3: Uso seguro de la bicicleta</div>
             </div>
@@ -157,15 +157,15 @@
     <div id="module4" class="module content" hidden>
         <div class="moduleTitle">Módulo 4: Seguridad en el Vehículo</div><br>
         <div id="thumbnails" class="thumbnails">
-            <div style="display:none;" id="thumbnail10" class="thumbnail" onclick="Sound()">
+            <div style="display:none;" id="thumbnail10" class="thumbnail">
                 <a href="Juego10.php"><img id="thumbnail-image3" src="../imagenes/miniaturas/Juego Unir.png" alt="Miniatura Video 1"></a>
                 <div id="thumb-vid-title7" class="thumb-vid-title">Juego 4.1: Uso del cinturón de seguridad</div>
             </div>
-            <div style="display:none;" id="thumbnail11" class="thumbnail" onclick="Sound()">
+            <div style="display:none;" id="thumbnail11" class="thumbnail">
                 <a href="Juego11.php"><img id="thumbnail-image3" src="../imagenes/miniaturas/Juego Adivina.png" alt="Miniatura Video 1"></a>
                 <div id="thumb-vid-title7" class="thumb-vid-title">Juego 4.2: Comportamiento seguro en el automóvil</div>
             </div>
-            <div style="display:none;" id="thumbnail12" class="thumbnail" onclick="Sound()">
+            <div style="display:none;" id="thumbnail12" class="thumbnail">
                 <a href="Juego12.php"><img id="thumbnail-image2" src="../imagenes/miniaturas/Juego Quiz.webp" alt="Miniatura Video 2"></a>
                 <div id="thumb-vid-title8" class="thumb-vid-title">Juego 4.3: Transporte escolar</div>
             </div>
@@ -188,15 +188,15 @@
     <div id="module5" class="module content" hidden>
         <div class="moduleTitle">Módulo 5: Situaciones de Emergencia</div><br>
         <div id="thumbnails" class="thumbnails">
-            <div style="display:none;" id="thumbnail13" class="thumbnail" onclick="Sound()">
+            <div style="display:none;" id="thumbnail13" class="thumbnail">
                 <a href="Juego13.php"><img id="thumbnail-image1" src="../imagenes/miniaturas/Juego Puzzle.jpeg" alt="Miniatura Juego 1"></a>
                 <div id="thumb-vid-title9" class="thumb-vid-title">Juego 5.1: ¿Qué hacer en caso de accidente?</div>
             </div>
-            <div style="display:none;" id="thumbnail14" class="thumbnail" onclick="Sound()">
+            <div style="display:none;" id="thumbnail14" class="thumbnail">
                 <a href="Juego14.php"><img id="thumbnail-image1" src="../imagenes/miniaturas/Juego Memorama.png" alt="Miniatura Video 1"></a>
                 <div id="thumb-vid-title9" class="thumb-vid-title">Juego 5.2: Primeros auxilios básicos</div>
             </div>
-            <div style="display:none;" id="thumbnail15" class="thumbnail" onclick="Sound()">
+            <div style="display:none;" id="thumbnail15" class="thumbnail">
                 <a href="Juego15.php"><img id="thumbnail-image2" src="../imagenes/miniaturas/Juego Quiz.webp" alt="Miniatura Video 2"></a>
                 <div id="thumb-vid-title10" class="thumb-vid-title">Juego 5.3: Prevención y seguridad en caso de desastres</div>
             </div>
@@ -219,15 +219,15 @@
     <div id="module6" class="module content" hidden>
         <div class="moduleTitle">Módulo 6: Seguridad Vial y Prevención de Delitos</div><br>
         <div id="thumbnails" class="thumbnails">
-            <div style="display:none;" id="thumbnail16" class="thumbnail" onclick="Sound()">
+            <div style="display:none;" id="thumbnail16" class="thumbnail">
                 <a href="Juego16.php"><img id="thumbnail-image3" src="../imagenes/miniaturas/Juego Unir.png" alt="Miniatura Video 1"></a>
                 <div id="thumb-vid-title11" class="thumb-vid-title">Juego 6.1: Identificación de situaciones de riesgo</div>
             </div>
-            <div style="display:none;" id="thumbnail17" class="thumbnail" onclick="Sound()">
+            <div style="display:none;" id="thumbnail17" class="thumbnail">
                 <a href="Juego17.php"><img id="thumbnail-image1" src="../imagenes/miniaturas/Juego Memorama.png" alt="Miniatura Video 1"></a>
                 <div id="thumb-vid-title11" class="thumb-vid-title">Juego 6.2: Estrategias de prevención</div>
             </div>
-            <div style="display:none;" id="thumbnail18" class="thumbnail" onclick="Sound()">
+            <div style="display:none;" id="thumbnail18" class="thumbnail">
                 <a href="Juego18.php"><img id="thumbnail-image2" src="../imagenes/miniaturas/Juego Quiz.webp" alt="Miniatura Video 2"></a>
                 <div id="thumb-vid-title12" class="thumb-vid-title">Juego 6.3: Seguridad personal</div>
             </div>
@@ -250,11 +250,11 @@
     <div id="module7" class="module content" hidden>
         <div class="moduleTitle">Módulo 7: Disuación de delitos</div><br>
         <div id="thumbnails" class="thumbnails">
-            <div style="display:none;" id="thumbnail19" class="thumbnail" onclick="Sound()">
+            <div style="display:none;" id="thumbnail19" class="thumbnail">
                 <a href="Juego19.php"><img id="thumbnail-image3" src="../imagenes/miniaturas/Juego Adivina.png" alt="Miniatura Video 1"></a>
                 <div id="thumb-vid-title13" class="thumb-vid-title">Juego 7.1: Respuestas en caso de emergencia</div>
             </div>
-            <div style="display:none;" id="thumbnail20" class="thumbnail" onclick="Sound()">
+            <div style="display:none;" id="thumbnail20" class="thumbnail">
                  <a href="Juego20.php"><img id="thumbnail-image2" src="../imagenes/miniaturas/Juego Quiz.webp" alt="Miniatura Video 2"></a>
                 <div id="thumb-vid-title13" class="thumb-vid-title">Juego 7.2: Interacción con extraños</div>
             </div>
@@ -273,11 +273,11 @@
     <div id="module8" class="module content" hidden>
         <div class="moduleTitle">Módulo 8: Convivencia vial y cultura de la paz</div><br>
         <div id="thumbnails" class="thumbnails">
-            <div style="display:none;" id="thumbnail21" class="thumbnail" onclick="Sound()">
+            <div style="display:none;" id="thumbnail21" class="thumbnail">
                 <a href="Juego21.php"><img id="thumbnail-image1" src="../imagenes/miniaturas/Juego Puzzle.jpeg" alt="Miniatura Juego 1"></a>
                 <div id="thumb-vid-title5" class="thumb-vid-title">Juego 8.1: Respeto mutuo en la vía pública</div>
             </div>
-            <div style="display:none;" id="thumbnail22" class="thumbnail" onclick="Sound()">
+            <div style="display:none;" id="thumbnail22" class="thumbnail">
                 <a href="Juego22.php"><img id="thumbnail-image2" src="../imagenes/miniaturas/Juego Quiz.webp" alt="Miniatura Video 2"></a>
                 <div id="thumb-vid-title5" class="thumb-vid-title">Juego 8.2: Resolución de conflictos en la vía</div>
             </div>

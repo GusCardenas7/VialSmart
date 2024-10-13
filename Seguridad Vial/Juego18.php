@@ -16,7 +16,7 @@
 <body>
 <!-- MENU -->
     <?php 
-        include '../funciones/menu_sec.php'; 
+        include '../funciones/menu.php';  
 
          // Parte dónde se revisa si ya se ha desbloqueado antes o no
         require "../Admin/funciones/conecta.php";   
@@ -226,6 +226,7 @@ function comprobarRespuesta(opcionElegida){
 function revisarpuntaje(){
     if(aciertos >= 6){
        WinGame.play();
+       var puntos = Puntos(aciertos);
 
        //---BD----
        // --- Llamada AJAX para actualizar la base de datos ---
@@ -242,7 +243,7 @@ function revisarpuntaje(){
          }
        };
        console.log("Enviando petición AJAX");
-       xhr.send("id_juego=" + <?php echo $id_juego; ?> + "&puntaje=40" + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='Respuestas en casos de emergencia'" + "&nombre_modulo='Disuacion de delitos'" + "&id_usuario=" + <?php echo $id_usuario; ?>);
+       xhr.send("id_juego=" + <?php echo $id_juego; ?> + "&puntaje="+puntos + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='Respuestas en casos de emergencia'" + "&nombre_modulo='Disuacion de delitos'" + "&id_usuario=" + <?php echo $id_usuario; ?>);
 
 
        //se activa la página de final de Juego
@@ -274,6 +275,12 @@ function volverAlInicio(){
     document.getElementById("pantalla-final").style.display = "none";
     document.getElementById("pantalla-inicial").style.display = "block";
     document.getElementById("pantalla-juego").style.display = "none";  
+}
+
+function Puntos(aciertos){
+    var puntaje = aciertos * 10;
+
+    return puntaje;
 }
 
 </script>

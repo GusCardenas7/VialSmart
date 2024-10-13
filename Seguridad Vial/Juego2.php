@@ -19,7 +19,7 @@
 
     <!-- MENU -->
     <?php 
-        include '../funciones/menu_sec.php'; 
+        include '../funciones/menu.php';  
 
         // Parte dónde se revisa si ya se ha desbloqueado antes o no
         require "../Admin/funciones/conecta.php";   
@@ -236,6 +236,8 @@ function destapar(id) {
             CorrectAudio.play();
 
             if (aciertos == 8) {
+                var puntos = Puntos(movimientos);
+                
                 clearInterval(tiempoAtras);
           
                 winAudio.play();
@@ -255,7 +257,7 @@ function destapar(id) {
                 }
               };
               console.log("Enviando petición AJAX");
-              xhr.send("id_juego=" + <?php echo $id_juego; ?> + "&puntaje=40" + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='La via y sus partes'");
+              xhr.send("id_juego=" + <?php echo $id_juego; ?> + "&puntaje="+puntos + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='La via y sus partes'");
 
                 Swal.fire({
                 title: '&iexcl;Lo lograste!<br><span class="footer">Has completado este juego y has desbloqueado la siguiente lecci&#243;n.</span>',
@@ -291,6 +293,26 @@ function destapar(id) {
         }
 
     }
+
+}
+function Puntos(movimientos){
+    var puntaje = 0;
+    
+    if (movimientos <= 15 ){
+        puntaje = 100;
+    }else if(movimientos <= 25){
+        puntaje = 80;
+    }else if(movimientos <= 35){
+        puntaje = 60;
+    }else if(movimientos <= 40){
+        puntaje = 40;
+    }else if(movimientos <= 45){
+        puntaje = 20;
+    }else if(movimientos > 50){
+        puntaje = 10;
+    }
+
+    return puntaje;
 
 }
 

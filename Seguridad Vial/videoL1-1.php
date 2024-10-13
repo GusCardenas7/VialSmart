@@ -51,7 +51,7 @@
     </div>
     <?php 
        // Verifico si existe ya un registro con esos datos
-        $sql = "SELECT * FROM videos WHERE nombre='Que es la seguridad vial' AND desbloqueado = 1 AND lecciones_id = $id_lecciones AND lecciones_modulos_id = $id_modulos";
+        $sql = "SELECT * FROM juegos WHERE nombre='Que es la seguridad vial' AND tipo='Puzzle' AND lecciones_id = $id_lecciones AND lecciones_modulos_id = $id_modulos";
         $res = $con->query($sql);
         $fila= mysqli_num_rows($res);
         

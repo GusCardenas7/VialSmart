@@ -9,7 +9,7 @@
 </head>
 <body> 
     <?php 
-        include '../funciones/menu_sec.php'; 
+        include '../funciones/menu.php';  
 
         // Parte dónde se revisa si ya se ha desbloqueado antes o no
         require "../Admin/funciones/conecta.php";   
@@ -50,7 +50,7 @@
 
     <?php 
        // Verifico si existe ya un registro con esos datos
-        $sql = "SELECT * FROM juegos WHERE nombre='Cruce seguro en las calles' AND tipo='Puzzle' AND desbloqueado = 0 AND lecciones_id = $id_lecciones AND lecciones_modulos_id = $id_modulos";
+        $sql = "SELECT * FROM juegos WHERE nombre='Cruce seguro en las calles' AND tipo='Puzzle' AND lecciones_id = $id_lecciones AND lecciones_modulos_id = $id_modulos";
         $res = $con->query($sql);
         $fila= mysqli_num_rows($res);
         
