@@ -15,6 +15,15 @@ body {
     flex: 1;
 }
 
+.blocked {
+    cursor: default;
+}
+
+    .blocked img {
+        background-color: rgba(0,0,0,0.9);
+        filter: brightness(0.4);
+    }
+
 nav {
     background: #333;
     color: #fff;

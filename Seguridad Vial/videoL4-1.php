@@ -24,7 +24,7 @@
          $id_modulos = $row["id"];
        } 
 
-       $sql = "SELECT * FROM lecciones WHERE nombre='Uso del cinturon de seguridad' AND desbloqueado = 1 AND modulos_id = $id_modulos"; //aquí varía el nombre del módulo
+       $sql = "SELECT * FROM lecciones WHERE nombre='Uso del cinturon de seguridad' AND modulos_id = $id_modulos"; //aquí varía el nombre del módulo
        $res = $con->query($sql);
 
        while($row =$res->fetch_array()){
@@ -50,7 +50,7 @@
 
     <?php 
        // Verifico si existe ya un registro con esos datos
-        $sql = "SELECT * FROM juegos WHERE nombre='Uso del cinturon de seguridad' AND tipo='DragAndDrop' AND desbloqueado = 0 AND lecciones_id = $id_lecciones AND lecciones_modulos_id = $id_modulos";
+        $sql = "SELECT * FROM juegos WHERE nombre='Uso del cinturon de seguridad' AND tipo='DragAndDrop' AND lecciones_id = $id_lecciones AND lecciones_modulos_id = $id_modulos";
         $res = $con->query($sql);
         $fila= mysqli_num_rows($res);
         

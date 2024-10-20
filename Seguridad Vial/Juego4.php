@@ -124,6 +124,8 @@ let divsPalabraActual = [];
 let totalQueDebeAcertar;
 
 let TotalAciertos = 0;
+var puntaje = 100;
+
 
 function cargarNuevaPalabra(){
     //Aumento en uno cantidad de palabras jugadas y controlo si llego a su limite
@@ -150,7 +152,7 @@ function cargarNuevaPalabra(){
                 }
             };
             console.log("Enviando petición AJAX");
-            xhr.send("id_juego=" + <?php echo $id_juego; ?> + "&puntaje=40" + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='Señales de transito mas comunes'");
+            xhr.send("id_juego=" + <?php echo $id_juego; ?> + "&puntaje="+puntaje + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='Señales de transito mas comunes'");
 
             Swal.fire({
                 title: '&iexcl;Lo lograste!<br><span class="footer">Has completado este juego y has desbloqueado la siguiente lecci&#243;n.</span>',
@@ -259,6 +261,7 @@ document.addEventListener("keydown", event => {
                 }
             }else{
                 //No acerto, decremento los intentos restantes
+                PuntosRestar();
                 intentosRestantes = intentosRestantes - 1;
                 document.getElementById("intentos").innerHTML = intentosRestantes;
 
@@ -279,6 +282,10 @@ document.addEventListener("keydown", event => {
 //Funcion que me determina si un caracter es una letra
 function isLetter(str) {
     return str.length === 1 && str.match(/[a-z]/i);
+}
+
+function PuntosRestar(){
+    puntaje = puntaje  -  4;
 }
 
 

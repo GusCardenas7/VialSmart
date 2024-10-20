@@ -1,11 +1,14 @@
+锘縧et Block = new Audio('../audios/block.wav');
+let Click = new Audio('../audios/click.wav');
+
 function sortThumbnailsByTitle(moduleIndex) {
-    // Obtener el m骴ulo actual y sus miniaturas
+    // Obtener el m贸dulo actual y sus miniaturas
     const thumbnails = modules[moduleIndex].thumbnails;
 
-    // Ordenar el array thumbnails basado en el t韙ulo
+    // Ordenar el array thumbnails basado en el t铆tulo
     thumbnails.sort((a, b) => a.title.localeCompare(b.title));
 
-    // Obtener el contenedor de miniaturas del m骴ulo actual
+    // Obtener el contenedor de miniaturas del m贸dulo actual
     const thumbnailContainer = document.querySelector(`#module${moduleIndex} .thumbnails`);
 
     // Limpiar el contenedor
@@ -34,19 +37,27 @@ function sortThumbnailsByTitle(moduleIndex) {
 }
 
 function hideModules(moduleIndex) {
-    // Ocultar todos los m骴ulos
+    // Ocultar todos los m贸dulos
     const modulesContainers = document.querySelectorAll('.module');
     modulesContainers.forEach(module => module.hidden = true);
 
-    // Mostrar el m骴ulo seleccionado
+    // Mostrar el m贸dulo seleccionado
     const selectedModule = document.getElementById('module' + moduleIndex);
     selectedModule.hidden = false;
 
-    // Actualizar la barra de navegaci髇
+    // Actualizar la barra de navegaci贸n
     const navItems = document.querySelectorAll('nav ul li a');
     navItems.forEach(item => item.classList.remove('active'));
     document.getElementById('a-module' + moduleIndex).classList.add('active');
 
-    // Ordenar y mostrar las miniaturas del m骴ulo seleccionado
+    // Ordenar y mostrar las miniaturas del m贸dulo seleccionado
     sortThumbnailsByTitle(moduleIndex);
+}
+
+function Advice() {
+    Block.play();
+    alert("隆Necesitas desbloquear las lecciones anteriores!");   //COLOCAR EL ONCLICK EN TODAS
+}
+function Sound() {
+    Click.play();
 }

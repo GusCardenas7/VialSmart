@@ -3,11 +3,12 @@
     "",
     "\\Admin",
     "\\Admin\\funciones",
+    "\\audios",
     "\\CSS",
     "\\JavaScript",
     "\\JS",
     "\\Seguridad Vial"
   ],
-  "SelectedNode": "\\Admin\\funciones\\actualizar_juegos.php",
+  "SelectedNode": "\\Seguridad Vial\\Juego9.php",
   "PreviewInSolutionExplorer": false
 }

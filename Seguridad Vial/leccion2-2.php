@@ -4,7 +4,6 @@
 <html>
 <head>
     <title>Lección 2.2</title>
-    <script src="../JavaScript/lecciones.js"></script>
     <script src="../JavaScript/lecciones_typewritter.js"></script>
 
 </head>
@@ -67,6 +66,11 @@
         $sql = "SELECT * FROM videos WHERE nombre='Señales de transito mas comunes' AND desbloqueado = 1 AND lecciones_id = $id_lecciones AND lecciones_modulos_id = $id_modulos";
         $res = $con->query($sql);
         $fila= mysqli_num_rows($res);
+
+        //echo "<script> alert($fila);</script>";
+        //echo "<script> alert($id_lecciones);</script>";
+        //echo "<script> alert($id_modulos);</script>";
+
         
         if($fila >= 1){
           echo "<script> document.getElementById('FlechaDesbloqueada').style.display = 'block'; </script>";

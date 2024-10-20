@@ -132,6 +132,7 @@ const draggableItems = document.querySelector(".draggable-items");
 const matchingPairs = document.querySelector(".matching-pairs");
 let draggableElements;
 let droppableElements;
+var puntaje = 100;
 
 initiateGame();
 
@@ -236,7 +237,7 @@ function drop(event) {
                 }
             };
             console.log("Enviando petición AJAX");
-            xhr.send("id_juego=" + <?php echo $id_juego; ?> + "&puntaje=40" + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='Señales especiales para niños'");
+            xhr.send("id_juego=" + <?php echo $id_juego; ?> + "&puntaje="+puntaje + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='Señales especiales para niños'");
        
        Swal.fire({
                 title: '&iexcl;Lo lograste!<br><span class="footer">Has completado este juego y has desbloqueado la siguiente lecci&#243;n.</span>',
@@ -256,6 +257,7 @@ function drop(event) {
                  })
     } 
   }else{failedAttempts++; // Incrementar el contador de intentos fallidos
+    puntaje = puntaje  -  25;    
     IncorrectAudio.play();
     if (failedAttempts === 5) { // Si se alcanzan 10 intentos fallidos
         //alert("Has perdido. Inténtalo de nuevo.");

@@ -1,3 +1,5 @@
+let Block = new Audio('../audios/block.wav');
+let Click = new Audio('../audios/click.wav');
 function hideModules(moduleIndex) {
     // Ocultar todos los módulos
     const modulesContainers = document.querySelectorAll('.module');
@@ -14,5 +16,11 @@ function hideModules(moduleIndex) {
 }
 
 function goToLesson(moduleIndex, lessonIndex) {
+    Click.play();
     window.location.href = `leccion${moduleIndex}-${lessonIndex}.php`;
+}
+
+function Advice() {
+    Block.play();
+    alert("¡Necesitas desbloquear las lecciones anteriores!");   //COLOCAR EL ONCLICK EN TODAS
 }

@@ -1,3 +1,4 @@
+let Block = new Audio('../audios/block.wav');
 // Información de los videos y miniaturas para cada módulo
 const modules = {
     1: {
@@ -187,4 +188,9 @@ function hideModules(moduleIndex) {
 
     // Ordenar y mostrar las miniaturas del módulo seleccionado
     sortThumbnailsByTitle(moduleIndex);
+}
+
+function Advice() {
+    Block.play();
+    alert("¡Necesitas desbloquear las lecciones anteriores!");   //COLOCAR EL ONCLICK EN TODAS
 }

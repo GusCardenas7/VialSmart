@@ -51,7 +51,7 @@
 
     <?php 
        // Verifico si existe ya un registro con esos datos
-        $sql = "SELECT * FROM juegos WHERE nombre='Tipos de señales de transito' AND tipo='adivinanza' AND desbloqueado = 0 AND lecciones_id = $id_lecciones AND lecciones_modulos_id = $id_modulos";
+        $sql = "SELECT * FROM juegos WHERE nombre='Tipos de señales de transito' AND tipo='adivinanza' AND lecciones_id = $id_lecciones AND lecciones_modulos_id = $id_modulos";
         $res = $con->query($sql);
         $fila= mysqli_num_rows($res);
         

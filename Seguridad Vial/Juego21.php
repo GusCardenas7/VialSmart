@@ -15,7 +15,7 @@
 
  <!-- MENU -->
     <?php 
-        include '../funciones/menu.php'; 
+       include '../funciones/menu.php';  
 
          // Parte d�nde se revisa si ya se ha desbloqueado antes o no
         require "../Admin/funciones/conecta.php";   
@@ -245,6 +245,7 @@ function seleccionar(casilla) {
         if (fin == true) {
             winAudio.play();
             clearInterval(tiempoAtras);
+            var puntos = Puntos(timer);
 
            //---BD----
             // --- Llamada AJAX para actualizar la base de datos ---
@@ -261,7 +262,7 @@ function seleccionar(casilla) {
                 }
             };
             console.log("Enviando petici�n AJAX");
-            xhr.send("id_juego=" + <?php echo $id_juego; ?> + "&puntaje=40" + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='Resolucion de conflictos en la via'");
+            xhr.send("id_juego=" + <?php echo $id_juego; ?> + "&puntaje="+puntos + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='Resolucion de conflictos en la via'");
 
 
             Swal.fire({
@@ -315,6 +316,25 @@ function Finalizar() {
 
     return correcto;
 
+}
+
+function Puntos(timer){
+    var puntaje = 0;
+    
+    if (timer >= 50 ){
+        puntaje = 100;
+    }else if(timer >= 40){
+        puntaje = 80;
+    }else if(timer >= 30){
+        puntaje = 60;
+    }else if(timer >= 20){
+        puntaje = 40;
+    }else if(timer >= 10){
+        puntaje = 20;
+    }else if(timer > 1){
+        puntaje = 10;
+    }
+    return puntaje;
 }
 
 var num_click = 0;

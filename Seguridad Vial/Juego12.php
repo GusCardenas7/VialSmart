@@ -230,6 +230,7 @@ function comprobarRespuesta(opcionElegida){
 function revisarpuntaje(){
     if(aciertos >= 6){
        WinGame.play();
+       var puntos = Puntos(aciertos);
 
        //---BD----
        // --- Llamada AJAX para actualizar la base de datos ---
@@ -246,7 +247,7 @@ function revisarpuntaje(){
          }
        };
        console.log("Enviando petición AJAX");
-       xhr.send("id_juego=" + <?php echo $id_juego; ?> + "&puntaje=40" + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='Que hacer en caso de accidente'" + "&nombre_modulo='Situaciones de emergencia'" + "&id_usuario=" + <?php echo $id_usuario; ?>);
+       xhr.send("id_juego=" + <?php echo $id_juego; ?> + "&puntaje="+puntos + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='Que hacer en caso de accidente'" + "&nombre_modulo='Situaciones de emergencia'" + "&id_usuario=" + <?php echo $id_usuario; ?>);
 
 
        document.getElementById("pantalla-juego").style.display = "none";
@@ -277,6 +278,12 @@ function volverAlInicio(){
     document.getElementById("pantalla-final").style.display = "none";
     document.getElementById("pantalla-inicial").style.display = "block";
     document.getElementById("pantalla-juego").style.display = "none";  
+}
+
+function Puntos(aciertos){
+    var puntaje = aciertos * 10;
+
+    return puntaje;
 }
 
 </script>
