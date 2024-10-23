@@ -16,7 +16,7 @@
 <body>
  <!-- MENU -->
     <?php 
-        include '../funciones/menu.php'; 
+        include '../funciones/menu.php';  
 
          // Parte dónde se revisa si ya se ha desbloqueado antes o no
         require "../Admin/funciones/conecta.php";   
@@ -46,6 +46,7 @@
         while($row =$res->fetch_array()){
          $id_juego = $row["id"];
          $desbloqueado = $row["desbloqueado"];
+         $puntajeInicial = $row["puntaje"];
         } 
         $fila= mysqli_num_rows($res);
         //echo "<script>alert('fila=$fila , desbloqueado=$desbloqueado, id_juego=$id_juego');</script>";
@@ -148,10 +149,10 @@ function cargarNuevaPalabra(){
                 }
             };
             console.log("Enviando petición AJAX");
-            xhr.send("id_juego=" + <?php echo $id_juego; ?> + "&puntaje="+puntaje + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='Transporte escolar'");
+            xhr.send("id_juego=" + <?php echo $id_juego; ?> + "&puntaje="+puntaje + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='Transporte escolar'"+ "&puntajeInicial=" + <?php echo $puntajeInicial; ?>);
 
             Swal.fire({
-                title: '&iexcl;Lo lograste!<br><span class="footer">Has completado este juego y has desbloqueado la siguiente lecci&#243;n.</span>',
+                title: '&iexcl;Lo lograste!<br><span class="footer">Has completado este juego y has desbloqueado la siguiente lecci&#243;n.</span><br><span style="color:#5c905f;" class="footer">Puntuaci&#243;n: </span>'+puntaje,
                 padding: '1em',
                 html: '<img class="ganar" src="../imagenes/perrito_bailando.gif" alt="" >',
                 color: '#000000',

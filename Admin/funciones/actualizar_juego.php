@@ -3,21 +3,24 @@
     $con = conecta();
 
     // Verifica si los datos han sido recibidos correctamente
-    if (isset($_POST['id_juego']) && isset($_POST['puntaje']) && isset($_POST['id_modulos']) && isset($_POST['nombre_leccion']) && isset($_POST['nombre_modulo']) && isset($_POST['id_usuario'])) { //segun el error esta aqui
+    if (isset($_POST['id_juego']) && isset($_POST['puntaje']) && isset($_POST['id_modulos']) && isset($_POST['nombre_leccion']) && isset($_POST['nombre_modulo']) && isset($_POST['id_usuario'])&& isset($_POST['puntajeInicial'])) { //segun el error esta aqui
         $id_juego = $_POST['id_juego'];
         $puntaje = $_POST['puntaje'];
         $id_modulos = $_POST['id_modulos'];
         $nombre_leccion = $_POST['nombre_leccion'];
         $nombre_modulo = $_POST['nombre_modulo'];
         $id_usuario = $_POST['id_usuario'];
+        $puntajeInicial = $_POST['puntajeInicial'];
 
 
         // Muestra los datos recibidos para asegurarte de que llegan correctamente
-        echo "Datos recibidos: id_juego=$id_juego, puntaje=$puntaje, id_modulos=$id_modulos, nombre_leccion=$nombre_leccion, nombre_modulo=$nombre_modulo, id_usuario=$id_usuario";
+        echo "Datos recibidos: id_juego=$id_juego, puntaje=$puntaje, id_modulos=$id_modulos, nombre_leccion=$nombre_leccion, nombre_modulo=$nombre_modulo, id_usuario=$id_usuario, puntajeInicial=$puntajeInicial";
 
-        // Realiza la actualización en la base de datos
-        $sql = "UPDATE juegos SET desbloqueado = 1, puntaje = $puntaje WHERE id = $id_juego";
-        $res = $con->query($sql);
+        if($puntaje > $puntajeInicial ){
+           // Realiza la actualización en la base de datos
+           $sql = "UPDATE juegos SET desbloqueado = 1, puntaje = $puntaje WHERE id = $id_juego";
+           $res = $con->query($sql);
+        }
 
         //checar el id de lecciones y modulos
         $sql = "SELECT * FROM modulos WHERE nombre=$nombre_modulo AND usuarios_id = $id_usuario"; //aquí varía el nombre del módulo

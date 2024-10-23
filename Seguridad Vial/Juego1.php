@@ -46,6 +46,7 @@
         while($row =$res->fetch_array()){
          $id_juego = $row["id"];
          $desbloqueado = $row["desbloqueado"];
+         $puntajeInicial = $row["puntaje"];
         } 
         $fila= mysqli_num_rows($res);
         //echo "<script>alert('fila=$fila , desbloqueado=$desbloqueado, id_juego=$id_juego');</script>";
@@ -265,10 +266,10 @@ function seleccionar(casilla) {
             }
           };
           console.log("Enviando petición AJAX");
-          xhr.send("id_juego=" + <?php echo $id_juego; ?> + "&puntaje="+puntos + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='Los usuarios de la via'");
+          xhr.send("id_juego=" + <?php echo $id_juego; ?> + "&puntaje="+puntos + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='Los usuarios de la via'"+ "&puntajeInicial=" + <?php echo $puntajeInicial; ?>);
           
             Swal.fire({
-                title: '&iexcl;Lo lograste!<br><span class="footer">Has completado este juego y has desbloqueado la siguiente lecci&#243;n.</span>',
+                title: '&iexcl;Lo lograste!<br><span class="footer">Has completado este juego y has desbloqueado la siguiente lecci&#243;n.</span><br><span style="color:#5c905f;" class="footer">Puntuaci&#243;n: </span>'+puntos,
                 padding: '3em',
                 html: '<img class="ganar" src="../imagenes/perrito_bailando.gif" alt="" >',
                 color: '#000000',
@@ -322,19 +323,12 @@ function Finalizar() {
 
 function Puntos(timer){
     var puntaje = 0;
-    
-    if (timer >= 50 ){
+
+    if(timer >= 50){
         puntaje = 100;
-    }else if(timer >= 40){
-        puntaje = 80;
-    }else if(timer >= 30){
-        puntaje = 60;
-    }else if(timer >= 20){
-        puntaje = 40;
-    }else if(timer >= 10){
-        puntaje = 20;
-    }else if(timer > 1){
-        puntaje = 10;
+    }else if(timer < 50){
+        var puntuacion = (50 - timer) * 2;
+        puntaje = 100 - puntuacion;
     }
 
     return puntaje;

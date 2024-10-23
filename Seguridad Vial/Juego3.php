@@ -17,7 +17,7 @@
 <body>
 <!-- MENU -->
     <?php 
-        include '../funciones/menu.php'; 
+        include '../funciones/menu.php';  
 
         // Parte dónde se revisa si ya se ha desbloqueado antes o no
         require "../Admin/funciones/conecta.php";   
@@ -47,6 +47,7 @@
         while($row =$res->fetch_array()){
          $id_juego = $row["id"];
          $desbloqueado = $row["desbloqueado"];
+         $puntajeInicial = $row["puntaje"];
         } 
         $fila= mysqli_num_rows($res);
         //echo "<script>alert('fila=$fila , desbloqueado=$desbloqueado, id_juego=$id_juego');</script>";
@@ -59,53 +60,52 @@
     ?>
     <br><br><br>
 
-<div class="content">
-    <!-- Juego quizz Inicio-->
-    <h1>¡Pon a prueba tus conocimientos!</h1>
-    <div id="pantalla-inicial">
-      <p class="leccion"> Modulo 1. Introducci&#243;n a la seguridad vial</p>
-      
-      <center><img src="../imagenes/InicioJ1.jpg" alt="" class="InicioJ1"></center>
-      <br> <button class="btn" onclick="comenzarJuego()"> COMENZAR A JUGAR</button> 
+<!-- Juego quizz Inicio-->
+<h1>&#33;Pon a prueba tus conocimientos!</h1>
+<div id="pantalla-inicial">
+  <p class="leccion"> Modulo 1. Introducci&#243;n a la seguridad vial</p>
+  
+  <center><img src="../imagenes/InicioJ1.jpg" alt="" class="InicioJ1"></center>
+  <br> <button class="btn" onclick="comenzarJuego()"> COMENZAR A JUGAR</button> 
+</div>
+<!-- Pantalla Juego -->
+<div class="´pantalla-juego" id="pantalla-juego">
+  <p class="Preguntas" id="pregunta"> <b>Pregunta</b> </p>
+  <center><img src="../imagenes/J1seguridad.png" alt="" id="J1seguridad"></center>
+  <div class="opciones"> 
+    <div class="opcion" id="op0" onclick="comprobarRespuesta(0)"> 
+      <div class="letra" id="l0">A</div>
+      <div class="nombre font" id="n0">OPCION A</div>
     </div>
-    <!-- Pantalla Juego -->
-    <div class="´pantalla-juego" id="pantalla-juego">
-      <p class="Preguntas" id="pregunta"> <b>Pregunta</b> </p>
-      <center><img src="../imagenes/J1seguridad.png" alt="" id="J1seguridad"></center>
-      <div class="opciones"> 
-        <div class="opcion" id="op0" onclick="comprobarRespuesta(0)"> 
-          <div class="letra" id="l0">A</div>
-          <div class="nombre font" id="n0">OPCION A</div>
-        </div>
-        <div class="opcion" id="op1" onclick="comprobarRespuesta(1)"> 
-          <div class="letra" id="l1">B</div>
-          <div class="nombre font" id="n1">OPCION B</div>
-        </div>
-        <div class="opcion" id="op2" onclick="comprobarRespuesta(2)"> 
-          <div class="letra" id="l2">C</div>
-          <div class="nombre font" id="n2">OPCION C</div>
-        </div>
-        <div class="opcion" id="op3" onclick="comprobarRespuesta(3)"> 
-          <div class="letra" id="l3">D</div>
-          <div class="nombre font" id="n3">OPCION D</div>
-        </div>
-      </div>
+    <div class="opcion" id="op1" onclick="comprobarRespuesta(1)"> 
+      <div class="letra" id="l1">B</div>
+      <div class="nombre font" id="n1">OPCION B</div>
     </div>
-    <!-- Pantalla final No aprobado-->
-    <div id="pantalla-final">
-      <h2> CORRECTAS: <span id="numCorrectas" style="color:#fffb9d;">3</span></h2>
-      <h2>INCORRECTAS: <span id="numIncorrectas" style="color:#f0e0e0;">2</span></h2>
-      <p id="PNP"></p>
-      <button class="btn" onclick="volverAlInicio()"> VOLVER AL INICIO</button>
+    <div class="opcion" id="op2" onclick="comprobarRespuesta(2)"> 
+      <div class="letra" id="l2">C</div>
+      <div class="nombre font" id="n2">OPCION C</div>
     </div>
+    <div class="opcion" id="op3" onclick="comprobarRespuesta(3)"> 
+      <div class="letra" id="l3">D</div>
+      <div class="nombre font" id="n3">OPCION D</div>
+    </div>
+  </div>
+</div>
+<!-- Pantalla final No aprobado-->
+<div id="pantalla-final">
+  <h2> CORRECTAS: <span id="numCorrectas" style="color:#fffb9d;">3</span></h2>
+  <h2>INCORRECTAS: <span id="numIncorrectas" style="color:#f0e0e0;">2</span></h2>
+  <p id="PNP"></p>
+  <button class="btn" onclick="volverAlInicio()"> VOLVER AL INICIO</button>
+</div>
 
 <!-- Pantalla final SÍ aprpbado -->
 <div id="pantalla-finalAprobado">
   <h2> CORRECTAS: <span id="numCorrectasA" style="color:#fffb9d;">3</span></h2>
-  <h2>INCORRECTAS: <span id="numIncorrectasA" style="color:#f0e0e0;">2</span></h2>
+  <h2>INCORRECTAS: <span id="numIncorrectasA" style="color:#f0e0e0;">2</span></h2><br>
+  <h2>Puntuación: <span id="puntos" style="color:#31772f;">2</span></h2>
   <p id="PNP2"></p>
   <a href="leccion2-1.php"> <button class="btn" onclick="Siguiente()"> Siguiente</button> </a>
-</div>
 </div>
 
 <!-- footer -->
@@ -259,7 +259,7 @@ function revisarpuntaje(){
          }
        };
        console.log("Enviando petición AJAX");
-       xhr.send("id_juego=" + <?php echo $id_juego; ?> + "&puntaje="+puntos + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='Tipos de señales de transito'" + "&nombre_modulo='Señales de transito'" + "&id_usuario=" + <?php echo $id_usuario; ?>);
+       xhr.send("id_juego=" + <?php echo $id_juego; ?> + "&puntaje="+puntos + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='Tipos de señales de transito'" + "&nombre_modulo='Señales de transito'" + "&id_usuario=" + <?php echo $id_usuario; ?>+ "&puntajeInicial=" + <?php echo $puntajeInicial; ?>);
 
        //se activa la página de final de Juego
        document.getElementById("pantalla-juego").style.display = "none";
@@ -268,6 +268,7 @@ function revisarpuntaje(){
        //se agregan los resultados
        document.getElementById("numCorrectasA").innerHTML = aciertos;
        document.getElementById("numIncorrectasA").innerHTML = preguntas.length - aciertos;
+       document.getElementById("puntos").innerHTML = puntos;
        document.getElementById("PNP2").className = "pasa";
        document.getElementById("PNP2").innerHTML = "&#161;Has logrado aprobar&#33; 🤩";
        //aqui iria alguna función para desbloquear la siguiente función, ya que logro pasar
