@@ -37,9 +37,6 @@
                     <h3>$nombre</h3>
                     <h4 style='margin-right: 10px;'>Correo:</h4>
                     <p>$correo</p>
-                    <br>
-                    <h4 style='margin-right: 22px;'>Nivel:</h4>
-                    <p>$nivel</p>
                 </div>";?>
             </div>
         </div>

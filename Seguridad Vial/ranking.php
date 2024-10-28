@@ -135,7 +135,7 @@
     </div>
 
     <div id="module7" class="module content" hidden>
-        <div class="moduleTitle">Módulo 7: Disuación de delitos</div><br>
+        <div class="moduleTitle">Módulo 7: Disuasión de delitos</div><br>
         <div id="thumbnails" class="thumbnails">
             <div id="thumbnail13" class="thumbnail" onclick="swapVideos(1)">
                 <a href="ranking7-1.php"><img id="thumbnail-image3" src="../imagenes/miniaturas/Juego Adivina.png" alt="Miniatura Video 1"></a>

@@ -104,7 +104,7 @@
             </div>
             <div style="display:none;" id="thumbnail6" class="thumbnail" onclick="Sound()">
                <a href="Juego6.php"><img id="thumbnail-image2" src="../imagenes/miniaturas/Juego Quiz.webp" alt="Miniatura Video 2"></a>
-                <div id="thumb-vid-title4" class="thumb-vid-title"> Juego.3: La vía y sus partes</div>
+                <div id="thumb-vid-title4" class="thumb-vid-title">Juego 2.3: Señales especiales para niños</div>
             </div>
             <!-- Des -->
             <div style="display:block;" id="thumbnail4.1" class="thumbnail blocked" onclick="Advice()">
@@ -113,11 +113,11 @@
             </div>
             <div style="display:block;" id="thumbnail5.1" class="thumbnail blocked" onclick="Advice()">
                 <img id="thumbnail-image3" src="../imagenes/miniaturas/Juego Unir.png" alt="Miniatura Video 1">
-                <div id="thumb-vid-title3" class="thumb-vid-title">Video 2.2: Señales de tránsito más comunes</div>
+                <div id="thumb-vid-title3" class="thumb-vid-title">Juego 2.2: Señales de tránsito más comunes</div>
             </div>
             <div style="display:block;" id="thumbnail6.1" class="thumbnail blocked" onclick="Advice()">
                 <img id="thumbnail-image2" src="../imagenes/miniaturas/Juego Quiz.webp" alt="Miniatura Video 2">
-                <div id="thumb-vid-title4" class="thumb-vid-title"> Juego.3: La vía y sus partes</div>
+                <div id="thumb-vid-title4" class="thumb-vid-title">Juego 2.3: Señales especiales para niños</div>
             </div>
         </div>
     </div>
@@ -248,7 +248,7 @@
     </div>
 
     <div id="module7" class="module content" hidden>
-        <div class="moduleTitle">Módulo 7: Disuación de delitos</div><br>
+        <div class="moduleTitle">Módulo 7: Disuasión de delitos</div><br>
         <div id="thumbnails" class="thumbnails">
             <div style="display:none;" id="thumbnail19" class="thumbnail" onclick="Sound()">
                 <a href="Juego19.php"><img id="thumbnail-image3" src="../imagenes/miniaturas/Juego Adivina.png" alt="Miniatura Video 1"></a>

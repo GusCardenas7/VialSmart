@@ -3,7 +3,7 @@
 ?>
 <html>
 <head>
-    <title>Video 8.1</title>
+    <title>Video 8.3</title>
     <link rel="stylesheet" href="../CSS/leccionesVideos.css">
     <script src="../JavaScript/videos.js"></script>
 </head>
@@ -33,7 +33,7 @@
     ?>
     <br><br><br><br><br>
     <div class="content">
-        <div class="moduleTitle scale-up-top">Lección 8.1: Respeto mutuo en la vía pública</div><br>
+        <div class="moduleTitle scale-up-top">Lección 8.3: Despedida</div><br>
         <div class="video-container scale-up-bottom">
             <div id="central-video-title" class="video-title">Video 8.3: Despedida</div>
             <video id="central-video" controls poster="../imagenes/miniaturas/8.3 Despedida.jpg">

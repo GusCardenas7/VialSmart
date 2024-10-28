@@ -152,7 +152,7 @@
     </div>
 
     <div id="module7" class="module content" hidden>
-        <div class="moduleTitle">Módulo 7: Disuación de delitos</div><br>
+        <div class="moduleTitle">Módulo 7: Disuasión de delitos</div><br>
         <div class="video-container">
             <div id="central-video-title" class="video-title">Video 7.1: Respuestas en casos de emergencias</div>
             <video id="central-video" controls poster="../imagenes/miniaturas/7.1 Respuestas en casos de emergencias.jpg">

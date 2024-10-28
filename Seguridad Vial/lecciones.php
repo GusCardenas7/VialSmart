@@ -242,7 +242,7 @@
         </div>
     </div>
      <div id="module7" class="module content" hidden>
-        <div class="moduleTitle">Módulo 7: Disuación de delitos</div><br>
+        <div class="moduleTitle">Módulo 7: Disuasión de delitos</div><br>
         <div id="lessons" class="lessons">
            <div style="display:none;" id="lesson19" class="lesson blur-in-expand" onclick="goToLesson(7,1)">
                 <img id="lesson-image1" src="../imagenes/miniaturas/7.1 Respuestas en casos de emergencias.jpg" alt="Lección 1">
