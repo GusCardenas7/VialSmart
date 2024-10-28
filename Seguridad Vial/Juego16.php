@@ -230,6 +230,20 @@ function drop(event) {
                 if (xhr.readyState === 4) {
                   if (xhr.status === 200) {
                     console.log("Respuesta del servidor: ", xhr.responseText); // Verifica la respuesta del servidor
+
+                    var xhr2 = new XMLHttpRequest();
+                    xhr2.open("POST", "../Admin/funciones/desbloqueoLogros.php", true);
+                    xhr2.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState === 4) {
+                            if (xhr2.status === 200) {
+                                console.log("Respuesta de la segunda consulta: ", xhr2.responseText);
+                            } else {
+                                console.error("Error en la segunda consulta: ", xhr2.statusText);
+                            }
+                        }
+                    };
+                    xhr2.send("nombre='Detector de riesgos'&id_usuario=" + <?php echo $id_usuario; ?> + "&puntos=" + puntaje);
                   } else {
                    console.error("Error: ", xhr.statusText); // Si hay un error, lo mostramos
                   }

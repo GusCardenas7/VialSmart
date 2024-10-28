@@ -161,6 +161,16 @@
             </div>
         </div>
     </div>
+
+    <div id="module9" class="module content" hidden>
+        <div class="moduleTitle">Ranking general</div><br>
+        <div id="thumbnails" class="thumbnails">
+            <div id="thumbnail15" class="thumbnail" onclick="swapVideos(1)">
+                <a href="rankingGeneral.php"><img id="thumbnail-image1" style="background-color: rgb(255, 0, 0, 39%);" src="../imagenes/ranking.png" alt="Miniatura Juego 1"></a>
+                <div id="thumb-vid-title5" class="thumb-vid-title">Ver ranking general</div>
+            </div>
+        </div>
+    </div>
     <footer>
         <div class="links">
             <a href="">Términos y condiciones</a>

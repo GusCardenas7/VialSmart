@@ -18,20 +18,20 @@
     <?php 
         include '../funciones/menu.php';  
 
-        // Parte dónde se revisa si ya se ha desbloqueado antes o no
+        // Parte dï¿½nde se revisa si ya se ha desbloqueado antes o no
         require "../Admin/funciones/conecta.php";   
         $con = conecta();
         $id_usuario = $_SESSION['idU'];
        
        //checar el id de lecciones y modulos
-       $sql = "SELECT * FROM modulos WHERE nombre='Introduccion' AND usuarios_id = $id_usuario"; //aquí varía el nombre del módulo
+       $sql = "SELECT * FROM modulos WHERE nombre='Introduccion' AND usuarios_id = $id_usuario"; //aquï¿½ varï¿½a el nombre del mï¿½dulo
        $res = $con->query($sql);
 
        while($row =$res->fetch_array()){
          $id_modulos = $row["id"];
        } 
 
-       $sql = "SELECT * FROM lecciones WHERE nombre='Que es la seguridad vial' AND desbloqueado = 1 AND modulos_id = $id_modulos"; //aquí varía el nombre del módulo
+       $sql = "SELECT * FROM lecciones WHERE nombre='Que es la seguridad vial' AND desbloqueado = 1 AND modulos_id = $id_modulos"; //aquï¿½ varï¿½a el nombre del mï¿½dulo
        $res = $con->query($sql);
 
        while($row =$res->fetch_array()){
@@ -243,7 +243,7 @@ function seleccionar(casilla) {
 
         CambiarPiezas();
 
-        //comprobar que está correcto
+        //comprobar que estï¿½ correcto
         var fin = Finalizar();
         if (fin == true) {
             winAudio.play();
@@ -259,12 +259,44 @@ function seleccionar(casilla) {
             if (xhr.readyState === 4) {
               if (xhr.status === 200) {
                 console.log("Respuesta del servidor: ", xhr.responseText); // Verifica la respuesta del servidor
+
+                // AquÃ­ puedes realizar la segunda consulta
+                var xhr2 = new XMLHttpRequest();
+                xhr2.open("POST", "../Admin/funciones/desbloqueoLogros.php", true);
+                xhr2.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr2.onreadystatechange = function () {
+                    if (xhr2.readyState === 4) {
+                        if (xhr2.status === 200) {
+                            console.log("Respuesta de la segunda consulta: ", xhr2.responseText);
+
+                            if(puntos === 100) {
+                                // AquÃ­ puedes realizar la segunda consulta
+                                var xhr3 = new XMLHttpRequest();
+                                xhr3.open("POST", "../Admin/funciones/desbloqueoLogros.php", true);
+                                xhr3.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                                xhr3.onreadystatechange = function () {
+                                    if (xhr3.readyState === 4) {
+                                        if (xhr3.status === 200) {
+                                            console.log("Respuesta de la tercera consulta: ", xhr3.responseText);
+                                        } else {
+                                            console.error("Error en la tercera consulta: ", xhr3.statusText);
+                                        }
+                                    }
+                                };
+                                xhr3.send("nombre='Conocimiento bÃ¡sico de seguridad vial'&id_usuario=" + <?php echo $id_usuario; ?> + "&puntos=" + puntos); 
+                            }
+                        } else {
+                            console.error("Error en la segunda consulta: ", xhr2.statusText);
+                        }
+                    }
+                };
+                xhr2.send("nombre='Un buen comienzo'&id_usuario=" + <?php echo $id_usuario; ?>); 
               } else {
                 console.error("Error: ", xhr.statusText); // Si hay un error, lo mostramos
               }
             }
           };
-          console.log("Enviando petición AJAX");
+          console.log("Enviando peticiï¿½n AJAX");
           xhr.send("id_juego=" + <?php echo $id_juego; ?> + "&puntaje="+puntos + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='Los usuarios de la via'");
           
             Swal.fire({

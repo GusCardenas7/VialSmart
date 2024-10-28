@@ -31,7 +31,7 @@
                 <img src="../imagenes/ranking.png" alt="Ranking">
                 <div class="lesson-title">Ver ranking general</div>
             </div>
-            <div id="lesson2" class="lesson blur-in-expand" onclick="goToPage('logrosConseguidos.php')">
+            <div id="lesson2" class="lesson blur-in-expand" onclick="goToPage('verLogros.php')">
                 <img src="../imagenes/logros.png" alt="Logros">
                 <div class="lesson-title">Ver logros conseguidos</div>
             </div>
