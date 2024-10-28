@@ -18,6 +18,44 @@
 <!-- MENU -->
     <?php 
         include '../funciones/menu.php'; 
+
+        // Parte dónde se revisa si ya se ha desbloqueado antes o no
+        require "../Admin/funciones/conecta.php";   
+        $con = conecta();
+        $id_usuario = $_SESSION['idU'];
+       
+       //checar el id de lecciones y modulos
+       $sql = "SELECT * FROM modulos WHERE nombre='Convivencia vial y cultura de la paz' AND usuarios_id = $id_usuario"; //aquí varía el nombre del módulo
+       $res = $con->query($sql);
+
+       while($row =$res->fetch_array()){
+         $id_modulos = $row["id"];
+       } 
+
+       $sql = "SELECT * FROM lecciones WHERE nombre='Resolucion de conflictos en la via' AND desbloqueado = 1 AND modulos_id = $id_modulos"; //aquí varía el nombre del módulo
+       $res = $con->query($sql);
+
+       while($row =$res->fetch_array()){
+         $id_lecciones = $row["id"];
+       } 
+
+       // Verifico si existe ya un registro con esos datos
+        $sql = "SELECT * FROM juegos WHERE nombre='Resolucion de conflictos en la via' AND tipo='quiz'  AND lecciones_id = $id_lecciones AND lecciones_modulos_id = $id_modulos";
+        $res = $con->query($sql);
+        $fila= mysqli_num_rows($res);
+
+        while($row =$res->fetch_array()){
+         $id_juego = $row["id"];
+         $desbloqueado = $row["desbloqueado"];
+         $puntajeInicial = $row["puntaje"];
+        } 
+        $fila= mysqli_num_rows($res);
+        //echo "<script>alert('fila=$fila , desbloqueado=$desbloqueado, id_juego=$id_juego');</script>";
+        if($fila == 0){
+        $sql = "INSERT INTO juegos (nombre, tipo, desbloqueado, puntaje, lecciones_id, lecciones_modulos_id) VALUES ('Resolucion de conflictos en la via','quiz',0,0,$id_lecciones ,$id_modulos);";
+        $res = $con->query($sql);
+        }
+
     ?>
     <br><br><br>
 
@@ -65,8 +103,9 @@
     <div id="pantalla-finalAprobado">
       <h2> CORRECTAS: <span id="numCorrectasA" style="color:#fffb9d;">3</span></h2>
       <h2>INCORRECTAS: <span id="numIncorrectasA" style="color:#f0e0e0;">2</span></h2>
+      <h2>Puntuación: <span id="puntos" style="color:#31772f;">2</span></h2>
       <p id="PNP"></p>
-      <a href="leccion2-1.php"> <button class="btn" onclick="Siguiente()"> Siguiente</button> </a>
+      <a href="videoL8-3.php"> <button class="btn" onclick="Siguiente()"> Siguiente</button> </a>
     </div>
 </div>
 
@@ -193,6 +232,27 @@ function comprobarRespuesta(opcionElegida){
 function revisarpuntaje(){
     if(aciertos >= 7){
        WinGame.play();
+       var puntos = Puntos(aciertos);
+
+       //---BD----
+       // --- Llamada AJAX para actualizar la base de datos ---
+       var xhr = new XMLHttpRequest();
+       xhr.open("POST", "../Admin/funciones/actualizar_Juegos.php", true);
+       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+       xhr.onreadystatechange = function () {
+         if (xhr.readyState === 4) {
+             if (xhr.status === 200) {
+                console.log("Respuesta del servidor: ", xhr.responseText); // Verifica la respuesta del servidor
+             } else {
+                console.error("Error: ", xhr.statusText); // Si hay un error, lo mostramos
+             }
+         }
+       };
+       console.log("Enviando petición AJAX");
+       xhr.send("id_juego=" + <?php echo $id_juego; ?> + "&puntaje="+puntos + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='Despedida'"+ "&puntajeInicial=" + <?php echo $puntajeInicial; ?>);
+
+
+
        //se activa la página de final de Juego
        document.getElementById("pantalla-juego").style.display = "none";
        document.getElementById("pantalla-finalAprobado").style.display = "block";
@@ -200,6 +260,7 @@ function revisarpuntaje(){
        //se agregan los resultados
        document.getElementById("numCorrectasA").innerHTML = aciertos;
        document.getElementById("numIncorrectasA").innerHTML = preguntas.length - aciertos;
+       document.getElementById("puntos").innerHTML = puntos;
        document.getElementById("PNP").className = "pasa";
        document.getElementById("PNP").innerHTML = "&#161;Has logrado aprobar&#33; 🤩";
        //aqui iria alguna función para desbloquear la siguiente función, ya que logro pasar
@@ -222,6 +283,12 @@ function volverAlInicio(){
     document.getElementById("pantalla-final").style.display = "none";
     document.getElementById("pantalla-inicial").style.display = "block";
     document.getElementById("pantalla-juego").style.display = "none";  
+}
+
+function Puntos(aciertos){
+    var puntaje = aciertos * 11.1111;
+
+    return puntaje;
 }
 
 </script>

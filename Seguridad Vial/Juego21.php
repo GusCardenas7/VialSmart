@@ -17,20 +17,20 @@
     <?php 
        include '../funciones/menu.php';  
 
-         // Parte d�nde se revisa si ya se ha desbloqueado antes o no
+         // Parte dónde se revisa si ya se ha desbloqueado antes o no
         require "../Admin/funciones/conecta.php";   
         $con = conecta();
         $id_usuario = $_SESSION['idU'];
        
        //checar el id de lecciones y modulos
-       $sql = "SELECT * FROM modulos WHERE nombre='Convivencia vial y cultura de la paz' AND usuarios_id = $id_usuario"; //aqu� var�a el nombre del m�dulo
+       $sql = "SELECT * FROM modulos WHERE nombre='Convivencia vial y cultura de la paz' AND usuarios_id = $id_usuario"; //aquí varía el nombre del módulo
        $res = $con->query($sql);
 
        while($row =$res->fetch_array()){
          $id_modulos = $row["id"];
        } 
 
-       $sql = "SELECT * FROM lecciones WHERE nombre='Respeto mutuo' AND desbloqueado = 1 AND modulos_id = $id_modulos"; //aqu� var�a el nombre del m�dulo
+       $sql = "SELECT * FROM lecciones WHERE nombre='Respeto mutuo' AND desbloqueado = 1 AND modulos_id = $id_modulos"; //aquí varía el nombre del módulo
        $res = $con->query($sql);
 
        while($row =$res->fetch_array()){
@@ -45,6 +45,7 @@
         while($row =$res->fetch_array()){
          $id_juego = $row["id"];
          $desbloqueado = $row["desbloqueado"];
+         $puntajeInicial = $row["puntaje"];
         } 
         $fila= mysqli_num_rows($res);
         //echo "<script>alert('fila=$fila , desbloqueado=$desbloqueado, id_juego=$id_juego');</script>";
@@ -240,7 +241,7 @@ function seleccionar(casilla) {
 
         CambiarPiezas();
 
-        //comprobar que est� correcto
+        //comprobar que está correcto
         var fin = Finalizar();
         if (fin == true) {
             winAudio.play();
@@ -275,12 +276,12 @@ function seleccionar(casilla) {
                   }
                 }
             };
-            console.log("Enviando petici�n AJAX");
-            xhr.send("id_juego=" + <?php echo $id_juego; ?> + "&puntaje="+puntos + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='Resolucion de conflictos en la via'");
+            console.log("Enviando petición AJAX");
+            xhr.send("id_juego=" + <?php echo $id_juego; ?> + "&puntaje="+puntos + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='Resolucion de conflictos en la via'"+ "&puntajeInicial=" + <?php echo $puntajeInicial; ?>);
 
 
             Swal.fire({
-                title: '&iexcl;Lo lograste!<br><span class="footer">Has completado este juego y has desbloqueado la siguiente lecci&#243;n.</span>',
+                title: '&iexcl;Lo lograste!<br><span class="footer">Has completado este juego y has desbloqueado la siguiente lecci&#243;n.</span><br><span style="color:#5c905f;" class="footer">Puntuaci&#243;n: </span>'+puntos,
                 padding: '3em',
                 html: '<img class="ganar" src="../imagenes/perrito_bailando.gif" alt="" >',
                 color: '#000000',
@@ -335,19 +336,12 @@ function Finalizar() {
 function Puntos(timer){
     var puntaje = 0;
     
-    if (timer >= 50 ){
+   if(timer >= 50){
         puntaje = 100;
-    }else if(timer >= 40){
-        puntaje = 80;
-    }else if(timer >= 30){
-        puntaje = 60;
-    }else if(timer >= 20){
-        puntaje = 40;
-    }else if(timer >= 10){
-        puntaje = 20;
-    }else if(timer > 1){
-        puntaje = 10;
-    }
+   }else if(timer < 50){
+        var puntuacion = (50 - timer) * 2;
+        puntaje = 100 - puntuacion;
+   }
     return puntaje;
 }
 
