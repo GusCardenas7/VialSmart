@@ -3,12 +3,9 @@
     "",
     "\\Admin",
     "\\Admin\\funciones",
-    "\\audios",
     "\\CSS",
-    "\\JavaScript",
-    "\\JS",
     "\\Seguridad Vial"
   ],
-  "SelectedNode": "\\Seguridad Vial\\Juego9.php",
+  "SelectedNode": "\\Admin\\funciones\\cerrarSesion.php",
   "PreviewInSolutionExplorer": false
 }

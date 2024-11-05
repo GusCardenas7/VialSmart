@@ -2,6 +2,7 @@
     require "../Admin/funciones/comprobarSesion.php";
 ?>
 
+
 <html>
 <head>
     <title>Juegos</title>
@@ -292,6 +293,7 @@
             </div>
         </div>
     </div>
+    <?php include 'chatbot.php'; ?>
 
     <?php 
      if($totalJuegos >= 1){

@@ -285,7 +285,7 @@
             </div>
         </div>
     </div> 
-
+    <?php include 'chatbot.php'; ?>
 
     <?php 
      if($totalLecciones >= 1){
