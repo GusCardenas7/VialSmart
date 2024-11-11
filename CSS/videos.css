@@ -17,6 +17,11 @@ body {
     filter: brightness(0.4);
 }
 
+/* Espaciado condicional para módulos con un solo thumbnail */
+#module7 .thumbnail {
+    margin-top: 50px; /* Ajusta según necesites */
+    margin-bottom: 75px; /* Espacio extra antes del footer */
+}
 
 .blocked {
     cursor: default;

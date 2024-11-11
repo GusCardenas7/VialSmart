@@ -75,7 +75,7 @@ const modules = {
             title: "Video 7.1: Respuestas en casos de emergencias"
         },
         thumbnails: [
-            { src: "../Videos/7.2 Interaccion con extraños.mp4", poster: "../imagenes/miniaturas/7.2 Interaccion con extraños.jpg", title: "Video 7.2: Interacción con extraños", elementId: "thumbnail-image13", titleId: "thumb-vid-title13" }
+            { src: "../Videos/7.2 Interaccion con extraños.mp4", poster: "../imagenes/miniaturas/7.2 Interaccion con extraños.jpg", title: "Video 7.2: Interacción con extraños", elementId: "thumbnail-image14", titleId: "thumb-vid-title14" }
         ]
     },
     8: {
@@ -141,42 +141,48 @@ function swapVideos(thumbnailIndex) {
     const centralVideoData = modules[moduleIndex].centralVideo;
     const thumbnails = modules[moduleIndex].thumbnails;
 
-    // Obtener elementos del DOM para el video central
-    const centralVideoSource = currentModule.querySelector('#central-video-source');
-    const centralVideo = currentModule.querySelector('#central-video');
-    const centralTitleElement = currentModule.querySelector('#central-video-title');
+    // Obtener el thumbnail seleccionado y verificar si está desbloqueado
+    const selectedThumbnail = thumbnails[thumbnailIndex - 1];
+    const thumbnailElement = document.getElementById(selectedThumbnail.elementId);
+    const thumbnailTitleElement = document.getElementById(selectedThumbnail.titleId);
 
-    // Obtener la miniatura seleccionada
-    const thumbnail = thumbnails[thumbnailIndex - 1];
-    const thumbnailImage = document.getElementById(thumbnail.elementId);
-    const thumbnailTitleElement = document.getElementById(thumbnail.titleId);
+    if (thumbnailElement && thumbnailElement.hidden === false) {
+        const tempSrc = centralVideoData.src;
+        const tempPoster = centralVideoData.poster;
+        const tempTitle = centralVideoData.title;
 
-    // Guardar el video central actual en variables temporales
-    const tempSrc = centralVideoData.src;
-    const tempPoster = centralVideoData.poster;
-    const tempTitle = centralVideoData.title;
+        // Actualizar el video central con el de la miniatura seleccionada
+        centralVideoData.src = selectedThumbnail.src;
+        centralVideoData.poster = selectedThumbnail.poster;
+        centralVideoData.title = selectedThumbnail.title;
 
-    // Actualizar el video central con el de la miniatura seleccionada
-    centralVideoData.src = thumbnail.src;
-    centralVideoData.poster = thumbnail.poster;
-    centralVideoData.title = thumbnail.title;
+        // Actualizar la miniatura seleccionada con el video, imagen y la leyends que estaab en el central.video
+        selectedThumbnail.src = tempSrc;
+        selectedThumbnail.poster = tempPoster;
+        selectedThumbnail.title = tempTitle;
 
-    // Actualizar la miniatura con el video que estaba en el centro
-    thumbnail.src = tempSrc;
-    thumbnail.poster = tempPoster;
-    thumbnail.title = tempTitle;
+        // Aplicar los cambios en el DOM para que lo use el cental video
+        const centralVideoSource = currentModule.querySelector('#central-video-source');
+        const centralVideo = currentModule.querySelector('#central-video');
+        const centralTitleElement = currentModule.querySelector('#central-video-title');
 
-    // Aplicar los cambios en el DOM
-    centralVideoSource.src = centralVideoData.src;
-    centralVideo.poster = centralVideoData.poster;
-    centralTitleElement.textContent = centralVideoData.title;
-    thumbnailImage.src = thumbnail.poster; // Actualiza el poster de la miniatura seleccionada
-    thumbnailTitleElement.textContent = thumbnail.title; // Actualiza el título de la miniatura
+        centralVideoSource.src = centralVideoData.src;
+        centralVideo.poster = centralVideoData.poster;
+        centralTitleElement.textContent = centralVideoData.title;
 
-    // Recargar el video central para que se apliquen los cambios
-    centralVideo.load();
-    sortThumbnailsByTitle(moduleIndex);
+        // Cambiar el poster y la leyenda del thumbnail seleccionado en el DOM
+        const thumbnailImage = document.getElementById(selectedThumbnail.elementId);
+        thumbnailImage.src = selectedThumbnail.poster;  
+        thumbnailTitleElement.textContent = selectedThumbnail.title;  
+
+        centralVideo.load();
+
+    } else {
+
+        Advice();
+    }
 }
+
 
 function sortThumbnailsByTitle(moduleIndex) {
     // Obtener el módulo actual y sus miniaturas

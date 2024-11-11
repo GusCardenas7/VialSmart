@@ -4,8 +4,10 @@
     "\\Admin",
     "\\Admin\\funciones",
     "\\CSS",
+    "\\funciones",
+    "\\JavaScript",
     "\\Seguridad Vial"
   ],
-  "SelectedNode": "\\Seguridad Vial\\videoL8-3.php",
+  "SelectedNode": "\\Admin\\funciones\\registrar_videos.php",
   "PreviewInSolutionExplorer": false
 }

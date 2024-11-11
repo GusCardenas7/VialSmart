@@ -30,6 +30,8 @@
        while($row =$res->fetch_array()){
          $id_lecciones = $row["id"];
        } 
+
+       $tipo_juego ="quiz";
     ?>
     <br><br><br><br><br>
     <div class="content">
@@ -84,12 +86,29 @@
             // Acción a realizar cuando se alcanza el tiempo especificado
             console.log('Se ha alcanzado el minuto 0:30');
             document.getElementById("FlechaDesbloqueada").style.display = "block";
-      <?php  
-             if($fila == 0){ 
-                 $sql = "INSERT INTO juegos (nombre, tipo, desbloqueado, puntaje, lecciones_id, lecciones_modulos_id) VALUES ('Interaccion con extraños','quiz',0,0,$id_lecciones ,$id_modulos);";
-                 $res = $con->query($sql);
+
+      <?php if($fila == 0){ ?>
+            // --- Llamada AJAX para actualizar la base de datos ---
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "../Admin/funciones/registrar_videos.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+             if (xhr.readyState === 4) {
+              if (xhr.status === 200) {
+               console.log("Respuesta del servidor: ", xhr.responseText); // Verifica la respuesta del servidor
+              } else {
+               console.error("Error: ", xhr.statusText); // Si hay un error, lo mostramos
+              }
              }
-      ?>   
+            };
+           console.log("Enviando petición AJAX");
+           xhr.send(
+            "id_lecciones=" + <?php echo $id_lecciones; ?> + 
+            "&id_modulos=" + <?php echo $id_modulos; ?> + 
+            "&tipo_juego=" + encodeURIComponent("<?php echo $tipo_juego; ?>") + 
+            "&nombre_leccion=Interaccion con extraños"
+           );
+         <?php } ?>
             // Cambiamos la variable bandera a true para que solo se active una vez
             bandera = true;
         }

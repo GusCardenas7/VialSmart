@@ -287,7 +287,7 @@ function volverAlInicio(){
 
 function Puntos(aciertos){
     var puntaje = aciertos * 11.1111;
-
+    puntaje = Math.round(puntaje);
     return puntaje;
 }
 

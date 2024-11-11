@@ -255,14 +255,26 @@ footer .copyright::after {
 function desbloquear(){
    //aqui se tiene que evaluar que si ya hay un modulo introduccion con el id del usuario entonces que la flecha aparezca por sí sola y que no haga el insert.
    document.getElementById("FlechaDesbloqueada").style.display = "block";
-   
-<?php 
-    
-    if($fila == 0){ 
-       $sql = "INSERT INTO videos (nombre, desbloqueado, lecciones_id, lecciones_modulos_id) VALUES ('Tipos de señales de transito',1,$id_lecciones ,$id_modulos);";
-       $res = $con->query($sql);
-      }
-?>
+   document.getElementById('boton').style.display = 'none';
+
+    <?php if($fila == 0){ ?>
+           // --- Llamada AJAX para actualizar la base de datos ---
+          var xhr = new XMLHttpRequest();
+          xhr.open("POST", "../Admin/funciones/registrar_lecciones.php", true);
+          xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+              if (xhr.status === 200) {
+                console.log("Respuesta del servidor: ", xhr.responseText); // Verifica la respuesta del servidor
+              } else {
+                console.error("Error: ", xhr.statusText); // Si hay un error, lo mostramos
+              }
+            }
+          };
+          console.log("Enviando petición AJAX");
+          xhr.send("id_lecciones=" + <?php echo $id_lecciones; ?> + "&id_modulos=" + <?php echo $id_modulos; ?> + "&nombre_leccion='Tipos de señales de transito'");
+          
+   <?php } ?>
    
 }
 </script>
