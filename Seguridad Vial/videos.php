@@ -326,6 +326,7 @@
             </div>
         </div>
     </div>
+    <?php include 'chatbot.php'; ?>
     <footer>
         <div class="links">
             <a href="">Términos y condiciones</a>
