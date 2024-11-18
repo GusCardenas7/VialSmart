@@ -3,12 +3,11 @@
     "",
     "\\Admin",
     "\\Admin\\funciones",
-    "\\audios",
     "\\CSS",
+    "\\funciones",
     "\\JavaScript",
-    "\\JS",
     "\\Seguridad Vial"
   ],
-  "SelectedNode": "\\Seguridad Vial\\Juego9.php",
+  "SelectedNode": "\\Admin\\funciones\\analisis_interacciones.py",
   "PreviewInSolutionExplorer": false
 }

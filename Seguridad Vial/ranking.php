@@ -27,7 +27,7 @@
         </ul>
     </nav><br>
     <div id="module1" class="module content">
-        <div class="moduleTitle">Módulo 1: Introducción a la Seguridad Vial</div><br>
+        <div class="moduleTitle"><span class="underline">🏆 Módulo 1: Introducción a la Seguridad Vial 🏆</span></div><br>
         <div id="thumbnails" class="thumbnails">
             <div id="thumbnail1" class="thumbnail">
                 <a href="ranking1-1.php"><img id="thumbnail-image1" src="../imagenes/miniaturas/Juego Puzzle.jpeg" alt="Miniatura Juego 1"></a>
@@ -45,7 +45,7 @@
     </div>
 
     <div id="module2" class="module content" hidden>
-        <div class="moduleTitle">Módulo 2: Señales de Tránsito</div><br>
+        <div class="moduleTitle"><span class="underline">🏆 Módulo 2: Señales de Tránsito 🏆</span></div><br>
         <div id="thumbnails" class="thumbnails">
             <div id="thumbnail4" class="thumbnail">
                 <a href="ranking2-1.php"><img id="thumbnail-image3" src="../imagenes/miniaturas/Juego Adivina.png" alt="Miniatura Video 1"></a>
@@ -63,7 +63,7 @@
     </div>
 
     <div id="module3" class="module content" hidden>
-        <div class="moduleTitle">Módulo 3: Reglas Básicas de Seguridad Vial</div><br>
+        <div class="moduleTitle"><span class="underline">🏆 Módulo 3: Reglas Básicas de Seguridad Vial 🏆</span></div><br>
         <div id="thumbnails" class="thumbnails">
             <div id="thumbnail7" class="thumbnail" onclick="swapVideos(1)">
                 <a href="ranking3-1.php"><img id="thumbnail-image1" src="../imagenes/miniaturas/Juego Puzzle.jpeg" alt="Miniatura Juego 1"></a>
@@ -81,7 +81,7 @@
     </div>
 
     <div id="module4" class="module content" hidden>
-        <div class="moduleTitle">Módulo 4: Seguridad en el Vehículo</div><br>
+        <div class="moduleTitle"><span class="underline">🏆 Módulo 4: Seguridad en el Vehículo 🏆</span></div><br>
         <div id="thumbnails" class="thumbnails">
             <div id="thumbnail10" class="thumbnail" onclick="swapVideos(1)">
                 <a href="ranking4-1.php"><img id="thumbnail-image3" src="../imagenes/miniaturas/Juego Unir.png" alt="Miniatura Video 1"></a>
@@ -99,7 +99,7 @@
     </div>
 
     <div id="module5" class="module content" hidden>
-        <div class="moduleTitle">Módulo 5: Situaciones de Emergencia</div><br>
+        <div class="moduleTitle"><span class="underline">🏆 Módulo 5: Situaciones de Emergencia 🏆</span></div><br>
         <div id="thumbnails" class="thumbnails">
             <div id="thumbnail13" class="thumbnail" onclick="swapVideos(1)">
                 <a href="ranking5-1.php"><img id="thumbnail-image1" src="../imagenes/miniaturas/Juego Puzzle.jpeg" alt="Miniatura Juego 1"></a>
@@ -117,7 +117,7 @@
     </div>
     <!-- AQUI -->
     <div id="module6" class="module content" hidden>
-        <div class="moduleTitle">Módulo 6: Seguridad Vial y Prevención de Delitos</div><br>
+        <div class="moduleTitle"><span class="underline">🏆 Módulo 6: Seguridad Vial y Prevención de Delitos 🏆</span></div><br>
         <div id="thumbnails" class="thumbnails">
             <div id="thumbnail11" class="thumbnail">
                 <a href="ranking6-1.php"><img id="thumbnail-image3" src="../imagenes/miniaturas/Juego Unir.png" alt="Miniatura Video 1"></a>
@@ -135,7 +135,7 @@
     </div>
 
     <div id="module7" class="module content" hidden>
-        <div class="moduleTitle">Módulo 7: Disuasión de delitos</div><br>
+        <div class="moduleTitle"><span class="underline">🏆 Módulo 7: Disuación de delitos 🏆</span></div><br>
         <div id="thumbnails" class="thumbnails">
             <div id="thumbnail13" class="thumbnail" onclick="swapVideos(1)">
                 <a href="ranking7-1.php"><img id="thumbnail-image3" src="../imagenes/miniaturas/Juego Adivina.png" alt="Miniatura Video 1"></a>
@@ -149,7 +149,7 @@
     </div>
 
     <div id="module8" class="module content" hidden>
-        <div class="moduleTitle">Módulo 8: Convivencia vial y cultura de la paz</div><br>
+        <div class="moduleTitle"><span class="underline">🏆 Módulo 8: Convivencia vial y cultura de la paz 🏆</span></div><br>
         <div id="thumbnails" class="thumbnails">
              <div id="thumbnail15" class="thumbnail" onclick="swapVideos(1)">
                 <a href="ranking8-1.php"><img id="thumbnail-image1" src="../imagenes/miniaturas/Juego Puzzle.jpeg" alt="Miniatura Juego 1"></a>

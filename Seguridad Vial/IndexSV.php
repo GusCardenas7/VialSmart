@@ -162,7 +162,7 @@ function navigateSlider() {
       </div>
 </div>
 <br><br><br>
-
+<?php include 'chatbot.php'; ?>
 <!--  Decoraciones  -->
 
 <img class="decoracion-semaforos" src="../imagenes/semaforos.png" alt=""/> 
