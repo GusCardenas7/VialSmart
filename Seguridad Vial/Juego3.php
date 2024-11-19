@@ -111,9 +111,9 @@
 <!-- footer -->
 <footer>
         <div class="links">
-            <a href="">Términos y condiciones</a>
-            <a href="">Política de privacidad</a>
-            <a href="../contacto_formulario.php">Contáctanos</a>
+            <a href="Terminos.php">T&#233;rminos y condiciones</a>
+            <a href="Politica.php">Pol&#237;tica de privacidad</a>
+            <a href="Contacto_formulario.php">Cont&#225;ctanos</a>
         </div>
         <span class="copyright">&copy; VialSmart 2024</span>
 </footer>
@@ -253,37 +253,6 @@ function revisarpuntaje(){
          if (xhr.readyState === 4) {
              if (xhr.status === 200) {
                 console.log("Respuesta del servidor: ", xhr.responseText); // Verifica la respuesta del servidor
-
-                var xhr2 = new XMLHttpRequest();
-                xhr2.open("POST", "../Admin/funciones/desbloqueoLogros.php", true);
-                xhr2.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-                xhr2.onreadystatechange = function () {
-                    if (xhr2.readyState === 4) {
-                        if (xhr2.status === 200) {
-                            console.log("Respuesta de la segunda consulta: ", xhr2.responseText);
-
-                        if(puntos === 100) {
-                          // Aquí puedes realizar la segunda consulta
-                          var xhr3 = new XMLHttpRequest();
-                          xhr3.open("POST", "../Admin/funciones/desbloqueoLogros.php", true);
-                          xhr3.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-                          xhr3.onreadystatechange = function () {
-                              if (xhr3.readyState === 4) {
-                                  if (xhr3.status === 200) {
-                                      console.log("Respuesta de la tercera consulta: ", xhr3.responseText);
-                                  } else {
-                                      console.error("Error en la tercera consulta: ", xhr3.statusText);
-                                  }
-                              }
-                          };
-                          xhr3.send("nombre='Anatomía de la vía'&id_usuario=" + <?php echo $id_usuario; ?> + "&puntos=" + puntos); 
-                        }
-                        } else {
-                            console.error("Error en la segunda consulta: ", xhr2.statusText);
-                        }
-                    }
-                };
-                xhr2.send("nombre='Sin la introducción no se puede avanzar'&id_usuario=" + <?php echo $id_usuario; ?>);
              } else {
                 console.error("Error: ", xhr.statusText); // Si hay un error, lo mostramos
              }

@@ -266,7 +266,7 @@
     </div>
 
         <div id="module7" class="module content" hidden>
-            <div class="moduleTitle">Módulo 7: Disuasión de delitos</div><br>
+            <div class="moduleTitle">Módulo 7: Disuación de delitos</div><br>
             <div class="video-container">
                 <div id="central-video-title" class="video-title">Video 7.1: Respuestas en casos de emergencias</div>
                 <video style="display:none;" id="central-video" class="central-video7" controls poster="../imagenes/miniaturas/7.1 Respuestas en casos de emergencias.jpg">
@@ -326,12 +326,11 @@
             </div>
         </div>
     </div>
-    <?php include 'chatbot.php'; ?>
     <footer>
         <div class="links">
-            <a href="">Términos y condiciones</a>
-            <a href="">Política de privacidad</a>
-            <a href="../contacto_formulario.php">Contáctanos</a>
+            <a href="Terminos.php">Términos y condiciones</a>
+            <a href="Politica.php">Política de privacidad</a>
+            <a href="Contacto_formulario.php">Contáctanos</a>
         </div>
         <span class="copyright">&copy; VialSmart 2024</span>
     </footer>

@@ -37,7 +37,7 @@
     <div class="content">
         <div class="header-container">
                     <img src="../imagenes/niño.png" class="header-image" alt="Imagen Agitada">
-                    <div class="moduleTitle scale-up-top">Lección 5.1: ¿Qué hacer en caso de accidente?</div>
+                    <div class="moduleTitle scale-up-top">Lección 5.1: ¿Qué hacer en situaciones de emergencia?</div>
                 </div>
                 <div id="lessons" class="lessons scale-up-bottom">
                     <p style="color:#4d4443">Saber cómo actuar en una emergencia puede marcar la diferencia. Es importante mantener la calma y seguir algunos pasos clave si te encuentras en una situación peligrosa o de accidente mientras estás en la calle.</p> <br><br>
@@ -70,9 +70,9 @@
 
     <footer>
         <div class="links">
-            <a href="">Términos y condiciones</a>
-            <a href="">Política de privacidad</a>
-            <a href="../contacto_formulario.php">Contáctanos</a>
+            <a href="Terminos.php">Términos y condiciones</a>
+            <a href="Politica.php">Política de privacidad</a>
+            <a href="Contacto_formulario.php">Contáctanos</a>
         </div>
         <span class="copyright">&copy; VialSmart 2024</span>
     </footer>

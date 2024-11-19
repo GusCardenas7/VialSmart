@@ -62,9 +62,9 @@
 
     <footer>
         <div class="links">
-            <a href="">Términos y condiciones</a>
-            <a href="">Política de privacidad</a>
-            <a href="../contacto_formulario.php">Contáctanos</a>
+            <a href="Terminos.php">Términos y condiciones</a>
+            <a href="Politica.php">Política de privacidad</a>
+            <a href="Contacto_formulario.php">Contáctanos</a>
         </div>
         <span class="copyright">&copy; VialSmart 2024</span>
     </footer>

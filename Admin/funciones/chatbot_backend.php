@@ -8,15 +8,9 @@ header('Content-Type: application/json');
 $data = json_decode(file_get_contents('php://input'), true);
 $user_message = $data['message'] ?? '';
 
-if (!preg_match('/dato_curioso/i', $user_message)) {
-    // Registrar la pregunta en la tabla `interacciones`
-    $insert_query = $con->prepare("INSERT INTO interacciones (pregunta) VALUES (?)");
-    $insert_query->bind_param("s", $user_message);
-    $insert_query->execute();
-}
-
 // Verificar si la solicitud es para un dato curioso
 if ($user_message === "dato_curioso") {
+    // Seleccionar un dato curioso aleatorio
     $dato_curioso_query = "SELECT contenido FROM datos_curiosos ORDER BY RAND() LIMIT 1";
     $dato_curioso_result = $con->query($dato_curioso_query);
     

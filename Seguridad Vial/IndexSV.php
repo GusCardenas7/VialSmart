@@ -62,7 +62,6 @@ function navigateSlider() {
     ?>
     <br><br><br>
 
-<div class="content">
 <!-- SLIDERS -->
 <div id="slider">
         <input type="radio" name="slider" id="slide1" checked>
@@ -115,71 +114,69 @@ function navigateSlider() {
 </div>
 
 <!-- CUADROS -->
-<div class="container">
-    <div class="row justify-content-center">
-        <!-- Lecciones -->
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-2">
-            <div class="card mt-5" style="box-shadow: 0px 1px 10px 1px #000;">
-                <a href="../Seguridad Vial/lecciones.php">
-                    <div class="cover-small" style="background-image: url('../imagenes/leccion2.jpg');">
-                    </div>
-                </a>
-                <div class="card-body font" style="color:#49403e;">
-                    <p class="text-center"> <b> Lecciones </b> </p>
-                </div>
-            </div>
-        </div>
 
-        <!-- Juegos -->
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-2">
-            <div class="card mt-5" style="box-shadow: 0px 1px 10px 1px #000;">
-                <a href="../Seguridad Vial/Juegos.php">
-                    <div class="cover-small" style="background-image: url('../imagenes/juegos2.jpg');">
-                    </div>
-                </a>
-                <div class="card-body font" style="color:#49403e;">
-                    <p class="text-center"> <b> Juegos </b> </p>
-                </div>
+<div class="row justify-content-center">
+      <!-- Lecciones -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-2">
+        <div class="contaner">
+          <div class="card mt-5" style="width: 20rem; box-shadow: 0px 1px 10px 1px #000;">
+            <a href="../Seguridad Vial/lecciones.php">
+              <div class="cover-small" style="background-image: url('../imagenes/leccion2.jpg');">
+              </div>
+            </a>
+            <div class="card-body font" style="color:#49403e;">
+              <p class="text-center"> <b> Lecciones </b> </p>
             </div>
+          </div>
         </div>
+      </div>
 
-        <!-- Videos -->
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-2">
-            <div class="card mt-5" style="box-shadow: 0px 1px 10px 1px #000;">
-                <a href="../Seguridad Vial/videos.php">
-                    <div class="cover-small" style="background-image: url('../imagenes/video3.jpg');">
-                    </div>
-                </a>
-                <div class="card-body font" style="color:#49403e;">
-                    <p class="text-center"> <b> Videos </b> </p>
-                </div>
+      <!-- Juegos -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-2">
+        <div class="container">
+          <div class="card mt-5" style="width: 20rem; box-shadow: 0px 1px 10px 1px #000;">
+            <a href="../Seguridad Vial/Juegos.php">
+              <div class="cover-small" style="background-image: url('../imagenes/juegos2.jpg');">
+              </div>
+            </a>
+            <div class="card-body font" style="color:#49403e;">
+              <p class="text-center"> <b> Juegos </b> </p>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
+
+      <!-- Videos -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-2">
+        <div class="container">
+          <div class="card mt-5" style="width: 20rem; box-shadow: 0px 1px 10px 1px #000;">
+            <a href="../Seguridad Vial/videos.php">
+              <div class="cover-small" style="background-image: url('../imagenes/video3.jpg');">
+              </div>
+            </a>
+            <div class="card-body font" style="color:#49403e;">
+              <p class="text-center"> <b> V&#237;deos </b> </p>
+            </div>
+          </div>
+        </div>
+      </div>
 </div>
 <br><br><br>
 <?php include 'chatbot.php'; ?>
-<!--  Decoraciones  --> 
-<div class="decoracion-semaforos">
-    <img src="../imagenes/semaforos.png" alt="Semáforos" />
-</div>
+<!--  Decoraciones  -->
 
-<div class="decoracion-carro">
-    <img src="../imagenes/coche.png" alt="Carro" />
-</div>
-
-<div class="decoracion-ninos">
-    <img src="../imagenes/grupo.png" alt="Niños" />
-</div>
-</div>
+<img class="decoracion-semaforos" src="../imagenes/semaforos.png" alt=""/> 
+<img class="decoracion-carro" src="../imagenes/coche.png" alt=""/> 
+<img class="decoracion-ninos" src="../imagenes/grupo.png" alt=""/> 
 
 <footer>
         <div class="links">
-            <a href="">Términos y condiciones</a>
-            <a href="">Política de privacidad</a>
-            <a href="../contacto_formulario.php">Contáctanos</a>
+            <a href="Terminos.php">Términos y condiciones</a>
+            <a href="Politica.php">Política de privacidad</a>
+            <a href="Contacto_formulario.php">Contáctanos</a>
         </div>
         <span class="copyright">&copy; VialSmart 2024</span>
 </footer>
 
 </body>
+

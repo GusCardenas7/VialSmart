@@ -135,7 +135,7 @@
     </div>
 
     <div id="module7" class="module content" hidden>
-        <div class="moduleTitle"><span class="underline">🏆 Módulo 7: Disuasión de delitos 🏆</span></div><br>
+        <div class="moduleTitle"><span class="underline">🏆 Módulo 7: Disuación de delitos 🏆</span></div><br>
         <div id="thumbnails" class="thumbnails">
             <div id="thumbnail13" class="thumbnail" onclick="swapVideos(1)">
                 <a href="ranking7-1.php"><img id="thumbnail-image3" src="../imagenes/miniaturas/Juego Adivina.png" alt="Miniatura Video 1"></a>
@@ -161,21 +161,11 @@
             </div>
         </div>
     </div>
-
-    <div id="module9" class="module content" hidden>
-        <div class="moduleTitle">Ranking general</div><br>
-        <div id="thumbnails" class="thumbnails">
-            <div id="thumbnail15" class="thumbnail" onclick="swapVideos(1)">
-                <a href="rankingGeneral.php"><img id="thumbnail-image1" style="background-color: rgb(255, 0, 0, 39%);" src="../imagenes/ranking.png" alt="Miniatura Juego 1"></a>
-                <div id="thumb-vid-title5" class="thumb-vid-title">Ver ranking general</div>
-            </div>
-        </div>
-    </div>
     <footer>
         <div class="links">
-            <a href="">Términos y condiciones</a>
-            <a href="">Política de privacidad</a>
-            <a href="../contacto_formulario.php">Contáctanos</a>
+            <a href="Terminos.php">Términos y condiciones</a>
+            <a href="Politica.php">Política de privacidad</a>
+            <a href="Contacto_formulario.php">Contáctanos</a>
         </div>
         <span class="copyright">&copy; VialSmart 2024</span>
     </footer>

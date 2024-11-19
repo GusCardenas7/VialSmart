@@ -155,6 +155,7 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
                     <th>Posición</th>
                     <th>Nombre</th>
                     <th>Mejor Puntuación</th>
+                    <th>Nivel del Jugador</th>
                 </tr>
             </thead>
             <tbody id="ranking-list">
@@ -167,9 +168,9 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
     </div>
     <footer>
         <div class="links">
-            <a href="">Términos y condiciones</a>
-            <a href="">Política de privacidad</a>
-            <a href="../contacto_formulario.php">Contáctanos</a>
+            <a href="Terminos.php">Términos y condiciones</a>
+            <a href="Politica.php">Política de privacidad</a>
+            <a href="Contacto_formulario.php">Contáctanos</a>
         </div>
         <span class="copyright">&copy; VialSmart 2024</span>
     </footer>
@@ -201,6 +202,7 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
                             <td>${item.posicion}</td>
                             <td>${item.nombre_usuario}</td>
                             <td>${item.mejor_puntaje} pts</td>
+                            <td>Nivel ${item.nivel}</td>
                         `;
                         rankingList.appendChild(listItem);
                     });
@@ -227,7 +229,7 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
                     $('.dataTables_filter input').attr('placeholder', 'Buscar jugador...');
 
                 } else {
-                    rankingList.innerHTML = '<tr><td colspan="3">No hay jugadores en el ranking</td></tr>';
+                    rankingList.innerHTML = '<tr><td colspan="4">No hay jugadores en el ranking</td></tr>';
                 }
             })
             .catch(error => console.error('Error:', error));
