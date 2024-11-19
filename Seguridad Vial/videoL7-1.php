@@ -35,9 +35,9 @@
     ?>
     <br><br><br><br><br>
     <div class="content">
-        <div class="moduleTitle scale-up-top">Lección 7.1: Respuesta en casos de emergencia</div><br>
+        <div class="moduleTitle scale-up-top">Lección 7.1: Respuestas en casos de emergencias</div><br>
         <div class="video-container scale-up-bottom">
-            <div id="central-video-title" class="video-title">Video 7.1: Respuesta en casos de emergencia</div>
+            <div id="central-video-title" class="video-title">Video 7.1: Respuestas en casos de emergencias</div>
             <video id="central-video" controls poster="../imagenes/miniaturas/7.1 Respuestas en casos de emergencias.jpg">
                 <source id="central-video-source" src="../Videos/7.1 Respuestas en casos de emergencias.mp4" type="video/mp4">
                 Tu navegador no soporta la reproducción de videos.

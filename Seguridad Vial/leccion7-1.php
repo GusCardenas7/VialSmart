@@ -35,7 +35,7 @@
     <div class="content">
         <div class="header-container">
                     <img src="../imagenes/niño.png" class="header-image" alt="Imagen Agitada">
-                    <div class="moduleTitle scale-up-top">Lección 7.1 Respuesta en casos de emergencia</div>
+                    <div class="moduleTitle scale-up-top">Lección 7.1 Respuestas en casos de emergencias</div>
                 </div>
                 <div id="lessons" class="lessons scale-up-bottom">
                     <p style="color:#295854; font-style: italic;">En situaciones de emergencia, como un asalto, acoso o un intento de secuestro, es fundamental saber cómo actuar rápidamente y de manera segura. Aquí te damos algunas recomendaciones importantes.</p> <br><br>

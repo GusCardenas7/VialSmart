@@ -37,7 +37,7 @@
     <div class="content">
         <div class="moduleTitle scale-up-top">Lección 5.2: Primeros auxilios básicos</div><br>
         <div class="video-container scale-up-bottom">
-            <div id="central-video-title" class="video-title">Video 5.2: Primeros auxilios basicos</div>
+            <div id="central-video-title" class="video-title">Video 5.2: Primeros auxilios básicos</div>
             <video id="central-video" controls poster="../imagenes/miniaturas/5.2 Primeros auxilios basicos.jpg">
                 <source id="central-video-source" src="../Videos/5.2 Primeros auxilios basicos.mp4" type="video/mp4">
                 Tu navegador no soporta la reproducción de videos.

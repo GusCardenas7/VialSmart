@@ -126,7 +126,7 @@
         <div id="lessons" class="lessons">
            <div style="display:none;" id="lesson7" class="lesson blur-in-expand" onclick="goToLesson(3,1)">
                 <img id="lesson-image1" src="../imagenes/miniaturas/3.1 Cruce seguro de la calle.jpg" alt="Lección 1">
-                <div id="lesson-title1" class="lesson-title">Lección 3.1: Cruce seguro de la calle</div>
+                <div id="lesson-title1" class="lesson-title">Lección 3.1: Cruce seguro en las calles</div>
             </div>
             <div style="display:none;" id="lesson8" class="lesson blur-in-expand" onclick="goToLesson(3,2)">
                 <img id="lesson-image2" src="../imagenes/miniaturas/3.2 Comportamiento peatonal seguro.jpg" alt="Lección 2">
@@ -139,7 +139,7 @@
             <!-- Des -->
             <div style="display:block;" id="lesson7.1" class="lesson blur-in-expand blocked" onclick="Advice()">
                 <img id="lesson-image1" src="../imagenes/miniaturas/3.1 Cruce seguro de la calle.jpg" alt="Lección 1">
-                <div id="lesson-title1" class="lesson-title">Lección 3.1: Cruce seguro de la calle</div>
+                <div id="lesson-title1" class="lesson-title">Lección 3.1: Cruce seguro en las calles</div>
             </div>
             <div style="display:block;" id="lesson8.1" class="lesson blur-in-expand blocked" onclick="Advice()">
                 <img id="lesson-image2" src="../imagenes/miniaturas/3.2 Comportamiento peatonal seguro.jpg" alt="Lección 2">
@@ -186,7 +186,7 @@
         <div id="lessons" class="lessons">
            <div style="display:none;" id="lesson13" class="lesson blur-in-expand" onclick="goToLesson(5,1)">
                 <img id="lesson-image1" src="../imagenes/miniaturas/5.1 Que hacer en caso de un accidente.jpg" alt="Lección 1">
-                <div id="lesson-title1" class="lesson-title">Lección 5.1: Qué hacer en caso de un accidente</div>
+                <div id="lesson-title1" class="lesson-title">Lección 5.1: ¿Qué hacer en caso de accidente?</div>
             </div>
             <div style="display:none;" id="lesson14" class="lesson blur-in-expand" onclick="goToLesson(5,2)">
                 <img id="lesson-image2" src="../imagenes/miniaturas/5.2 Primeros auxilios basicos.jpg" alt="Lección 2">
@@ -194,12 +194,12 @@
             </div>
             <div style="display:none;" id="lesson15" class="lesson blur-in-expand" onclick="goToLesson(5,3)">
                 <img id="lesson-image3" src="../imagenes/miniaturas/5.3 Prevencion y seguridad en caso de emergencias.jpg" alt="Lección 3">
-                <div id="lesson-title3" class="lesson-title">Lección 5.3: Prevención y seguridad en casos de emergencia</div>
+                <div id="lesson-title3" class="lesson-title">Lección 5.3: Prevención y seguridad en caso de emergencias</div>
             </div>
             <!-- Des -->
             <div style="display:block;" id="lesson13.1" class="lesson blur-in-expand blocked" onclick="Advice()">
                 <img id="lesson-image1" src="../imagenes/miniaturas/5.1 Que hacer en caso de un accidente.jpg" alt="Lección 1">
-                <div id="lesson-title1" class="lesson-title">Lección 5.1: Qué hacer en caso de un accidente</div>
+                <div id="lesson-title1" class="lesson-title">Lección 5.1: ¿Qué hacer en caso de accidente?</div>
             </div>
             <div style="display:block;" id="lesson14.1" class="lesson blur-in-expand blocked" onclick="Advice()">
                 <img id="lesson-image2" src="../imagenes/miniaturas/5.2 Primeros auxilios basicos.jpg" alt="Lección 2">
@@ -207,7 +207,7 @@
             </div>
             <div style="display:block;" id="lesson15.1" class="lesson blur-in-expand blocked" onclick="Advice()">
                 <img id="lesson-image3" src="../imagenes/miniaturas/5.3 Prevencion y seguridad en caso de emergencias.jpg" alt="Lección 3">
-                <div id="lesson-title3" class="lesson-title">Lección 5.3: Prevención y seguridad en casos de emergencia</div>
+                <div id="lesson-title3" class="lesson-title">Lección 5.3: Prevención y seguridad en caso de emergencias</div>
             </div>
         </div>
     </div>
@@ -220,7 +220,7 @@
             </div>
             <div style="display:none;" id="lesson17" class="lesson blur-in-expand" onclick="goToLesson(6,2)">
                 <img id="lesson-image2" src="../imagenes/miniaturas/6.2 Estrategias de prevencion.jpg" alt="Lección 2">
-                <div id="lesson-title2" class="lesson-title">Lección 6.2: Estrategías de prevención</div>
+                <div id="lesson-title2" class="lesson-title">Lección 6.2: Estrategias de prevención</div>
             </div>
             <div style="display:none;" id="lesson18" class="lesson blur-in-expand" onclick="goToLesson(6,3)">
                 <img id="lesson-image3" src="../imagenes/miniaturas/6.3 Seguridad personal.jpg" alt="Lección 3">
@@ -233,7 +233,7 @@
             </div>
             <div style="display:block;" id="lesson17.1" class="lesson blur-in-expand blocked" onclick="Advice()">
                 <img id="lesson-image2" src="../imagenes/miniaturas/6.2 Estrategias de prevencion.jpg" alt="Lección 2">
-                <div id="lesson-title2" class="lesson-title">Lección 6.2: Estrategías de prevención</div>
+                <div id="lesson-title2" class="lesson-title">Lección 6.2: Estrategias de prevención</div>
             </div>
             <div style="display:block;" id="lesson18.1" class="lesson blur-in-expand blocked" onclick="Advice()">
                 <img id="lesson-image3" src="../imagenes/miniaturas/6.3 Seguridad personal.jpg" alt="Lección 3">
@@ -246,7 +246,7 @@
         <div id="lessons" class="lessons">
            <div style="display:none;" id="lesson19" class="lesson blur-in-expand" onclick="goToLesson(7,1)">
                 <img id="lesson-image1" src="../imagenes/miniaturas/7.1 Respuestas en casos de emergencias.jpg" alt="Lección 1">
-                <div id="lesson-title1" class="lesson-title">Lección 7.1: Respuestas en caso de emergencias</div>
+                <div id="lesson-title1" class="lesson-title">Lección 7.1: Respuestas en casos de emergencias</div>
             </div>
             <div style="display:none;" id="lesson20" class="lesson blur-in-expand" onclick="goToLesson(7,2)">
                 <img id="lesson-image2" src="../imagenes/miniaturas/7.2 Interaccion con extraños.jpg" alt="Lección 2">
@@ -255,7 +255,7 @@
             <!-- Des-->
             <div style="display:block;" id="lesson19.1" class="lesson blur-in-expand blocked" onclick="Advice()">
                 <img id="lesson-image1" src="../imagenes/miniaturas/7.1 Respuestas en casos de emergencias.jpg" alt="Lección 1">
-                <div id="lesson-title1" class="lesson-title">Lección 7.1: Respuestas en caso de emergencias</div>
+                <div id="lesson-title1" class="lesson-title">Lección 7.1: Respuestas en casos de emergencias</div>
             </div>
             <div style="display:block;" id="lesson20.1" class="lesson blur-in-expand blocked" onclick="Advice()">
                 <img id="lesson-image2" src="../imagenes/miniaturas/7.2 Interaccion con extraños.jpg" alt="Lección 2">
