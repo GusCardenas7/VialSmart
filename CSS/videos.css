@@ -1,0 +1,206 @@
+﻿html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1103%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(204%2c 229%2c 255%2c 1)'%3e%3c/rect%3e%3cpath d='M100 50 L200 150 300 50 200 -50z' fill='rgba(102%2c 153%2c 255%2c 0.6)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M1200 60 a150 150 0 1 0 300 0 a150 150 0 1 0 -300 0z' fill='rgba(102%2c 153%2c 255%2c 0.6)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M850 450 L950 370 800 270 700 350z' fill='rgba(102%2c 153%2c 255%2c 0.6)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M600 200 C620 210 640 190 660 170 C680 150 700 130 720 110 C740 90 760 70 780 50' fill='rgba(102%2c 153%2c 255%2c 0.6)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M400 470 C420 480 440 460 460 440 C480 420 500 400 520 380 C540 360 560 340 580 320' fill='rgba(102%2c 153%2c 255%2c 0.6)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1300 200 C1320 210 1340 190 1360 170 C1380 150 1400 130 1420 110 C1440 90 1460 70 1480 50' fill='rgba(102%2c 153%2c 255%2c 0.6)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1100 300 C1120 310 1140 290 1160 270 C1180 250 1200 230 1220 210 C1240 190 1260 170 1280 150' fill='rgba(102%2c 153%2c 255%2c 0.6)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M800 550 C850 560 900 540 920 510 C940 480 930 440 900 420 C870 400 830 390 800 400' fill='rgba(102%2c 153%2c 255%2c 0.6)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M450 250 L500 300 550 250 500 200z' fill='rgba(102%2c 153%2c 255%2c 0.6)' class='triangle-float3'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1103'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");    background-size: cover;
+    background-repeat: repeat;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.thumbnail.blocked img {
+    background-color: rgba(0, 0, 0, 0.9);
+    filter: brightness(0.4);
+}
+
+/* Espaciado condicional para módulos con un solo thumbnail */
+#module7 .thumbnail {
+    margin-top: 50px; /* Ajusta según necesites */
+    margin-bottom: 75px; /* Espacio extra antes del footer */
+}
+
+.blocked {
+    cursor: default;
+}
+
+    .blocked img {
+        background-color: rgba(0,0,0,0.9);
+        filter: brightness(0.4);
+    }
+
+.content {
+    flex: 1;
+}
+
+nav {
+    background: #333;
+    color: #fff;
+    padding: 5px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background: #ffffffe2;
+    color: #000000;
+}
+
+nav ul li a.active {
+    background: #ffffff;
+    color: #000000;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+.moduleTitle {
+    color: black;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.video-container {
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 1px 10px 1px #000;
+    max-width: 100%;
+    width: 640px;
+    margin: 0 auto;
+}
+
+.video-container video {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.video-container .video-title {
+    background-color: #444;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.thumbnail {
+    width: 400px;
+    height: 300px;
+    background-color: #ffffff;
+    margin: 0 20px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0px 1px 10px 1px #000;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.8s ease;
+    display: block;
+    border-radius: 10px 10px 0 0;
+}
+
+.thumbnail .thumb-vid-title {
+    background-color: #444;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0px 1px 10px 1px #000;
+}
+
+.thumbnail img:hover {
+    transition: all 0.6s ease;
+    filter: brightness(50%);
+}
+
+footer {
+    background-color: #000000;
+    color: #b7b7b7;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    font-weight: normal;
+    position: relative;
+}
+
+footer .links {
+    display: flex;
+    gap: 30px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+footer a:active {
+    color: white;
+}
+
+footer .copyright {
+    font-size: 13px;
+}
+
+footer .copyright::after {
+    content: '';
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    height: 30px;
+    width: 0.1px;
+    background-color: #b7b7b7;
+}

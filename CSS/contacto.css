@@ -1,0 +1,152 @@
+ 
+       body {
+        background-color: #FF2F1C;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='123' height='123' viewBox='0 0 200 200'%3E%3Cpolygon fill='%23FA4F2B' points='100 0 0 100 100 100 100 200 200 100 200 0'/%3E%3C/svg%3E");
+        background-repeat: repeat;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        margin: 0; /* Eliminar márgenes globales para evitar desplazamiento */
+        padding: 0;
+        box-sizing: border-box; /* Asegura que el padding y el borde no afecten el ancho total */
+    }
+    
+    .content {
+        flex: 1; /* Asegura que el contenido ocupe el espacio disponible */
+        width: 100%;
+        box-sizing: border-box; /* Incluye el padding dentro del ancho total */
+    }
+    
+    
+    
+            .titulo {
+                color: black;
+                text-align: center; /* Centra el texto horizontalmente */
+                font-size: 25px;
+                font-weight: bold;
+                font-family: 'Share Tech Mono', monospace;
+                background: rgba(255, 255, 255, 0.5);
+                backdrop-filter: blur(2px);
+                border: 2px solid #FF4C4C;
+                border-radius: 20px;
+                padding: 25px 40px;
+                margin: 0;
+                width: 800px;
+                margin-left: auto; /* Esto centra el bloque horizontalmente */
+                margin-right: auto; /* Esto centra el bloque horizontalmente */
+            }
+    
+            .letraFooter { 
+                color: black;
+            }
+    
+            @keyframes animar_roja {
+            from {
+                width: 0%;
+            }
+    
+            to {
+                width: 100%;
+            }
+            }
+    
+            label{
+                display: inline-block;
+                width: 100px;
+                text-align: center;
+                
+            }
+    
+            input, textarea, select {
+                width: 250px;
+                margin:2px auto;
+                box-sizing: border-box;
+            }
+    
+            textarea {
+                resize: none;
+                font-family: 'Share Tech Mono', monospace;
+                font-size: 19px; /* Reduce el tamaño del texto */
+            }
+    
+            #mensaje2 {
+                height:20px;
+                line-height:20px;
+                border: 2px solid black;
+                background: lightcoral;
+                color: white;
+                font-size: 16px;
+                font-weight: bold;
+                width: 250px;
+                text-align: center;
+                margin:2px auto;
+            }
+    
+            .form-container {
+                font-family: 'Share Tech Mono', monospace;
+                background: rgba(255, 255, 255, 0.5);
+                 backdrop-filter: blur(2px);
+                padding: 20px;
+                border-radius: 20px;
+                width: 30%; /* Ajusta el ancho del contenedor */
+                margin: 0 auto;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para resaltar el formulario */
+            }
+    
+            .etiquetas{
+                font-family: 'Share Tech Mono', monospace;
+                font-size: 19px;
+    
+            }
+    
+            #nombre, #apellidos, #correo, #mensaje {
+                font-size: 16px;
+                font-family: 'Share Tech Mono', monospace;
+            }
+    
+            /* FOOTER*/
+            
+    footer {
+        background-color: #000000;
+        color: #b7b7b7;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        font-weight: normal;
+        position: relative;
+        height: auto;
+        width: 100%; /* Asegura que el footer ocupe todo el ancho de la página */
+        box-sizing: border-box; /* Incluye el padding dentro del ancho total */
+        margin: 0; /* Eliminar márgenes */
+    }
+    
+    footer .links {
+        display: flex;
+        gap: 20px;
+    }
+    
+    footer a {
+        color: white;
+        text-decoration: none;
+        font-weight: normal;
+    }
+    
+    footer a:hover {
+        text-decoration: underline;
+    }
+    
+    footer .copyright {
+        font-size: 13px;
+    }
+    
+    footer .copyright::after {
+        content: '';
+        position: absolute;
+        right: 25px;
+        top: 10px;
+        height: 30px;
+        width: 0.1px;
+        background-color: #b7b7b7;
+    }

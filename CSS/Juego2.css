@@ -1,0 +1,214 @@
+body {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1032%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(172%2c 214%2c 211%2c 1)'%3e%3c/rect%3e%3cpath d='M236.418%2c257.95C287.253%2c258.414%2c343.022%2c249.911%2c368.965%2c206.192C395.284%2c161.84%2c378.347%2c107.272%2c352.213%2c62.811C326.513%2c19.089%2c287.116%2c-17.943%2c236.418%2c-19.306C183.603%2c-20.726%2c135.667%2c10.49%2c109.311%2c56.281C83.017%2c101.963%2c79.893%2c159.218%2c107.998%2c203.809C134.547%2c245.932%2c186.629%2c257.495%2c236.418%2c257.95' fill='rgba(139%2c 187%2c 145%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1489.079%2c279.147C1544.184%2c278.067%2c1587.925%2c238.992%2c1616.128%2c191.638C1645.157%2c142.897%2c1663.988%2c82.805%2c1635.095%2c33.983C1606.572%2c-14.213%2c1545.005%2c-25.996%2c1489.079%2c-23.044C1438.829%2c-20.392%2c1393.993%2c5.311%2c1367.523%2c48.106C1339.449%2c93.494%2c1328.255%2c149.56%2c1353.104%2c196.791C1379.548%2c247.054%2c1432.295%2c280.26%2c1489.079%2c279.147' fill='rgba(139%2c 187%2c 145%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M77.04239438552898 400.23093925626347L49.77338223877443 494.9883641229723 133.75882526525905 475.59879681056873z' fill='rgba(139%2c 187%2c 145%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M-56.29286715307489 188.68623804286577L-69.7336054190645 342.31457941085284 83.89473594892257 355.7553176768424 97.33547421491218 202.12697630885538z' fill='rgba(139%2c 187%2c 145%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M538.8123456350439 137.34090629095343L590.2213637601532-30.23904227561721 440.3404048023972 1.6191390202491078z' fill='rgba(139%2c 187%2c 145%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M854.371%2c404.425C873.769%2c402.982%2c884.808%2c384.223%2c893.985%2c367.072C902.461%2c351.232%2c909.011%2c333.359%2c901.001%2c317.279C892.191%2c299.595%2c874.125%2c287.896%2c854.371%2c287.55C834.033%2c287.193%2c815.22%2c298.111%2c804.82%2c315.592C794.176%2c333.484%2c792.894%2c355.657%2c803.036%2c373.839C813.436%2c392.484%2c833.081%2c406.009%2c854.371%2c404.425' fill='rgba(139%2c 187%2c 145%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M1106.768%2c452.317C1160.9%2c454.561%2c1217.295%2c441.198%2c1247.716%2c396.367C1281.875%2c346.029%2c1289.719%2c279.603%2c1259.982%2c226.532C1229.657%2c172.412%2c1168.805%2c145.017%2c1106.768%2c144.816C1044.351%2c144.614%2c980.058%2c169.868%2c951.823%2c225.533C925.435%2c277.556%2c951.796%2c337.299%2c984.703%2c385.464C1012.753%2c426.519%2c1057.089%2c450.258%2c1106.768%2c452.317' fill='rgba(139%2c 187%2c 145%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M738.0563577899836 218.41246514644328L667.124020150582 319.71434175971325 839.3582344032536 289.3448027858448z' fill='rgba(139%2c 187%2c 145%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M570.1608941297951 266.1828334335353L460.1855771394456 192.00354548109894 386.00628918700926 301.97886247144845 495.9816061773588 376.15815042388476z' fill='rgba(139%2c 187%2c 145%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M282.8991199840451 126.15710663676087L174.11924503657144 211.1452593864202 259.10739778623076 319.9251343338939 367.88727273370444 234.93698158423456z' fill='rgba(139%2c 187%2c 145%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M1371.5815260736515 418.4759230501451L1439.343549504817 460.8183347156422 1468.97615528748 338.0040937361452z' fill='rgba(139%2c 187%2c 145%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M959.11 171.65 a100.27 100.27 0 1 0 200.54 0 a100.27 100.27 0 1 0 -200.54 0z' fill='rgba(139%2c 187%2c 145%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1032'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+}
+
+main {
+    width: 750px;
+    margin: 100px auto 50px;
+    display: flex;
+    align-items: center;
+}
+
+.section1 {
+    background-color: rgba(85, 84, 73, 30%);
+    padding: 10px 10px 10px 10px;
+    border-radius: 8px;
+    position: absolute;
+    left: 450px;
+    top: 199px;
+    z-index: 4;
+}
+
+button {
+    height: 100px;
+    width: 100px;
+    font-size: 40px;
+    color: black;
+    font-weight: bold;
+}
+
+.desc {
+    text-align: center;
+    color: #3a4645;
+}
+
+h3 {
+    text-align: justify;
+    font-size: 20px;
+    font-family: 'Share Tech Mono', monospace;
+    color: #1c564e;
+}
+
+h1 {
+    color: #555449;
+    text-align: center;
+}
+
+button:hover {
+    cursor: pointer;
+}
+.sol {
+    left: 247px;
+    top: -40px;
+    width: 23%;
+    max-height: 100%;
+    height: auto;
+    position: absolute;
+    border: none;
+}
+
+.section2 {
+    background-color: rgba(85, 84, 73, 30%);
+    border-radius: 8px;
+    width: 290px;
+    height: 250px;
+    padding: 0 20px;
+    position: relative;
+    left: 660px;
+    top: -73px;
+    z-index: 5;
+}
+
+.estadisticas {
+    border: 2px solid rgb(0, 0, 0);
+    width: 290px;
+    height: 55px;
+    border-radius: 8px;
+    padding: 8px 20px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+img {
+    width: 80%;
+}
+
+.decoracion2 {
+    width: 15%;
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+}
+
+
+.opciones {
+    width: 150px;
+    height: 130px;
+    background-color: #D8F9E9;
+    border-radius: 8px;
+    position: relative;
+    top: -855px;
+    right: -30px;
+    box-shadow: 10px 5px 5px black;
+}
+
+.volver {
+    width: 14%;
+    top: 18px;
+    left: 7px;
+    position: absolute;
+}
+
+.deshacer {
+    width: 16%;
+    top: 78px;
+    left: 10px;
+    position: absolute;
+}
+
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+}
+
+.ganar {
+    width: 35%;
+    border: none;
+}
+
+.footer {
+    font-size: 19px;
+    color: rgb(29,29,29);
+    text-align: center;
+}
+
+.quitar {
+    text-decoration: none;
+    color: black;
+    text-align:center;
+    font-size: 16px;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.quitar2 {
+    text-decoration: none;
+    color: black;
+    font-size: 19px;
+    font-family: 'Share Tech Mono', monospace;
+    text-align: left;
+}
+
+.titulo {
+    color: #E1653E;
+}
+
+.perder {
+    width: 60%;
+}
+
+.titulo_ganar {
+    color: #7EC875;
+}
+/* FOOTER*/
+footer {
+    background-color: #000000;
+    color: #b7b7b7;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    font-weight: normal;
+    position: absolute;
+    top: 800px;
+    left: 0%;
+    height: 40px;
+    width: 94%;
+    text-align: center;
+}
+
+    footer .links {
+        display: flex;
+        gap: 30px;
+    }
+
+    footer a {
+        color: white;
+        text-decoration: none;
+        font-weight: normal;
+    }
+
+        footer a:hover {
+            text-decoration: underline;
+            color: white;
+        }
+
+        footer a:active {
+            color: white;
+        }
+
+    footer .copyright {
+        font-size: 13px;
+    }
+
+        footer .copyright::after {
+            content: '';
+            position: absolute;
+            right: 25px;
+            top: 10px;
+            height: 30px;
+            width: 0.1px;
+            background-color: #b7b7b7;
+        }
+
